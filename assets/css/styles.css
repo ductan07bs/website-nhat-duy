@@ -369,6 +369,54 @@ em { font-style: italic; color: var(--walnut-mid); }
   border: 0;
   filter: saturate(0.92) contrast(0.95);
 }
+/* Facade Maps — hiển thị trước, chỉ load iframe khi click/hover */
+.map-facade {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--sand);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(201,169,110,.18), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(232,213,183,.04) 0 12px, transparent 12px 24px),
+    linear-gradient(160deg, var(--walnut-mid), var(--navy));
+  transition: filter .4s var(--ease-soft);
+}
+.map-facade:hover, .map-facade:focus-visible { filter: brightness(1.08); outline: none; }
+.map-facade__pin {
+  display: grid; place-items: center;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: rgba(201,169,110,.16);
+  color: var(--gold);
+  margin-bottom: 4px;
+  animation: map-pin-pulse 2.4s ease-in-out infinite;
+}
+@keyframes map-pin-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,169,110,.4); }
+  50% { box-shadow: 0 0 0 14px rgba(201,169,110,0); }
+}
+.map-facade strong { font-family: "Cormorant Garamond", serif; font-size: 1.5rem; color: var(--bone); font-weight: 500; }
+.map-facade__addr { font-size: .85rem; color: var(--sand-soft); }
+.map-facade__btn {
+  margin-top: 10px;
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--gold);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: background .3s var(--ease-soft);
+}
+.map-facade:hover .map-facade__btn { background: var(--gold-soft); }
+@media (prefers-reduced-motion: reduce) { .map-facade__pin { animation: none; } }
 
 @media (max-width: 900px) {
   .map-block { grid-template-columns: 1fr; }
