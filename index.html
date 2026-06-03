@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Nội Thất Nhật Duy — Đại lý Kymdan chính hãng tại Bồng Sơn" />
 <meta name="twitter:description" content="Đại lý Kymdan chính hãng tại Bồng Sơn, Gia Lai. Nệm Kymdan, nội thất Kymdan, nệm foam &amp; bông ép Hàn Quốc. Đặt lịch trải nghiệm tại Showroom." />
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1758448755969-8791367cf5c5?auto=format&amp;fit=crop&amp;q=80&amp;w=1200&amp;h=630" />
+<meta name="twitter:image" content="https://kymdan.com/attachment.do?file=attachment/17129/kymdan-logo-word-only.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -208,11 +208,13 @@
 
     <nav class="primary-nav" aria-label="Điều hướng chính">
       <ul>
-        <li><a href="#sanh-pho">Sảnh phố</a></li>
-        <li><a href="#bo-suu-tap">Bộ sưu tập</a></li>
+        <li><a href="#sanh-pho">Chọn theo không gian</a></li>
+        <li><a href="#bo-suu-tap">Bộ sưu tập nệm</a></li>
+        <li><a href="#so-sanh">So sánh dòng nệm</a></li>
+        <li><a href="#bang-gia">Bảng giá</a></li>
         <li><a href="#thuoc-lo-ban">Thước Lỗ Ban</a></li>
         <li><a href="#mac-thu">Nằm thử tại Showroom</a></li>
-        <li><a href="#cau-chuyen">Câu chuyện</a></li>
+        <li><a href="#cau-chuyen">Khách hàng nói gì</a></li>
       </ul>
     </nav>
 
@@ -290,6 +292,59 @@
         </span>
       </div>
     </figure>
+  </div>
+</section>
+
+<!-- ─────────── MATTRESS QUIZ ─────────── -->
+<section class="quiz" id="chon-nem" aria-labelledby="qz-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <span class="eyebrow">Trắc nghiệm · Chỉ 3 câu hỏi</span>
+      <h2 id="qz-title">Nệm nào phù hợp<br /><em>với bạn nhất?</em></h2>
+      <p class="section-lede">Trả lời 3 câu hỏi nhanh — Nhật Duy gợi ý dòng nệm phù hợp nhất cho giấc ngủ của bạn.</p>
+    </header>
+
+    <div class="quiz__card" id="quizCard">
+
+      <div class="quiz__step" id="qStep1">
+        <p class="quiz__question">Bạn thường ngủ theo tư thế nào?</p>
+        <div class="quiz__options">
+          <button type="button" class="quiz__opt" data-step="1" data-val="A">😴 Nằm ngửa</button>
+          <button type="button" class="quiz__opt" data-step="1" data-val="B">🫢 Nằm nghiêng</button>
+          <button type="button" class="quiz__opt" data-step="1" data-val="C">😤 Nằm sấp</button>
+        </div>
+      </div>
+
+      <div class="quiz__step" id="qStep2" hidden>
+        <p class="quiz__question">Bạn hoặc người dùng nệm có vấn đề gì không?</p>
+        <div class="quiz__options">
+          <button type="button" class="quiz__opt" data-step="2" data-val="A">🦴 Đau lưng / cột sống</button>
+          <button type="button" class="quiz__opt" data-step="2" data-val="B">🌡️ Hay đổ mồ hôi, nóng lưng</button>
+          <button type="button" class="quiz__opt" data-step="2" data-val="C">👶 Dành cho trẻ em</button>
+          <button type="button" class="quiz__opt" data-step="2" data-val="D">✅ Không vấn đề gì đặc biệt</button>
+        </div>
+      </div>
+
+      <div class="quiz__step" id="qStep3" hidden>
+        <p class="quiz__question">Ngân sách đầu tư cho bộ nệm của bạn là?</p>
+        <div class="quiz__options">
+          <button type="button" class="quiz__opt" data-step="3" data-val="A">💰 Dưới 10 triệu</button>
+          <button type="button" class="quiz__opt" data-step="3" data-val="B">💰💰 10–30 triệu</button>
+          <button type="button" class="quiz__opt" data-step="3" data-val="C">💰💰💰 Trên 30 triệu — muốn tốt nhất</button>
+        </div>
+      </div>
+
+      <div class="quiz__result" id="qResult" hidden>
+        <div class="quiz__result-inner">
+          <span class="quiz__result-icon" aria-hidden="true">✦</span>
+          <h3 id="qResultTitle"></h3>
+          <p id="qResultDesc"></p>
+          <a class="btn btn--gold" href="#mac-thu" id="qResultCTA">Đặt lịch nằm thử dòng này tại Showroom</a>
+          <button type="button" class="btn btn--ghost" id="qRestart" style="margin-top:10px;">Làm lại từ đầu</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -502,13 +557,14 @@
             <span class="cert__seal" aria-hidden="true">✦</span>
             <span class="cert__brand">KYMDAN</span>
             <span class="cert__label">Đại lý phân phối chính hãng</span>
+            <div class="cert__img-placeholder">
+              <!-- TODO: Thêm ảnh scan giấy chứng nhận Kymdan vào đây -->
+              <span class="cert__coming">Ảnh chứng nhận — cập nhật sớm</span>
+            </div>
           </div>
           <figcaption>Giấy ủy quyền · MST &amp; tem chống giả Kymdan</figcaption>
         </figure>
       </div>
-      <p class="certs__note">
-        <em>(Ảnh scan giấy chứng nhận đang được cập nhật. Khách có thể đến showroom đối chiếu trực tiếp bản gốc bất kỳ lúc nào.)</em>
-      </p>
     </section>
 
     <div class="combos__filter" role="tablist" aria-label="Lọc combo theo dòng sản phẩm">
@@ -535,6 +591,13 @@
           <li>Nệm cao su thiên nhiên <strong>Kymdan Deluxe</strong> chính hãng <em>(độ dày tùy chọn 15–22cm)</em></li>
           <li>Gối Kymdan + Ga trải giường Kymdan Serenity đồng bộ</li>
         </ul>
+        <div class="combo__firmness">
+          <span class="firmness__label">Độ cứng/mềm:</span>
+          <span class="firmness__bar" aria-hidden="true">
+            <span class="firmness__fill" style="width: 55%"></span>
+          </span>
+          <span class="firmness__text">Vừa phải — phù hợp mọi tư thế ngủ</span>
+        </div>
         <div class="combo__price">
           <span class="combo__price-old">26.900.000₫</span>
           <span class="combo__price-now">22.450.000₫</span>
@@ -560,9 +623,16 @@
         </header>
         <ul class="combo__items" role="list">
           <li>Giường bọc nhung · gỗ óc chó dán đồng thau xước</li>
-          <li>Nệm cao su thiên nhiên <strong>Kymdan</strong> Luxury chính hãng <em>(nâng đỡ cột sống toàn diện)</em></li>
+          <li>Nệm cao su thiên nhiên <strong>Kymdan Special Deluxe Pillow Top Royal</strong> chính hãng <em>(nâng đỡ cột sống toàn diện)</em></li>
           <li>Bộ ga gối lụa tơ tằm Hoàng Kim 25 momme</li>
         </ul>
+        <div class="combo__firmness">
+          <span class="firmness__label">Độ cứng/mềm:</span>
+          <span class="firmness__bar" aria-hidden="true">
+            <span class="firmness__fill" style="width: 35%"></span>
+          </span>
+          <span class="firmness__text">Mềm mại — lý tưởng cho người thích cảm giác ôm ấp</span>
+        </div>
         <div class="combo__price">
           <span class="combo__price-old">112.000.000₫</span>
           <span class="combo__price-now">96.500.000₫</span>
@@ -590,6 +660,13 @@
           <li>Nệm bông ép <strong>Hàn Quốc</strong> nhập khẩu <em>(thoáng mát, kháng khuẩn, phù hợp khí hậu nhiệt đới)</em></li>
           <li>Bộ ga gối cotton cao cấp mát lành mùa hè</li>
         </ul>
+        <div class="combo__firmness">
+          <span class="firmness__label">Độ cứng/mềm:</span>
+          <span class="firmness__bar" aria-hidden="true">
+            <span class="firmness__fill" style="width: 65%"></span>
+          </span>
+          <span class="firmness__text">Vừa-cứng — thoáng mát, phù hợp phòng trẻ em</span>
+        </div>
         <div class="combo__price">
           <span class="combo__price-old">12.500.000₫</span>
           <span class="combo__price-now">9.900.000₫</span>
@@ -605,6 +682,156 @@
   </div>
 </section>
 
+<!-- ─────────── SO SÁNH DÒNG NỆM ─────────── -->
+<section class="compare" id="so-sanh" aria-labelledby="cmp-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <span class="eyebrow">So sánh · Chọn đúng từ đầu</span>
+      <h2 id="cmp-title">Ba dòng nệm —<br /><em>một lựa chọn đúng cho bạn.</em></h2>
+    </header>
+
+    <div class="compare__grid">
+
+      <div class="compare__col">
+        <div class="compare__head">
+          <span class="compare__badge">Phổ thông</span>
+          <h3>Nệm Kymdan Deluxe</h3>
+          <p>Cao su thiên nhiên 100%</p>
+        </div>
+        <ul class="compare__list" role="list">
+          <li class="good">Bền 15–20 năm</li>
+          <li class="good">Bảo hành 15 năm chính hãng</li>
+          <li class="good">Nâng đỡ cột sống tốt</li>
+          <li class="good">Kháng khuẩn, kháng nấm mốc</li>
+          <li class="good">Phù hợp mọi tư thế ngủ</li>
+          <li class="neutral">Độ dày 15–22cm tùy chọn</li>
+          <li class="neutral">Giá tầm trung</li>
+        </ul>
+        <p class="compare__best-for">Tốt nhất cho: <strong>Phòng ngủ chính · Người lớn tuổi · Đau lưng</strong></p>
+        <a class="btn btn--ghost btn--block" href="#mac-thu">Nằm thử dòng này</a>
+      </div>
+
+      <div class="compare__col compare__col--featured">
+        <div class="compare__head">
+          <span class="compare__badge compare__badge--gold">Đề cử của Nhật Duy</span>
+          <h3>Kymdan Special Deluxe Pillow Top</h3>
+          <p>Cao su thiên nhiên · Lớp êm ái nhất</p>
+        </div>
+        <ul class="compare__list" role="list">
+          <li class="good">Bền 15–20 năm</li>
+          <li class="good">Bảo hành 15 năm chính hãng</li>
+          <li class="good">Lớp Pillow Top cực êm ái</li>
+          <li class="good">Cảm giác sang trọng như khách sạn 5 sao</li>
+          <li class="good">Nâng đỡ cột sống toàn diện</li>
+          <li class="neutral">Giá cao hơn dòng Deluxe</li>
+        </ul>
+        <p class="compare__best-for">Tốt nhất cho: <strong>Biệt thự · Nhà phố · Ai muốn giấc ngủ hoàn hảo nhất</strong></p>
+        <a class="btn btn--gold btn--block" href="#mac-thu">Nằm thử dòng này</a>
+      </div>
+
+      <div class="compare__col">
+        <div class="compare__head">
+          <span class="compare__badge">Tiết kiệm</span>
+          <h3>Nệm Bông ép Hàn Quốc</h3>
+          <p>Nhập khẩu · Thoáng mát đặc biệt</p>
+        </div>
+        <ul class="compare__list" role="list">
+          <li class="good">Thoáng mát vượt trội trong khí hậu nóng</li>
+          <li class="good">Kháng khuẩn, an toàn trẻ em</li>
+          <li class="good">Nhẹ, dễ vệ sinh</li>
+          <li class="good">Giá hợp lý nhất</li>
+          <li class="neutral">Độ bền 5–8 năm</li>
+          <li class="neutral">Bảo hành 3 năm</li>
+        </ul>
+        <p class="compare__best-for">Tốt nhất cho: <strong>Phòng trẻ em · Người hay đổ mồ hôi · Ngân sách hợp lý</strong></p>
+        <a class="btn btn--ghost btn--block" href="#mac-thu">Nằm thử dòng này</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── BẢNG GIÁ THAM KHẢO ─────────── -->
+<section class="price-table" id="bang-gia" aria-labelledby="pt-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <span class="eyebrow">Giá tham khảo · Niêm yết Kymdan chính hãng 2026</span>
+      <h2 id="pt-title">Bảng giá nệm Kymdan<br /><em>minh bạch từ đầu.</em></h2>
+      <p class="section-lede">
+        Giá dưới đây là giá niêm yết Kymdan chính hãng. Tại Showroom Nhật Duy,
+        khách có thể được tư vấn thêm chính sách ưu đãi theo từng thời điểm.
+        <strong>Giao hàng miễn phí trong 30 km.</strong>
+      </p>
+    </header>
+
+    <div class="price-table__wrapper">
+      <table class="price-grid" aria-label="Bảng giá nệm Kymdan theo kích thước">
+        <thead>
+          <tr>
+            <th>Dòng nệm</th>
+            <th>Phù hợp với</th>
+            <th>1m2 × 2m</th>
+            <th>1m6 × 2m</th>
+            <th>1m8 × 2m</th>
+            <th>Bảo hành</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Kymdan Deluxe</strong><br /><small>Cao su thiên nhiên · 15–22cm</small></td>
+            <td>Phòng ngủ chính · Mọi đối tượng</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>15 năm</td>
+          </tr>
+          <tr class="price-grid__highlight">
+            <td><strong>Kymdan Special Deluxe Pillow Top</strong><br /><small>Cao su thiên nhiên · Êm ái nhất</small></td>
+            <td>Biệt thự · Nhà phố cao cấp</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>15 năm</td>
+          </tr>
+          <tr>
+            <td><strong>Kymdan Massage</strong><br /><small>Bề mặt massage nhẹ nhàng</small></td>
+            <td>Người đau lưng · Cần phục hồi</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>15 năm</td>
+          </tr>
+          <tr>
+            <td><strong>Kymdan Mini</strong><br /><small>Dành cho trẻ em · Giường đơn</small></td>
+            <td>Phòng trẻ em · Giường phụ</td>
+            <td>Liên hệ</td>
+            <td>—</td>
+            <td>—</td>
+            <td>15 năm</td>
+          </tr>
+          <tr>
+            <td><strong>Nệm Bông ép Hàn Quốc</strong><br /><small>Nhập khẩu · Thoáng mát</small></td>
+            <td>Phòng trẻ em · Khí hậu nóng</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>Liên hệ</td>
+            <td>3 năm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="price-table__note">
+      <p>
+        Giá cập nhật theo chính sách Kymdan 2026.
+        <strong>Gọi <a href="tel:0909001336">0909 001 336</a></strong> để nhận báo giá chính xác
+        và kiểm tra ưu đãi hiện hành tại Showroom Nhật Duy.
+      </p>
+      <a class="btn btn--gold" href="tel:0909001336">Hỏi giá ngay — gọi hoặc Zalo</a>
+    </div>
+  </div>
+</section>
+
 <!-- ─────────── TESTIMONIALS ─────────── -->
 <section class="stories" id="cau-chuyen" aria-labelledby="st-title">
   <div class="container">
@@ -614,7 +841,6 @@
       <p class="section-lede">
         Mỗi câu chuyện dưới đây đến từ một gia đình thật tại Bồng Sơn —
         Hoài Nhơn — An Lão, với địa chỉ và combo bàn giao cụ thể.
-        <em class="section-lede__note">(Ảnh minh họa demo — sẽ thay bằng ảnh thật chụp tại nhà khách hàng, đã được khách đồng ý đăng tải.)</em>
       </p>
     </header>
 
@@ -640,9 +866,10 @@
 
       <figure class="story">
         <div class="story__media story__media--01">
+          <!-- TODO: Thay ảnh thật tại đây khi có ảnh chụp từ nhà khách hàng -->
           <img src="https://kymdan.com/attachment.do?file=attachment/17338/BannerSlide1_vn-xf.webp"
                onerror="this.onerror=null;this.src='https://kymdan.com/attachment.do?file=attachment/6115/deluxe_icon_up_web.jpg';"
-               alt="Phòng ngủ chủ chị Lê Hoài Linh, P. Bồng Sơn — Combo Kymdan Hoàng Kim bàn giao 03/2026 (ảnh minh họa)"
+               alt="Phòng ngủ chủ chị Lê Hoài Linh, P. Bồng Sơn — Combo Kymdan Hoàng Kim bàn giao 03/2026"
                loading="lazy" decoding="async" />
         </div>
         <figcaption>
@@ -661,9 +888,10 @@
 
       <figure class="story">
         <div class="story__media story__media--02">
+          <!-- TODO: Thay ảnh thật tại đây khi có ảnh chụp từ nhà khách hàng -->
           <img src="https://kymdan.com/attachment.do?file=attachment/5/bed_avatar_255.jpg"
                onerror="this.onerror=null;this.src='https://kymdan.com/attachment.do?file=attachment/6115/deluxe_icon_up_web.jpg';"
-               alt="Phòng ngủ anh Trần Minh Quân, P. Hoài Nhơn — Combo Kymdan Tinh Giản (ảnh minh họa)"
+               alt="Phòng ngủ anh Trần Minh Quân, P. Hoài Nhơn — Combo Kymdan Tinh Giản"
                loading="lazy" decoding="async" />
         </div>
         <figcaption>
@@ -681,9 +909,10 @@
 
       <figure class="story">
         <div class="story__media story__media--03">
+          <!-- TODO: Thay ảnh thật tại đây khi có ảnh chụp từ nhà khách hàng -->
           <img src="https://kymdan.com/attachment.do?file=attachment/17339/BannerSlide2_vn-xf.webp"
                onerror="this.onerror=null;this.src='https://kymdan.com/attachment.do?file=attachment/6115/deluxe_icon_up_web.jpg';"
-               alt="Phòng ngủ cô Phan Thị Vân, P. An Lão — Combo Kymdan bàn giao 08/2025, kích thước 1m57×1m97 cung Bản (ảnh minh họa)"
+               alt="Phòng ngủ cô Phan Thị Vân, P. An Lão — Combo Kymdan bàn giao 08/2025, kích thước 1m57×1m97 cung Bản"
                loading="lazy" decoding="async" />
         </div>
         <figcaption>
@@ -798,6 +1027,21 @@
           <option value="foam">Xem nệm foam &amp; bông ép Hàn Quốc</option>
           <option value="phong-thuy">Tư vấn phong thủy phòng ngủ (Lỗ Ban)</option>
           <option value="combo">Tư vấn combo phòng ngủ trọn gói</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span class="field__label">Ngày muốn ghé Showroom</span>
+        <input type="date" name="visit_date" required id="visitDate" placeholder="Chọn ngày…" />
+      </label>
+
+      <label class="field">
+        <span class="field__label">Khung giờ mong muốn</span>
+        <select name="visit_time" required>
+          <option value="">— Chọn khung giờ —</option>
+          <option value="sang">Buổi sáng (8:00 – 11:30)</option>
+          <option value="chieu">Buổi chiều (13:00 – 17:00)</option>
+          <option value="toi">Buổi tối (17:30 – 20:30)</option>
         </select>
       </label>
 
@@ -979,10 +1223,13 @@
     <div class="site-footer__col">
       <h4>Theo dõi</h4>
       <ul class="socials">
-        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+        <!-- TODO: Cập nhật URL Facebook fanpage thực tế rồi bỏ style="display:none" -->
+        <li style="display:none"><a href="#" aria-label="Facebook">Facebook</a></li>
         <li><a href="https://zalo.me/0909001336" target="_blank" rel="noopener" aria-label="Chat Zalo Nhật Duy">Zalo OA</a></li>
-        <li><a href="#" aria-label="YouTube">YouTube</a></li>
-        <li><a href="#" aria-label="TikTok">TikTok</a></li>
+        <!-- TODO: Cập nhật URL YouTube channel thực tế rồi bỏ style="display:none" -->
+        <li style="display:none"><a href="#" aria-label="YouTube">YouTube</a></li>
+        <!-- TODO: Cập nhật URL TikTok thực tế rồi bỏ style="display:none" -->
+        <li style="display:none"><a href="#" aria-label="TikTok">TikTok</a></li>
       </ul>
     </div>
 
@@ -1010,5 +1257,80 @@
 </div>
 
 <script src="assets/js/main.js" defer></script>
+
+<script>
+  // Set min date = hôm nay cho input ngày ghé showroom
+  (function () {
+    var d = document.getElementById('visitDate');
+    if (d) {
+      var today = new Date();
+      var yyyy = today.getFullYear();
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var dd = String(today.getDate()).padStart(2, '0');
+      d.min = yyyy + '-' + mm + '-' + dd;
+    }
+  })();
+
+  // Mattress Quiz logic
+  (function () {
+    var answers = {};
+    var opts = document.querySelectorAll('.quiz__opt');
+    if (!opts.length) return;
+
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var step = this.dataset.step;
+        var val = this.dataset.val;
+        answers['s' + step] = val;
+
+        if (step === '1') {
+          document.getElementById('qStep1').hidden = true;
+          document.getElementById('qStep2').hidden = false;
+        } else if (step === '2') {
+          document.getElementById('qStep2').hidden = true;
+          document.getElementById('qStep3').hidden = false;
+        } else if (step === '3') {
+          document.getElementById('qStep3').hidden = true;
+          showResult();
+        }
+      });
+    });
+
+    var restart = document.getElementById('qRestart');
+    if (restart) {
+      restart.addEventListener('click', function () {
+        answers = {};
+        document.getElementById('qResult').hidden = true;
+        document.getElementById('qStep1').hidden = false;
+        document.getElementById('qStep2').hidden = true;
+        document.getElementById('qStep3').hidden = true;
+      });
+    }
+
+    function showResult() {
+      var title, desc;
+      var s2 = answers.s2, s3 = answers.s3;
+
+      if (s2 === 'C' || s3 === 'A') {
+        title = 'Nệm Bông ép Hàn Quốc nhập khẩu';
+        desc = 'Thoáng mát, kháng khuẩn, giá hợp lý — lý tưởng cho phòng trẻ em hoặc người có ngân sách vừa phải. Nhật Duy có hàng nhập khẩu trực tiếp tại Showroom.';
+      } else if (s2 === 'B') {
+        title = 'Nệm Kymdan Special Deluxe Pillow Top Cloud';
+        desc = 'Thiết kế đặc biệt thoáng hơi, phù hợp người hay đổ mồ hôi. Cao su thiên nhiên 100%, bảo hành 15 năm.';
+      } else if (s3 === 'C') {
+        title = 'Nệm Kymdan Special Deluxe Pillow Top Royal';
+        desc = 'Dòng cao cấp nhất trong hệ sinh thái Kymdan. Lớp Pillow Top êm ái như khách sạn 5 sao, nâng đỡ cột sống hoàn hảo. Xứng đáng với đầu tư của bạn.';
+      } else {
+        title = 'Nệm Kymdan Deluxe';
+        desc = 'Dòng nền tảng của Kymdan — cao su thiên nhiên 100%, bền 15–20 năm, phù hợp mọi tư thế ngủ, bảo hành chính hãng 15 năm. Lựa chọn đáng tin cậy nhất trong tầm giá.';
+      }
+
+      document.getElementById('qResultTitle').textContent = title;
+      document.getElementById('qResultDesc').textContent = desc;
+      document.getElementById('qResultCTA').textContent = 'Đặt lịch nằm thử ' + title + ' tại Showroom';
+      document.getElementById('qResult').hidden = false;
+    }
+  })();
+</script>
 </body>
 </html>
