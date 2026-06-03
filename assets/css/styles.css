@@ -829,6 +829,26 @@ em { font-style: italic; color: var(--walnut-mid); }
   .hero__proof { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 560px) {
+  .hero { padding-top: clamp(36px, 8vw, 60px); }
+  .hero__lede { margin: 1.2rem 0 2rem; }
+  .hero__actions { gap: 12px; margin-bottom: 2.4rem; }
+  /* CTA full-width — bấm dễ, nổi bật trên mobile */
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  /* Khối chỉ số: 2 cột có đường kẻ phân cách tinh tế */
+  .hero__proof { gap: 20px 16px; }
+  .hero__proof li { padding-left: 14px; border-left: 2px solid rgba(201,169,110,.4); }
+  .hero__proof strong { font-size: 1.7rem; }
+  /* Thẻ "Đại lý Kymdan" căn trong khung, không tràn mép */
+  .hero__tag {
+    left: 12px; right: 12px;
+    bottom: 14px;
+    justify-content: center;
+  }
+  /* Con dấu nhỏ lại, nằm gọn trong khung */
+  .hero__seal { top: -14px; right: 6px; }
+}
+
 /* ─── 6. Trust marquee ───────────────────────────────────── */
 .trust-marquee {
   background: var(--navy);
