@@ -212,12 +212,12 @@
 
   /* ── Scroll reveal ────────────────────────────────────── */
   const reveals = document.querySelectorAll(
-    '.section-head, .space-card, .combo, .story, .local-trust article, .booking__form, .booking__copy, .loban__intro, .loban__panel, .hero__copy, .hero__stage'
+    '.section-head, .space-card, .combo, .story, .local-trust article, .booking__form, .booking__copy, .loban__intro, .loban__panel, .product-card, .compare__col, .quiz__card, .price-table__wrapper, .price-table__note'
   );
   reveals.forEach(el => el.classList.add('reveal'));
 
   /* stagger groups */
-  document.querySelectorAll('.space-filter__grid, .combos__grid, .stories__grid, .local-trust__grid')
+  document.querySelectorAll('.space-filter__grid, .combos__grid, .stories__grid, .local-trust__grid, .product-grid, .compare__grid')
     .forEach(g => g.classList.add('reveal-stagger'));
 
   const io = new IntersectionObserver((entries) => {

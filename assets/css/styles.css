@@ -100,6 +100,23 @@ em { font-style: italic; color: var(--walnut-mid); }
   font-weight: 600;
   margin-bottom: 1.1rem;
 }
+/* Eyebrow trong section header có đường kẻ vàng dẫn — đồng bộ với hero */
+.section-head .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-head .eyebrow::before {
+  content: ""; width: 38px; height: 1px;
+  background: linear-gradient(90deg, var(--gold-deep), transparent);
+}
+.section-head--center .eyebrow::before {
+  background: linear-gradient(90deg, transparent, var(--gold-deep));
+}
+.section-head--center .eyebrow::after {
+  content: ""; width: 38px; height: 1px;
+  background: linear-gradient(90deg, var(--gold-deep), transparent);
+}
 
 .section-head { max-width: 60ch; margin-bottom: clamp(36px, 5vw, 64px); }
 .section-head--center { margin-left: auto; margin-right: auto; text-align: center; }
@@ -1905,7 +1922,10 @@ em { font-style: italic; color: var(--walnut-mid); }
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1.01);
+  transition: transform .9s var(--ease-soft);
 }
+.product-card:hover .product-card__media img { transform: scale(1.07); }
 .product-card__body {
   padding: 18px 18px 20px;
   display: flex;
