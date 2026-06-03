@@ -1643,6 +1643,29 @@ em { font-style: italic; color: var(--walnut-mid); }
   line-height: 1.6;
 }
 
+/* Gợi ý cuộn ngang cho bảng giá trên mobile */
+.scroll-hint {
+  display: none;
+  text-align: center;
+  font-size: 12px;
+  color: #d4a84b;
+  margin: 0 0 10px;
+  letter-spacing: 0.3px;
+}
+.scroll-hint span { animation: scroll-hint-nudge 1.6s ease-in-out infinite; display: inline-block; }
+@keyframes scroll-hint-nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+@media (max-width: 760px) {
+  .scroll-hint { display: block; }
+  /* Fade nhẹ mép phải báo hiệu còn nội dung cuộn */
+  .price-table__wrapper.is-scrollable {
+    -webkit-mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+            mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+  }
+}
+
 /* ─── 21. Bảng so sánh 3 dòng nệm ──────────────────────── */
 .compare { padding: 80px 0; background: #0a0a14; }
 .compare__grid {

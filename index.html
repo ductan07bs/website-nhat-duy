@@ -1834,6 +1834,31 @@
 <script src="assets/js/main.js" defer></script>
 
 <script>
+  // Gợi ý cuộn ngang cho các bảng giá rộng (chỉ khi nội dung tràn khung)
+  (function () {
+    var wrappers = document.querySelectorAll('.price-table__wrapper');
+    wrappers.forEach(function (w) {
+      function check() {
+        var table = w.querySelector('table');
+        if (!table) return;
+        var overflow = table.scrollWidth > w.clientWidth + 4;
+        w.classList.toggle('is-scrollable', overflow);
+        var hint = w.previousElementSibling;
+        var hasHint = hint && hint.classList && hint.classList.contains('scroll-hint');
+        if (overflow && !hasHint) {
+          var el = document.createElement('p');
+          el.className = 'scroll-hint';
+          el.innerHTML = '<span aria-hidden="true">→</span> Vuốt ngang để xem thêm kích thước <span aria-hidden="true">→</span>';
+          w.parentNode.insertBefore(el, w);
+        } else if (!overflow && hasHint) {
+          hint.remove();
+        }
+      }
+      check();
+      window.addEventListener('resize', check);
+    });
+  })();
+
   // Set min date = hôm nay cho input ngày ghé showroom
   (function () {
     var d = document.getElementById('visitDate');
