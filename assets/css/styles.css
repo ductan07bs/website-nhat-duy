@@ -551,6 +551,7 @@ em { font-style: italic; color: var(--walnut-mid); }
 .primary-nav a:hover::after { width: 100%; }
 
 .header__cta { display: flex; align-items: center; gap: 18px; }
+.header__cta .btn { white-space: nowrap; flex-shrink: 0; }
 .hotline {
   display: grid;
   grid-template-columns: auto auto;
