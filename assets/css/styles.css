@@ -1600,6 +1600,29 @@ em { font-style: italic; color: var(--walnut-mid); }
   transition: transform 1.3s var(--ease-soft);
 }
 .story:hover .story__media img { transform: scale(1.04); }
+/* Avatar chữ cái đầu — dùng tạm khi chưa có ảnh bàn giao thật (xem TODO trong HTML) */
+.story__media--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 38%, var(--walnut-mid), var(--walnut) 70%);
+}
+.story__avatar {
+  width: clamp(96px, 26%, 132px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--gold-soft), var(--gold-deep));
+  color: var(--navy);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.25);
+  border: 2px solid var(--gold-soft);
+}
 
 .story figcaption { padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 18px; flex: 1; }
 .story blockquote {

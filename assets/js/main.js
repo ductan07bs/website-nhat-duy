@@ -202,11 +202,38 @@
         booking.reportValidity();
         return;
       }
-      /* In production: POST to /api/booking — relay to Zalo OA + SMS gateway */
-      ok.hidden = false;
-      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      booking.querySelector('button[type="submit"]').textContent = 'Đã gửi — Cảm ơn bạn';
-      booking.querySelector('button[type="submit"]').disabled = true;
+      const btn = booking.querySelector('button[type="submit"]');
+      const btnText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Đang gửi…';
+
+      const showSuccess = () => {
+        ok.hidden = false;
+        ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        btn.textContent = 'Đã gửi — Cảm ơn bạn';
+      };
+
+      /* Gửi lead thật qua FormSubmit AJAX → email về nemnhatduy@gmail.com.
+         Lần đầu cần xác nhận email kích hoạt từ FormSubmit (chỉ một lần). */
+      fetch('https://formsubmit.co/ajax/nemnhatduy@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(booking)
+      })
+      .then((r) => r.json())
+      .then(showSuccess)
+      .catch(() => {
+        /* Không để mất lead: hướng dẫn khách gửi nhanh qua Zalo */
+        btn.disabled = false;
+        btn.textContent = btnText;
+        const name = encodeURIComponent((booking.name && booking.name.value) || '');
+        const phone = encodeURIComponent((booking.phone && booking.phone.value) || '');
+        const msg = encodeURIComponent('Em muốn đặt lịch ghé Showroom Nhật Duy. Tên: ' +
+          decodeURIComponent(name) + ' — SĐT: ' + decodeURIComponent(phone));
+        if (confirm('Gửi qua mạng chưa được. Bấm OK để nhắn nhanh qua Zalo cho Nhật Duy nhé?')) {
+          window.open('https://zalo.me/0909001336?text=' + msg, '_blank', 'noopener');
+        }
+      });
     });
   }
 
