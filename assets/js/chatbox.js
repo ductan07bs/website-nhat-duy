@@ -16,8 +16,8 @@
   const ZALO_URL = 'https://zalo.me/0909001336';
   const STORE_KEY = 'nd_chat_v1';
   const MAX_INPUT = 500;
-  const GREETING = 'Chào anh/chị! Em là trợ lý của Nội Thất Nhật Duy. Anh/chị cần em tư vấn về nệm, giá hay phong thủy giường nệm ạ?';
-  const SUGGESTIONS = ['Giá nệm Kymdan 1m6', 'Nệm cho người đau lưng', 'Kích thước hợp phong thủy'];
+  const GREETING = 'Em là trợ lý của Nội Thất Nhật Duy. Anh/chị cần em tư vấn về nệm, giá hay phong thủy giường nệm ạ?';
+  const SUGGESTIONS = ['Giá nệm Kymdan 1m6', 'Nệm cho người đau lưng', 'Kích thước hợp phong thủy', 'Chính sách bảo hành & trả góp'];
 
   /* ── Trạng thái (giữ trong phiên) ────────────────────── */
   let state = { messages: [], open: false, leadShown: false, leadDone: false };
@@ -38,6 +38,12 @@
   };
 
   const ICON_CHAT = '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 5h16v11H10l-5 4v-4H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 9.5h7M8.5 12.5h4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  /* Monogram của thương hiệu (cùng nét với logo trên header) */
+  const ICON_MARK = '<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M14 32 V16 L24 28 V16 M30 32 V16 H34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>';
+  const ICON_PHONE = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  const ICON_ZALO = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6h16v10H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  const ICON_PEN = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  const ICON_ARROW = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
   const ICON_SEND = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12l16-7-6 16-3-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
 
   const launcher = el('button', 'ndchat-launcher');
@@ -45,7 +51,9 @@
   launcher.setAttribute('aria-label', 'Mở trợ lý Nhật Duy');
   launcher.setAttribute('aria-expanded', 'false');
   launcher.setAttribute('aria-controls', 'ndchatPanel');
-  launcher.innerHTML = ICON_CHAT + '<span class="ndchat-launcher__label">Hỏi trợ lý</span>';
+  launcher.innerHTML = '<span class="ndchat-launcher__ring" aria-hidden="true"></span>' + ICON_CHAT +
+    '<span class="ndchat-launcher__dot" aria-hidden="true"></span>' +
+    '<span class="ndchat-launcher__label"><b>Trợ lý Nhật Duy</b>Hỏi giá · tư vấn nệm</span>';
 
   const panel = el('section', 'ndchat');
   panel.id = 'ndchatPanel';
@@ -54,21 +62,23 @@
   panel.setAttribute('aria-label', 'Trợ lý Nhật Duy');
   panel.innerHTML =
     '<header class="ndchat__head">' +
-      '<div><strong class="ndchat__title">Trợ lý Nhật Duy</strong>' +
-      '<span class="ndchat__sub">Tư vấn nệm · giá · phong thủy</span></div>' +
+      '<span class="ndchat__mark">' + ICON_MARK + '</span>' +
+      '<div class="ndchat__head-copy"><strong class="ndchat__title">Trợ lý Nhật Duy</strong>' +
+      '<span class="ndchat__sub"><i aria-hidden="true"></i>Trả lời ngay · nệm, giá, phong thủy</span></div>' +
       '<button type="button" class="ndchat__close" aria-label="Đóng trợ lý">×</button>' +
     '</header>' +
     '<div class="ndchat__actions">' +
-      '<a class="ndchat__action ndchat__action--call" href="tel:' + PHONE_TEL + '">Gọi ' + PHONE_TEXT + '</a>' +
-      '<a class="ndchat__action ndchat__action--zalo" href="' + ZALO_URL + '" target="_blank" rel="noopener">Zalo</a>' +
-      '<button type="button" class="ndchat__action ndchat__action--lead">Để lại số</button>' +
+      '<a class="ndchat__action ndchat__action--call" aria-label="Gọi ' + PHONE_TEXT + '" href="tel:' + PHONE_TEL + '">' + ICON_PHONE + '<span>' + PHONE_TEXT + '</span></a>' +
+      '<a class="ndchat__action ndchat__action--zalo" href="' + ZALO_URL + '" target="_blank" rel="noopener">' + ICON_ZALO + '<span>Zalo</span></a>' +
+      '<button type="button" class="ndchat__action ndchat__action--lead">' + ICON_PEN + '<span>Để lại số</span></button>' +
     '</div>' +
     '<div class="ndchat__log" role="log" aria-live="polite" tabindex="0"></div>' +
     '<form class="ndchat__input" novalidate>' +
       '<label class="sr-only" for="ndchatText">Nhập câu hỏi</label>' +
       '<textarea id="ndchatText" rows="1" maxlength="' + MAX_INPUT + '" placeholder="Nhập câu hỏi của anh/chị…" enterkeyhint="send"></textarea>' +
       '<button type="submit" class="ndchat__send" aria-label="Gửi">' + ICON_SEND + '</button>' +
-    '</form>';
+    '</form>' +
+    '<p class="ndchat__foot">Trợ lý AI · giá mang tính tham khảo, chuyên viên xác nhận khi gọi lại</p>';
 
   document.body.append(launcher, panel);
 
@@ -79,9 +89,19 @@
 
   const scrollDown = () => { log.scrollTop = log.scrollHeight; };
 
+  /* Tin của trợ lý đi kèm monogram; trả về bong bóng (b.parentNode là cả hàng) */
   function addBubble(role, text) {
-    const b = el('div', 'ndchat__msg ndchat__msg--' + (role === 'user' ? 'user' : 'bot'), text);
-    log.appendChild(b);
+    const isUser = role === 'user';
+    const row = el('div', 'ndchat__row ndchat__row--' + (isUser ? 'user' : 'bot'));
+    if (!isUser) {
+      const av = el('span', 'ndchat__avatar');
+      av.setAttribute('aria-hidden', 'true');
+      av.innerHTML = ICON_MARK;
+      row.appendChild(av);
+    }
+    const b = el('div', 'ndchat__msg ndchat__msg--' + (isUser ? 'user' : 'bot'), text);
+    row.appendChild(b);
+    log.appendChild(row);
     scrollDown();
     return b;
   }
@@ -116,11 +136,12 @@
       leadForm = el('form', 'ndchat__lead');
       leadForm.noValidate = true;
       leadForm.innerHTML =
-        '<strong>Để lại số — chuyên viên gọi lại trong 30 phút</strong>' +
+        '<strong>Để lại số, chuyên viên gọi lại <em>trong 30 phút.</em></strong>' +
         '<label><span class="sr-only">Họ tên</span><input type="text" name="name" autocomplete="name" placeholder="Tên anh/chị" maxlength="80" /></label>' +
         '<label><span class="sr-only">Số điện thoại</span><input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="Số điện thoại" maxlength="20" /></label>' +
         '<p class="ndchat__lead-err" role="alert" hidden></p>' +
-        '<button type="submit" class="btn btn--gold btn--block">Gửi — Nhật Duy gọi lại</button>';
+        '<button type="submit" class="btn btn--gold btn--block">Gửi — Nhật Duy gọi lại</button>' +
+        '<small>Thông tin chỉ dùng để gọi tư vấn, không chia sẻ cho bên thứ ba.</small>';
       leadForm.addEventListener('submit', submitLead);
     }
     if (prefillPhone && !leadForm.elements.phone.value) leadForm.elements.phone.value = prefillPhone;
@@ -194,11 +215,11 @@
     save();
     addBubble('user', text);
 
-    const typing = el('div', 'ndchat__msg ndchat__msg--bot ndchat__typing');
-    typing.setAttribute('aria-label', 'Trợ lý đang trả lời');
-    typing.innerHTML = '<span></span><span></span><span></span>';
-    log.appendChild(typing);
-    scrollDown();
+    const typingBubble = addBubble('assistant', '');
+    typingBubble.classList.add('ndchat__typing');
+    typingBubble.setAttribute('aria-label', 'Trợ lý đang trả lời');
+    typingBubble.innerHTML = '<span></span><span></span><span></span>';
+    const typing = typingBubble.parentNode;
 
     /* Khách tự gõ số điện thoại vào ô chat → mở sẵn form với số đó */
     const typedPhone = (text.match(/(?:\+?84|0)(?:[\s.\-]?\d){9}/) || [''])[0];
@@ -254,13 +275,21 @@
   function render() {
     if (rendered) return;
     rendered = true;
-    addBubble('assistant', GREETING);
+    const welcome = el('div', 'ndchat__welcome');
+    welcome.innerHTML =
+      '<span class="ndchat__welcome-eyebrow">Đại lý Kymdan chính hãng · Bồng Sơn</span>' +
+      '<strong class="ndchat__welcome-title">Kính chào <em>anh/chị.</em></strong>';
+    welcome.appendChild(el('p', null, GREETING));
+    log.appendChild(welcome);
     state.messages.forEach(m => addBubble(m.role, m.content));
     if (!state.messages.length) {
       const chips = el('div', 'ndchat__chips');
+      chips.appendChild(el('span', 'ndchat__chips-label', 'Anh/chị có thể hỏi'));
       SUGGESTIONS.forEach(s => {
-        const c = el('button', 'ndchat__chip', s);
+        const c = el('button', 'ndchat__chip');
         c.type = 'button';
+        c.appendChild(el('span', null, s));
+        c.insertAdjacentHTML('beforeend', ICON_ARROW);
         c.addEventListener('click', () => ask(s));
         chips.appendChild(c);
       });

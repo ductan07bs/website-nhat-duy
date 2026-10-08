@@ -1,6 +1,7 @@
 /* =========================================================
    NỘI THẤT NHẬT DUY — Chatbox "Trợ lý Nhật Duy"
-   Dùng chung biến màu / font của styles.css (--navy, --gold, --bone…)
+   Tinh thần: quầy tư vấn của showroom — navy trầm, viền vàng mảnh,
+   chữ Cormorant cho lời chào. Dùng chung biến của styles.css.
    ========================================================= */
 
 /* ─── Nút bong bóng ─────────────────────────────────────────
@@ -15,25 +16,60 @@
   display: grid; place-items: center;
   border-radius: 50%;
   border: 1px solid var(--gold);
-  background: var(--navy);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(201,169,110,.28), transparent 60%),
+    var(--navy);
   color: var(--gold);
   cursor: pointer;
-  box-shadow: 0 14px 30px -12px rgba(26,26,46,.75);
-  transition: transform .35s var(--ease-soft), background .25s ease, color .25s ease;
+  box-shadow: 0 16px 34px -14px rgba(17,17,31,.85), inset 0 0 0 4px rgba(201,169,110,.08);
+  transition: transform .35s var(--ease-soft), box-shadow .35s var(--ease-soft);
 }
-.ndchat-launcher:hover { transform: translateY(-2px); background: var(--gold); color: var(--navy); }
-.ndchat-launcher:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-.ndchat-launcher__label {
-  position: absolute; right: calc(100% + 10px); top: 50%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: var(--navy);
-  color: var(--sand);
-  font-size: .8rem; font-weight: 600;
-  box-shadow: 0 10px 24px -14px rgba(26,26,46,.8);
+.ndchat-launcher:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -14px rgba(17,17,31,.9), inset 0 0 0 4px rgba(201,169,110,.16); }
+.ndchat-launcher:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.ndchat-launcher svg { position: relative; }
+
+/* Vòng vàng lan nhẹ — gợi ý "có người đang trực" */
+.ndchat-launcher__ring {
+  position: absolute; inset: -1px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  animation: ndchat-ring 3.2s var(--ease-soft) infinite;
   pointer-events: none;
+}
+@keyframes ndchat-ring {
+  0% { transform: scale(1); opacity: .7; }
+  70%, 100% { transform: scale(1.55); opacity: 0; }
+}
+.ndchat-launcher__dot {
+  position: absolute; top: 5px; right: 5px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--navy);
+}
+.ndchat-launcher__label {
+  position: absolute; right: calc(100% + 12px); top: 50%;
+  transform: translateY(-50%);
+  display: grid; gap: 1px;
+  white-space: nowrap;
+  padding: 9px 16px 10px;
+  border-radius: 14px 14px 4px 14px;
+  background: var(--bone);
+  border: 1px solid rgba(201,169,110,.55);
+  color: var(--stone);
+  font-size: .76rem; line-height: 1.3; text-align: left;
+  box-shadow: 0 16px 30px -18px rgba(26,26,46,.7);
+  pointer-events: none;
+  animation: ndchat-label .6s var(--ease-soft) 1.2s both;
+}
+.ndchat-launcher__label b {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--navy);
+}
+@keyframes ndchat-label {
+  from { opacity: 0; transform: translateY(-50%) translateX(8px); }
+  to { opacity: 1; transform: translateY(-50%) translateX(0); }
 }
 .back-to-top { bottom: 164px; }
 .ndchat-open .ndchat-launcher { display: none; }
@@ -43,173 +79,296 @@
   position: fixed;
   right: 20px; bottom: 24px;
   z-index: 130;
-  width: 380px; max-width: calc(100vw - 40px);
-  height: min(600px, calc(100vh - 48px));
+  width: 392px; max-width: calc(100vw - 40px);
+  height: min(640px, calc(100vh - 48px));
   display: flex; flex-direction: column;
   background: var(--bone);
   color: var(--ink);
-  border: 1px solid rgba(201,169,110,.5);
-  border-radius: var(--radius-md);
-  box-shadow: 0 40px 80px -30px rgba(26,26,46,.75);
+  border: 1px solid rgba(201,169,110,.6);
+  border-radius: 20px;
+  box-shadow: 0 50px 90px -34px rgba(17,17,31,.8), 0 0 0 6px rgba(201,169,110,.07);
   overflow: hidden;
   font-size: .95rem;
+  transform-origin: 100% 100%;
+  animation: ndchat-in .42s var(--ease-soft) both;
 }
 .ndchat[hidden] { display: none; }
+@keyframes ndchat-in {
+  from { opacity: 0; transform: translateY(18px) scale(.97); }
+  to { opacity: 1; transform: none; }
+}
 
+/* Đầu khung: navy + quầng vàng như các section tối của trang */
 .ndchat__head {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: 14px 16px;
-  background: var(--navy);
+  position: relative;
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 14px 16px 18px;
+  background:
+    radial-gradient(circle at 92% -20%, rgba(201,169,110,.34), transparent 55%),
+    radial-gradient(circle at 0% 120%, rgba(232,213,183,.10), transparent 50%),
+    var(--navy);
   color: var(--sand);
 }
+.ndchat__head::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  opacity: .7;
+}
+.ndchat__mark { flex: 0 0 42px; height: 42px; color: var(--gold); }
+.ndchat__mark svg { display: block; width: 100%; height: 100%; }
+.ndchat__head-copy { flex: 1 1 auto; min-width: 0; }
 .ndchat__title {
   display: block;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.35rem; font-weight: 600; line-height: 1.1;
-  color: var(--gold);
+  font-size: 1.45rem; font-weight: 600; line-height: 1.1; letter-spacing: .01em;
+  color: var(--bone);
 }
-.ndchat__sub { font-size: .74rem; letter-spacing: .04em; opacity: .8; }
+.ndchat__sub {
+  display: flex; align-items: center; gap: 7px;
+  margin-top: 3px;
+  font-size: .72rem; letter-spacing: .03em;
+  color: rgba(232,213,183,.78);
+}
+.ndchat__sub i {
+  flex: 0 0 7px; height: 7px; border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,169,110,.22);
+}
 .ndchat__close {
-  width: 40px; height: 40px;
-  border: 0; border-radius: 50%;
-  background: rgba(232,213,183,.1);
+  flex: 0 0 40px; height: 40px;
+  border: 1px solid rgba(232,213,183,.22); border-radius: 50%;
+  background: transparent;
   color: var(--sand);
-  font-size: 1.5rem; line-height: 1;
+  font-size: 1.4rem; line-height: 1;
   cursor: pointer;
+  transition: background .25s ease, color .25s ease, transform .35s var(--ease-soft);
 }
-.ndchat__close:hover { background: var(--gold); color: var(--navy); }
+.ndchat__close:hover { background: var(--gold); color: var(--navy); transform: rotate(90deg); }
 .ndchat__close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
 /* Gọi / Zalo / Để lại số — luôn hiển thị */
 .ndchat__actions {
   display: flex; gap: 8px;
   padding: 10px 12px;
-  background: var(--bone-warm);
-  border-bottom: 1px solid rgba(26,26,46,.08);
+  background: var(--navy);
 }
 .ndchat__action {
-  flex: 1 1 auto;
-  display: inline-flex; align-items: center; justify-content: center;
-  min-height: 40px;
+  flex: 1 1 0;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  min-height: 42px;
   padding: 8px 10px;
   border-radius: 999px;
-  border: 1px solid var(--navy);
-  background: transparent;
-  color: var(--navy);
-  font: inherit; font-size: .82rem; font-weight: 700;
+  border: 1px solid rgba(232,213,183,.3);
+  background: rgba(232,213,183,.06);
+  color: var(--sand);
+  font: inherit; font-size: .8rem; font-weight: 700; letter-spacing: .01em;
   white-space: nowrap;
+  text-decoration: none;
   cursor: pointer;
+  transition: background .25s ease, border-color .25s ease, color .25s ease;
 }
-.ndchat__action--call { background: var(--navy); color: var(--sand); }
+.ndchat__action:hover { background: rgba(232,213,183,.16); border-color: var(--sand); }
+.ndchat__action--call { flex-grow: 1.5; }
 .ndchat__action--zalo { background: #0068d6; border-color: #0068d6; color: #fff; }
-.ndchat__action--lead { background: var(--gold); border-color: var(--gold); }
+.ndchat__action--zalo:hover { background: #0a84ff; border-color: #0a84ff; }
+.ndchat__action--lead { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+.ndchat__action--lead:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
 .ndchat__action[hidden] { display: none; }
-.ndchat__action:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+.ndchat__action:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
+/* ─── Vùng tin nhắn ───────────────────────────────────────── */
 .ndchat__log {
   flex: 1 1 auto;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 14px 12px;
-  display: flex; flex-direction: column; gap: 10px;
+  padding: 18px 14px 16px;
+  display: flex; flex-direction: column; gap: 12px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201,169,110,.13), transparent 42%),
+    var(--bone);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201,169,110,.6) transparent;
 }
+.ndchat__log:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+
+/* Lời chào kiểu thiệp mời */
+.ndchat__welcome {
+  padding: 4px 4px 14px;
+  border-bottom: 1px solid rgba(201,169,110,.4);
+}
+.ndchat__welcome-eyebrow {
+  display: block;
+  font-size: .66rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.ndchat__welcome-title {
+  display: block;
+  margin: 6px 0 6px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem; font-weight: 500; line-height: 1.05;
+  color: var(--navy);
+}
+.ndchat__welcome-title em { font-weight: 300; color: var(--gold-deep); }
+.ndchat__welcome p { margin: 0; color: var(--stone); line-height: 1.55; }
+
+.ndchat__row { display: flex; align-items: flex-end; gap: 8px; animation: ndchat-msg .4s var(--ease-soft) both; }
+.ndchat__row--user { justify-content: flex-end; }
+@keyframes ndchat-msg {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.ndchat__avatar {
+  flex: 0 0 28px; height: 28px;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold);
+}
+.ndchat__avatar svg { display: block; width: 100%; height: 100%; }
 .ndchat__msg {
-  max-width: 86%;
-  padding: 10px 14px;
-  border-radius: 16px;
-  line-height: 1.5;
+  max-width: 82%;
+  padding: 11px 15px;
+  border-radius: 18px;
+  line-height: 1.55;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 .ndchat__msg--bot {
-  align-self: flex-start;
   background: #fff;
-  border: 1px solid rgba(26,26,46,.08);
-  border-bottom-left-radius: 4px;
+  border: 1px solid rgba(26,26,46,.07);
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 10px 22px -18px rgba(26,26,46,.55);
 }
 .ndchat__msg--user {
-  align-self: flex-end;
   background: var(--navy);
   color: var(--sand);
-  border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 12px 22px -16px rgba(26,26,46,.8);
 }
-.ndchat__msg a { color: var(--gold-deep); font-weight: 700; text-decoration: underline; }
+.ndchat__msg a { color: var(--gold-deep); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
-.ndchat__typing { display: inline-flex; gap: 5px; padding: 14px 16px; }
+.ndchat__typing { display: inline-flex; align-items: center; gap: 5px; padding: 15px 16px; }
 .ndchat__typing span {
   width: 7px; height: 7px; border-radius: 50%;
-  background: var(--stone-soft);
-  animation: ndchat-dot 1.1s ease-in-out infinite;
+  background: var(--gold);
+  animation: ndchat-dot 1.2s ease-in-out infinite;
 }
-.ndchat__typing span:nth-child(2) { animation-delay: .15s; }
-.ndchat__typing span:nth-child(3) { animation-delay: .3s; }
+.ndchat__typing span:nth-child(2) { animation-delay: .16s; }
+.ndchat__typing span:nth-child(3) { animation-delay: .32s; }
 @keyframes ndchat-dot {
-  0%, 60%, 100% { transform: translateY(0); opacity: .5; }
+  0%, 60%, 100% { transform: translateY(0); opacity: .35; }
   30% { transform: translateY(-5px); opacity: 1; }
 }
 
-.ndchat__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Gợi ý câu hỏi — dạng danh mục có mũi tên */
+.ndchat__chips { display: flex; flex-direction: column; margin-top: 2px; }
+.ndchat__chips-label {
+  padding: 0 4px 6px;
+  font-size: .66rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--stone-soft);
+}
 .ndchat__chip {
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(201,169,110,.7);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 46px;
+  padding: 10px 4px;
+  border: 0; border-bottom: 1px solid rgba(26,26,46,.09);
   background: transparent;
   color: var(--navy);
-  font: inherit; font-size: .85rem; font-weight: 600;
+  font: inherit; font-size: .94rem; font-weight: 600; text-align: left;
   cursor: pointer;
+  transition: padding .3s var(--ease-soft), color .25s ease;
+  animation: ndchat-msg .45s var(--ease-soft) both;
 }
-.ndchat__chip:hover { background: var(--gold); }
+.ndchat__chip:nth-of-type(1) { animation-delay: .08s; }
+.ndchat__chip:nth-of-type(2) { animation-delay: .14s; }
+.ndchat__chip:nth-of-type(3) { animation-delay: .20s; }
+.ndchat__chip:nth-of-type(4) { animation-delay: .26s; }
+.ndchat__chip svg { flex: 0 0 16px; color: var(--gold-deep); transition: transform .3s var(--ease-soft); }
+.ndchat__chip:hover { padding-left: 10px; color: var(--gold-deep); }
+.ndchat__chip:hover svg { transform: translateX(4px); }
+.ndchat__chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-/* Form Tên + SĐT trong khung chat */
+/* ─── Form Tên + SĐT trong khung chat ─────────────────────── */
 .ndchat__lead {
-  display: flex; flex-direction: column; gap: 8px;
-  padding: 14px;
-  border-radius: var(--radius-md);
-  background: var(--sand-soft);
+  position: relative;
+  display: flex; flex-direction: column; gap: 9px;
+  margin-top: 2px;
+  padding: 18px 16px 14px;
+  border-radius: 16px;
+  background: #fff;
   border: 1px solid rgba(201,169,110,.6);
+  box-shadow: 0 22px 40px -26px rgba(26,26,46,.6);
+  overflow: hidden;
+  animation: ndchat-msg .45s var(--ease-soft) both;
 }
-.ndchat__lead strong { font-size: .92rem; color: var(--navy); }
+.ndchat__lead::before {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-soft), var(--gold-deep));
+}
+.ndchat__lead strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.32rem; font-weight: 600; line-height: 1.15;
+  color: var(--navy);
+}
+.ndchat__lead strong em { color: var(--gold-deep); }
+.ndchat__lead label { display: block; }
 .ndchat__lead input {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: var(--radius-sm);
+  padding: 13px 14px;
+  border-radius: 10px;
   border: 1px solid rgba(26,26,46,.16);
-  background: #fff;
+  background: var(--bone);
   font: inherit; font-size: 16px; /* 16px: iPhone không tự phóng to khi gõ */
   color: var(--ink);
+  transition: border-color .25s ease, box-shadow .25s ease, background .25s ease;
 }
-.ndchat__lead input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(201,169,110,.18); }
+.ndchat__lead input:focus { outline: none; background: #fff; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(201,169,110,.18); }
 .ndchat__lead-err { margin: 0; font-size: .84rem; font-weight: 600; color: #9B2C2C; }
-.ndchat__lead .btn { padding: 12px 18px; }
+.ndchat__lead .btn { padding: 13px 18px; }
+.ndchat__lead small { font-size: .72rem; color: var(--stone-soft); text-align: center; }
 
+/* ─── Ô nhập ──────────────────────────────────────────────── */
 .ndchat__input {
   display: flex; align-items: flex-end; gap: 8px;
-  padding: 10px 12px;
-  border-top: 1px solid rgba(26,26,46,.08);
+  padding: 10px 12px 6px;
+  border-top: 1px solid rgba(201,169,110,.35);
   background: #fff;
 }
 .ndchat__input textarea {
   flex: 1 1 auto;
-  min-height: 44px; max-height: 96px;
-  padding: 11px 14px;
-  border-radius: 22px;
-  border: 1px solid rgba(26,26,46,.16);
+  min-height: 46px; max-height: 96px;
+  padding: 12px 16px;
+  border-radius: 23px;
+  border: 1px solid rgba(26,26,46,.14);
   background: var(--bone);
   font: inherit; font-size: 16px;
   color: var(--ink);
   resize: none;
+  transition: border-color .25s ease, box-shadow .25s ease;
 }
+.ndchat__input textarea::placeholder { color: var(--stone-soft); }
 .ndchat__input textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(201,169,110,.18); }
 .ndchat__send {
-  flex: 0 0 44px; height: 44px;
+  flex: 0 0 46px; height: 46px;
   display: grid; place-items: center;
   border: 0; border-radius: 50%;
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--navy);
+  color: var(--gold);
   cursor: pointer;
+  transition: background .25s ease, color .25s ease, transform .3s var(--ease-soft);
 }
-.ndchat__send:disabled { opacity: .5; cursor: default; }
-.ndchat__send:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+.ndchat__send:hover:not(:disabled) { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+.ndchat__send:disabled { opacity: .45; cursor: default; }
+.ndchat__send:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.ndchat__foot {
+  margin: 0;
+  padding: 0 14px 9px;
+  background: #fff;
+  font-size: .66rem; letter-spacing: .02em; text-align: center;
+  color: var(--stone-soft);
+}
 
 /* ─── Mobile ──────────────────────────────────────────────── */
 @media (max-width: 720px) {
@@ -223,7 +382,12 @@
     width: auto; max-width: none;
     height: 100vh; height: 100dvh;
     border: 0; border-radius: 0;
+    box-shadow: none;
+    transform-origin: 50% 100%;
   }
+  .ndchat__head { padding-top: max(16px, env(safe-area-inset-top)); }
+  .ndchat__foot { padding-bottom: max(9px, env(safe-area-inset-bottom)); }
+  .ndchat__action { font-size: .78rem; padding: 8px 6px; gap: 6px; }
   .ndchat-open .sticky-cta,
   .ndchat-open .zalo-float,
   .ndchat-open .back-to-top { display: none; }
@@ -231,6 +395,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ndchat__typing span { animation: none; }
-  .ndchat-launcher { transition: none; }
+  .ndchat, .ndchat__row, .ndchat__chip, .ndchat__lead, .ndchat-launcher__label { animation: none; }
+  .ndchat-launcher__ring, .ndchat__typing span { animation: none; }
+  .ndchat-launcher__ring { opacity: 0; }
+  .ndchat-launcher, .ndchat__close, .ndchat__send, .ndchat__chip, .ndchat__chip svg { transition: none; }
 }
