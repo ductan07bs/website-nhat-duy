@@ -1,0 +1,236 @@
+/* =========================================================
+   NỘI THẤT NHẬT DUY — Chatbox "Trợ lý Nhật Duy"
+   Dùng chung biến màu / font của styles.css (--navy, --gold, --bone…)
+   ========================================================= */
+
+/* ─── Nút bong bóng ─────────────────────────────────────────
+   Xếp chồng dọc góc phải-dưới, không đè nhau:
+   desktop:  Zalo (24px) → Trợ lý (94px) → Lên đầu trang (164px)
+   mobile:   thanh CTA (12px) → Zalo (84px) → Trợ lý (146px) → Lên đầu trang (208px) */
+.ndchat-launcher {
+  position: fixed;
+  right: 20px; bottom: 94px;
+  z-index: 61;
+  width: 58px; height: 58px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: var(--navy);
+  color: var(--gold);
+  cursor: pointer;
+  box-shadow: 0 14px 30px -12px rgba(26,26,46,.75);
+  transition: transform .35s var(--ease-soft), background .25s ease, color .25s ease;
+}
+.ndchat-launcher:hover { transform: translateY(-2px); background: var(--gold); color: var(--navy); }
+.ndchat-launcher:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.ndchat-launcher__label {
+  position: absolute; right: calc(100% + 10px); top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--sand);
+  font-size: .8rem; font-weight: 600;
+  box-shadow: 0 10px 24px -14px rgba(26,26,46,.8);
+  pointer-events: none;
+}
+.back-to-top { bottom: 164px; }
+.ndchat-open .ndchat-launcher { display: none; }
+
+/* ─── Cửa sổ chat ─────────────────────────────────────────── */
+.ndchat {
+  position: fixed;
+  right: 20px; bottom: 24px;
+  z-index: 130;
+  width: 380px; max-width: calc(100vw - 40px);
+  height: min(600px, calc(100vh - 48px));
+  display: flex; flex-direction: column;
+  background: var(--bone);
+  color: var(--ink);
+  border: 1px solid rgba(201,169,110,.5);
+  border-radius: var(--radius-md);
+  box-shadow: 0 40px 80px -30px rgba(26,26,46,.75);
+  overflow: hidden;
+  font-size: .95rem;
+}
+.ndchat[hidden] { display: none; }
+
+.ndchat__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 16px;
+  background: var(--navy);
+  color: var(--sand);
+}
+.ndchat__title {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem; font-weight: 600; line-height: 1.1;
+  color: var(--gold);
+}
+.ndchat__sub { font-size: .74rem; letter-spacing: .04em; opacity: .8; }
+.ndchat__close {
+  width: 40px; height: 40px;
+  border: 0; border-radius: 50%;
+  background: rgba(232,213,183,.1);
+  color: var(--sand);
+  font-size: 1.5rem; line-height: 1;
+  cursor: pointer;
+}
+.ndchat__close:hover { background: var(--gold); color: var(--navy); }
+.ndchat__close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* Gọi / Zalo / Để lại số — luôn hiển thị */
+.ndchat__actions {
+  display: flex; gap: 8px;
+  padding: 10px 12px;
+  background: var(--bone-warm);
+  border-bottom: 1px solid rgba(26,26,46,.08);
+}
+.ndchat__action {
+  flex: 1 1 auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 40px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--navy);
+  background: transparent;
+  color: var(--navy);
+  font: inherit; font-size: .82rem; font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.ndchat__action--call { background: var(--navy); color: var(--sand); }
+.ndchat__action--zalo { background: #0068d6; border-color: #0068d6; color: #fff; }
+.ndchat__action--lead { background: var(--gold); border-color: var(--gold); }
+.ndchat__action[hidden] { display: none; }
+.ndchat__action:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+.ndchat__log {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 14px 12px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.ndchat__msg {
+  max-width: 86%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.ndchat__msg--bot {
+  align-self: flex-start;
+  background: #fff;
+  border: 1px solid rgba(26,26,46,.08);
+  border-bottom-left-radius: 4px;
+}
+.ndchat__msg--user {
+  align-self: flex-end;
+  background: var(--navy);
+  color: var(--sand);
+  border-bottom-right-radius: 4px;
+}
+.ndchat__msg a { color: var(--gold-deep); font-weight: 700; text-decoration: underline; }
+
+.ndchat__typing { display: inline-flex; gap: 5px; padding: 14px 16px; }
+.ndchat__typing span {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--stone-soft);
+  animation: ndchat-dot 1.1s ease-in-out infinite;
+}
+.ndchat__typing span:nth-child(2) { animation-delay: .15s; }
+.ndchat__typing span:nth-child(3) { animation-delay: .3s; }
+@keyframes ndchat-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: .5; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+
+.ndchat__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ndchat__chip {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,169,110,.7);
+  background: transparent;
+  color: var(--navy);
+  font: inherit; font-size: .85rem; font-weight: 600;
+  cursor: pointer;
+}
+.ndchat__chip:hover { background: var(--gold); }
+
+/* Form Tên + SĐT trong khung chat */
+.ndchat__lead {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--sand-soft);
+  border: 1px solid rgba(201,169,110,.6);
+}
+.ndchat__lead strong { font-size: .92rem; color: var(--navy); }
+.ndchat__lead input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(26,26,46,.16);
+  background: #fff;
+  font: inherit; font-size: 16px; /* 16px: iPhone không tự phóng to khi gõ */
+  color: var(--ink);
+}
+.ndchat__lead input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(201,169,110,.18); }
+.ndchat__lead-err { margin: 0; font-size: .84rem; font-weight: 600; color: #9B2C2C; }
+.ndchat__lead .btn { padding: 12px 18px; }
+
+.ndchat__input {
+  display: flex; align-items: flex-end; gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(26,26,46,.08);
+  background: #fff;
+}
+.ndchat__input textarea {
+  flex: 1 1 auto;
+  min-height: 44px; max-height: 96px;
+  padding: 11px 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(26,26,46,.16);
+  background: var(--bone);
+  font: inherit; font-size: 16px;
+  color: var(--ink);
+  resize: none;
+}
+.ndchat__input textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(201,169,110,.18); }
+.ndchat__send {
+  flex: 0 0 44px; height: 44px;
+  display: grid; place-items: center;
+  border: 0; border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  cursor: pointer;
+}
+.ndchat__send:disabled { opacity: .5; cursor: default; }
+.ndchat__send:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+/* ─── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .ndchat-launcher { right: 16px; bottom: 146px; width: 52px; height: 52px; }
+  .ndchat-launcher__label { display: none; }
+  .back-to-top { bottom: 208px; }
+
+  /* Mở chat = phủ kín màn hình; ẩn các nút nổi phía dưới để không che nhau */
+  .ndchat {
+    inset: 0;
+    width: auto; max-width: none;
+    height: 100vh; height: 100dvh;
+    border: 0; border-radius: 0;
+  }
+  .ndchat-open .sticky-cta,
+  .ndchat-open .zalo-float,
+  .ndchat-open .back-to-top { display: none; }
+  .ndchat-open body { overflow: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ndchat__typing span { animation: none; }
+  .ndchat-launcher { transition: none; }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "website-nhat-duy",
+  "private": true,
+  "description": "Landing page Nội Thất Nhật Duy + chatbox AI (Vercel Serverless Functions trong /api)",
+  "scripts": {
+    "knowledge": "node scripts/build-knowledge.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.1"
+  }
+}

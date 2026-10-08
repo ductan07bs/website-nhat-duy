@@ -1,0 +1,7 @@
+# Khóa bí mật — KHÔNG BAO GIỜ commit
+.env
+.env.*
+!.env.example
+
+node_modules/
+.vercel/
