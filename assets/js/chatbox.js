@@ -37,9 +37,9 @@
     return n;
   };
 
-  const ICON_CHAT = '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 5h16v11H10l-5 4v-4H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 9.5h7M8.5 12.5h4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
-  /* Monogram của thương hiệu (cùng nét với logo trên header) */
-  const ICON_MARK = '<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M14 32 V16 L24 28 V16 M30 32 V16 H34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>';
+  const ICON_CHAT = '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 5h16v11H10l-5 4v-4H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 9.5h7M8.5 12.5h4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  /* Avatar của trợ lý: trăng khuyết + sao ✦ trên nền đêm (assets/img/chat-avatar.svg) */
+  const AVATAR = '<img src="assets/img/chat-avatar.svg" alt="" width="64" height="64" decoding="async" />';
   const ICON_PHONE = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
   const ICON_ZALO = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6h16v10H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
   const ICON_PEN = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
@@ -51,8 +51,8 @@
   launcher.setAttribute('aria-label', 'Mở trợ lý Nhật Duy');
   launcher.setAttribute('aria-expanded', 'false');
   launcher.setAttribute('aria-controls', 'ndchatPanel');
-  launcher.innerHTML = '<span class="ndchat-launcher__ring" aria-hidden="true"></span>' + ICON_CHAT +
-    '<span class="ndchat-launcher__dot" aria-hidden="true"></span>' +
+  launcher.innerHTML = '<span class="ndchat-launcher__ring" aria-hidden="true"></span>' + AVATAR +
+    '<span class="ndchat-launcher__badge" aria-hidden="true">' + ICON_CHAT + '</span>' +
     '<span class="ndchat-launcher__label"><b>Trợ lý Nhật Duy</b>Hỏi giá · tư vấn nệm</span>';
 
   const panel = el('section', 'ndchat');
@@ -62,7 +62,7 @@
   panel.setAttribute('aria-label', 'Trợ lý Nhật Duy');
   panel.innerHTML =
     '<header class="ndchat__head">' +
-      '<span class="ndchat__mark">' + ICON_MARK + '</span>' +
+      '<span class="ndchat__mark">' + AVATAR + '</span>' +
       '<div class="ndchat__head-copy"><strong class="ndchat__title">Trợ lý Nhật Duy</strong>' +
       '<span class="ndchat__sub"><i aria-hidden="true"></i>Trả lời ngay · nệm, giá, phong thủy</span></div>' +
       '<button type="button" class="ndchat__close" aria-label="Đóng trợ lý">×</button>' +
@@ -96,7 +96,7 @@
     if (!isUser) {
       const av = el('span', 'ndchat__avatar');
       av.setAttribute('aria-hidden', 'true');
-      av.innerHTML = ICON_MARK;
+      av.innerHTML = AVATAR;
       row.appendChild(av);
     }
     const b = el('div', 'ndchat__msg ndchat__msg--' + (isUser ? 'user' : 'bot'), text);

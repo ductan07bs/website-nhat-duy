@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Trợ lý Nhật Duy">
+  <defs>
+    <radialGradient id="bg" cx="34%" cy="26%" r="85%">
+      <stop offset="0" stop-color="#34345A"/>
+      <stop offset=".55" stop-color="#1A1A2E"/>
+      <stop offset="1" stop-color="#0D0D18"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="14" y1="12" x2="50" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F3DFB4"/>
+      <stop offset=".45" stop-color="#C9A96E"/>
+      <stop offset="1" stop-color="#9A773C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#C9A96E" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#C9A96E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- nền đêm + hai vòng viền vàng -->
+  <circle cx="32" cy="32" r="31.25" fill="url(#bg)" stroke="url(#gold)" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#C9A96E" stroke-opacity=".3" stroke-width=".6"/>
+
+  <!-- quầng sáng sau trăng -->
+  <circle cx="33" cy="28" r="19" fill="url(#glow)"/>
+
+  <!-- trăng khuyết -->
+  <path d="M36 16 A13 13 0 1 0 43 33 A9.75 9.75 0 1 1 36 16 Z" fill="url(#gold)"/>
+
+  <!-- sao bốn cánh (✦ của thương hiệu) nằm trong lòng trăng -->
+  <path d="M43.5 14.5 Q44.3 19.7 49.5 20.5 Q44.3 21.3 43.5 26.5 Q42.7 21.3 37.5 20.5 Q42.7 19.7 43.5 14.5 Z" fill="#F7EBCF"/>
+
+  <!-- sao nhỏ -->
+  <circle cx="19.5" cy="15.5" r="1" fill="#E8D5B7" opacity=".8"/>
+  <circle cx="51" cy="33.5" r=".8" fill="#E8D5B7" opacity=".6"/>
+  <circle cx="14.5" cy="27" r=".6" fill="#E8D5B7" opacity=".5"/>
+
+  <!-- đường cong tấm nệm êm bên dưới -->
+  <path d="M16.5 45.5 Q32 51.5 47.5 45.5" fill="none" stroke="url(#gold)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M22.5 50.2 Q32 53.8 41.5 50.2" fill="none" stroke="#C9A96E" stroke-opacity=".5" stroke-width="1" stroke-linecap="round"/>
+</svg>

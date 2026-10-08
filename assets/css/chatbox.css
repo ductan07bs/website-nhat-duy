@@ -15,18 +15,22 @@
   width: 58px; height: 58px;
   display: grid; place-items: center;
   border-radius: 50%;
-  border: 1px solid var(--gold);
-  background:
-    radial-gradient(circle at 30% 25%, rgba(201,169,110,.28), transparent 60%),
-    var(--navy);
+  padding: 0;
+  border: 0;
+  background: var(--navy);
   color: var(--gold);
   cursor: pointer;
-  box-shadow: 0 16px 34px -14px rgba(17,17,31,.85), inset 0 0 0 4px rgba(201,169,110,.08);
+  box-shadow: 0 16px 34px -14px rgba(17,17,31,.85);
   transition: transform .35s var(--ease-soft), box-shadow .35s var(--ease-soft);
 }
-.ndchat-launcher:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -14px rgba(17,17,31,.9), inset 0 0 0 4px rgba(201,169,110,.16); }
+.ndchat-launcher:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -14px rgba(17,17,31,.9); }
+.ndchat-launcher:hover img { transform: rotate(-8deg) scale(1.04); }
 .ndchat-launcher:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-.ndchat-launcher svg { position: relative; }
+.ndchat-launcher img {
+  display: block; width: 100%; height: 100%;
+  border-radius: 50%;
+  transition: transform .5s var(--ease-soft);
+}
 
 /* Vòng vàng lan nhẹ — gợi ý "có người đang trực" */
 .ndchat-launcher__ring {
@@ -40,12 +44,15 @@
   0% { transform: scale(1); opacity: .7; }
   70%, 100% { transform: scale(1.55); opacity: 0; }
 }
-.ndchat-launcher__dot {
-  position: absolute; top: 5px; right: 5px;
-  width: 11px; height: 11px;
+.ndchat-launcher__badge {
+  position: absolute; top: -4px; right: -4px;
+  width: 24px; height: 24px;
+  display: grid; place-items: center;
   border-radius: 50%;
   background: var(--gold);
-  border: 2px solid var(--navy);
+  color: var(--navy);
+  border: 2px solid var(--bone);
+  box-shadow: 0 6px 12px -6px rgba(17,17,31,.7);
 }
 .ndchat-launcher__label {
   position: absolute; right: calc(100% + 12px); top: 50%;
@@ -115,8 +122,12 @@
   background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
   opacity: .7;
 }
-.ndchat__mark { flex: 0 0 42px; height: 42px; color: var(--gold); }
-.ndchat__mark svg { display: block; width: 100%; height: 100%; }
+.ndchat__mark {
+  flex: 0 0 46px; height: 46px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(201,169,110,.16), 0 10px 20px -10px rgba(0,0,0,.8);
+}
+.ndchat__mark img { display: block; width: 100%; height: 100%; border-radius: 50%; }
 .ndchat__head-copy { flex: 1 1 auto; min-width: 0; }
 .ndchat__title {
   display: block;
@@ -219,13 +230,11 @@
   to { opacity: 1; transform: none; }
 }
 .ndchat__avatar {
-  flex: 0 0 28px; height: 28px;
-  padding: 3px;
+  flex: 0 0 30px; height: 30px;
   border-radius: 50%;
-  background: var(--navy);
-  color: var(--gold);
+  box-shadow: 0 6px 12px -8px rgba(26,26,46,.8);
 }
-.ndchat__avatar svg { display: block; width: 100%; height: 100%; }
+.ndchat__avatar img { display: block; width: 100%; height: 100%; border-radius: 50%; }
 .ndchat__msg {
   max-width: 82%;
   padding: 11px 15px;
@@ -398,5 +407,5 @@
   .ndchat, .ndchat__row, .ndchat__chip, .ndchat__lead, .ndchat-launcher__label { animation: none; }
   .ndchat-launcher__ring, .ndchat__typing span { animation: none; }
   .ndchat-launcher__ring { opacity: 0; }
-  .ndchat-launcher, .ndchat__close, .ndchat__send, .ndchat__chip, .ndchat__chip svg { transition: none; }
+  .ndchat-launcher, .ndchat-launcher img, .ndchat__close, .ndchat__send, .ndchat__chip, .ndchat__chip svg { transition: none; }
 }
