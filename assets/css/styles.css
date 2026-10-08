@@ -1961,27 +1961,52 @@ em { font-style: italic; color: var(--walnut-mid); }
   line-height: 1.6;
 }
 
-/* Gợi ý cuộn ngang cho bảng giá trên mobile */
-.scroll-hint {
-  display: none;
-  text-align: center;
-  font-size: 12px;
-  color: #d4a84b;
-  margin: 0 0 10px;
-  letter-spacing: 0.3px;
-}
-.scroll-hint span { animation: scroll-hint-nudge 1.6s ease-in-out infinite; display: inline-block; }
-@keyframes scroll-hint-nudge {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(6px); }
-}
-@media (max-width: 760px) {
-  .scroll-hint { display: block; }
-  /* Fade nhẹ mép phải báo hiệu còn nội dung cuộn */
-  .price-table__wrapper.is-scrollable {
-    -webkit-mask-image: linear-gradient(to right, #000 88%, transparent 100%);
-            mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+/* Bảng giá → thẻ dọc trên mobile (không cuộn ngang).
+   Nhãn cột lấy từ data-label do main.js gắn theo <thead>. */
+@media (max-width: 768px) {
+  .price-table__wrapper { overflow-x: visible; }
+  .price-grid { min-width: 0; font-size: 14px; }
+  .price-grid,
+  .price-grid tbody,
+  .price-grid tr,
+  .price-grid td { display: block; }
+  .price-grid thead {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0,0,0,0);
   }
+  .price-grid tr {
+    background: #1a1a2e;
+    border: 1px solid #2a2a3a;
+    border-radius: 12px;
+    padding: 6px 16px 8px;
+    margin-bottom: 12px;
+  }
+  .price-grid tr.price-grid__highlight { border-color: #d4a84b; }
+  .price-grid__highlight td { background: transparent; }
+  .price-grid td {
+    padding: 9px 0;
+    border-bottom: 1px solid #25253a;
+  }
+  .price-grid td:last-child { border-bottom: 0; }
+  .price-grid td:first-child { font-size: 15px; color: #e8e6e0; padding-top: 10px; }
+  .price-grid td[data-label] {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    text-align: right;
+  }
+  .price-grid td[data-label]::before {
+    content: attr(data-label);
+    flex: 0 0 auto;
+    max-width: 48%;
+    text-align: left;
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .price-grid td[colspan] { text-align: left !important; }
 }
 
 /* ─── 21. Bảng so sánh 3 dòng nệm ──────────────────────── */
@@ -2435,3 +2460,190 @@ em { font-style: italic; color: var(--walnut-mid); }
 @media (max-width: 720px) {
   .exit-msg { left: 12px; right: 12px; bottom: 150px; width: auto; }
 }
+
+/* ─── 30. Form: lỗi tiếng Việt, trạng thái gửi, phần không bắt buộc ── */
+.field__error {
+  font-size: 0.84rem;
+  color: #9B2C2C;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"] {
+  border-color: #9B2C2C;
+  box-shadow: 0 0 0 4px rgba(155,44,44,.12);
+}
+.form-status {
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--bone-warm);
+  color: var(--ink);
+  font-size: 0.94rem;
+  margin: 0;
+}
+.form-status--ok { background: var(--gold); color: var(--navy); }
+.form-status--err {
+  background: rgba(90,42,42,.08);
+  border-left: 4px solid var(--bad);
+  color: var(--bad);
+}
+.form-status a { color: inherit; font-weight: 700; text-decoration: underline; }
+
+.booking__more summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--stone);
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+  padding: 6px 0;
+}
+.booking__more summary:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+.booking__more-body {
+  display: flex; flex-direction: column; gap: 16px;
+  margin-top: 14px;
+}
+.btn[disabled] { opacity: .7; cursor: default; transform: none; box-shadow: none; }
+@media (max-width: 560px) {
+  .booking__form { padding: 24px 18px; gap: 12px; }
+  .booking__form h3 { font-size: 1.45rem; }
+}
+
+/* ─── 31. Liên hệ nhanh (kết quả quiz & thước Lỗ Ban) ─────── */
+.btn--zalo { --bg: #0068d6; --fg: #fff; }
+.btn--zalo:hover { --bg: #0a84ff; }
+.quick-contact {
+  display: grid; gap: 10px;
+  margin-top: 18px;
+  text-align: center;
+}
+.quick-contact__lead { margin: 0; font-size: 0.95rem; font-weight: 600; }
+.quick-contact__phones,
+.quiz__result-inner .quick-contact__phones { margin: 0; font-size: 0.92rem; }
+.quick-contact__phones a { font-weight: 700; color: var(--navy); white-space: nowrap; }
+.quick-contact--dark { margin-top: 12px; justify-items: center; }
+.quick-contact--dark .quick-contact__phones a { color: #d4a84b; }
+
+/* ─── 32. Phiếu Phong Thủy Giấc Ngủ ───────────────────────── */
+.phieu {
+  grid-column: 2;
+  background: var(--bone);
+  color: var(--ink);
+  border-radius: var(--radius-md);
+  padding: clamp(24px, 3vw, 36px);
+  box-shadow: 0 60px 100px -40px rgba(0,0,0,.6);
+}
+.phieu__form { display: flex; flex-direction: column; gap: 14px; }
+.phieu__form h3 { font-size: 1.45rem; }
+.phieu__lede { margin: 0; font-size: 0.92rem; color: var(--stone); }
+.phieu__out { margin-top: 22px; }
+.phieu__actions { display: grid; gap: 10px; margin: 16px 0 12px; }
+@media (max-width: 920px) { .phieu { grid-column: auto; } }
+
+.phieu-card {
+  background: var(--navy);
+  color: var(--sand);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 28px 22px 22px;
+  text-align: center;
+}
+.phieu-card__head { display: grid; gap: 4px; margin-bottom: 18px; }
+.phieu-card__brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+.phieu-card__sub { font-size: 0.72rem; text-transform: uppercase; color: var(--sand); opacity: .75; }
+.phieu-card__title { font-size: 1.7rem; color: var(--sand); margin-bottom: 6px; }
+.phieu-card__for { margin: 0 0 18px; font-size: 0.95rem; }
+.phieu-card__for strong { color: var(--gold); }
+.phieu-card__block { text-align: left; margin-bottom: 16px; }
+.phieu-card__label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.phieu-card__block ul { display: grid; gap: 6px; font-size: 0.92rem; }
+.phieu-card__block li {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 9px 12px;
+  background: rgba(232,213,183,.08);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+}
+/* Chỉ áp lên bản sao lúc xuất ảnh: html2canvas vẽ chữ thấp hơn trình duyệt ~5px */
+.phieu-card.is-export .phieu-card__block li { padding: 4px 12px 14px; }
+.phieu-card__block li[data-good="0"] { border-left-color: #B45A5A; }
+.phieu-card__block li b { color: var(--gold); }
+.phieu-card__block li span:first-child { white-space: nowrap; }
+.phieu-card__wish {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  margin: 18px 0;
+}
+.phieu-card__foot {
+  display: grid; gap: 2px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(201,169,110,.35);
+  font-size: 0.82rem;
+}
+.phieu-card__foot strong { color: var(--gold); }
+
+/* ─── 33. Accordion nhóm sản phẩm phụ ─────────────────────── */
+.acc-intro { padding-bottom: 8px; }
+.acc-intro .section-head { margin-bottom: 28px; }
+.acc-intro h2 { color: #e8e6e0; }
+.acc-intro h2 em { color: #d4a84b; }
+.product-cat.acc { padding: 0; background: #0f1117; }
+.product-cat.acc--last { padding-bottom: 72px; }
+.acc__heading { margin: 0; font: inherit; }
+.acc__toggle {
+  width: 100%;
+  min-height: 68px;
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 4px;
+  background: none;
+  border: 0;
+  border-top: 1px solid #2a2a3a;
+  color: #e8e6e0;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.acc--last .acc__toggle { border-bottom: 1px solid #2a2a3a; }
+.acc--last.is-open .acc__toggle { border-bottom: 0; }
+.acc__toggle:focus-visible { outline: 2px solid #d4a84b; outline-offset: 2px; }
+.acc__title {
+  flex: 1;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  color: #d4a84b;
+}
+.acc__meta { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #8a8a8a; }
+.acc__icon {
+  position: relative;
+  flex: 0 0 32px; height: 32px;
+  border: 1px solid #2a2a3a; border-radius: 50%;
+}
+.acc__icon::before,
+.acc__icon::after {
+  content: "";
+  position: absolute; left: 50%; top: 50%;
+  width: 12px; height: 1.5px;
+  background: #d4a84b;
+  transform: translate(-50%, -50%);
+  transition: transform .25s ease;
+}
+.acc__icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+.acc__toggle[aria-expanded="true"] .acc__icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+.acc__toggle:hover .acc__icon { border-color: #d4a84b; }
+.acc__panel { padding: 40px 0 56px; }
+@media (max-width: 560px) {
+  .acc__meta { display: none; }
+  .acc__panel { padding: 24px 0 40px; }
+}
+@media (prefers-reduced-motion: reduce) { .acc__icon::before, .acc__icon::after { transition: none; } }

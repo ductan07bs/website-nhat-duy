@@ -49,7 +49,7 @@
   "@id": "https://noithatnhatduy.vn/#furniturestore",
   "url": "https://noithatnhatduy.vn/",
   "telephone": "+84909001336",
-  "email": "nemnhatduy@gmail.com",
+  "email": "ductan07bs@gmail.com",
   "contactPoint": [
     { "@type": "ContactPoint", "telephone": "+84909001336", "contactType": "sales", "areaServed": "VN", "availableLanguage": "Vietnamese" },
     { "@type": "ContactPoint", "telephone": "+84905070785", "contactType": "customer service", "areaServed": "VN", "availableLanguage": "Vietnamese" }
@@ -386,6 +386,14 @@
           <h3 id="qResultTitle"></h3>
           <p id="qResultDesc"></p>
           <a class="btn btn--gold" href="#mac-thu" id="qResultCTA">Đặt lịch nằm thử dòng này tại Showroom</a>
+          <div class="quick-contact quick-contact--dark">
+            <a class="btn btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener">Nhắn Zalo giữ dòng nệm này</a>
+            <p class="quick-contact__phones">
+              Hoặc gọi ngay:
+              <a href="tel:0909001336">0909&nbsp;001&nbsp;336</a> ·
+              <a href="tel:0905070785">0905&nbsp;070&nbsp;785</a>
+            </p>
+          </div>
           <button type="button" class="btn btn--ghost" id="qRestart" style="margin-top:10px;">Làm lại từ đầu</button>
         </div>
       </div>
@@ -732,8 +740,69 @@
             Nhận tư vấn phong thủy từ chuyên gia Nhật Duy
           </a>
         </div>
+
+        <div class="quick-contact">
+          <p class="quick-contact__lead">Nhắn Zalo để Nhật Duy tư vấn kích thước hợp phong thủy cho bạn</p>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener">Nhắn Zalo tư vấn kích thước</a>
+          <p class="quick-contact__phones">
+            Hoặc gọi ngay:
+            <a href="tel:0909001336">0909&nbsp;001&nbsp;336</a> ·
+            <a href="tel:0905070785">0905&nbsp;070&nbsp;785</a>
+          </p>
+        </div>
       </div>
     </form>
+
+    <!-- Phiếu Phong Thủy Giấc Ngủ — hiện sau khi có kết quả thước Lỗ Ban -->
+    <div class="phieu" id="phieuBox" hidden>
+      <form class="phieu__form" id="phieuForm" novalidate>
+        <h3>Nhận Phiếu tư vấn phong thủy phòng ngủ riêng cho bạn</h3>
+        <p class="phieu__lede">Nhập tên và số điện thoại — phiếu hiện ngay bên dưới, tải về làm ảnh được.</p>
+        <label class="field">
+          <span class="field__label">Họ &amp; tên</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Anh / Chị…" data-required="Vui lòng nhập họ tên để ghi lên phiếu" />
+        </label>
+        <label class="field">
+          <span class="field__label">Số điện thoại</span>
+          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" data-required="Vui lòng nhập số điện thoại để Nhật Duy gọi lại" />
+        </label>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <button class="btn btn--gold btn--block" type="submit">Nhận phiếu phong thủy</button>
+        <p class="form-status form-status--err" id="phieuErr" role="alert" hidden></p>
+      </form>
+
+      <div class="phieu__out" id="phieuOut" hidden>
+        <article class="phieu-card" id="phieuCard" aria-label="Phiếu phong thủy giấc ngủ">
+          <header class="phieu-card__head">
+            <span class="phieu-card__brand">Nội Thất Nhật Duy</span>
+            <span class="phieu-card__sub">Đại lý Kymdan chính hãng · Bồng Sơn, Gia Lai</span>
+          </header>
+          <h4 class="phieu-card__title">Phiếu Phong Thủy Giấc Ngủ</h4>
+          <p class="phieu-card__for">Dành riêng cho <strong id="phieuName"></strong></p>
+
+          <div class="phieu-card__block">
+            <span class="phieu-card__label">Kích thước đang chọn · Thước Lỗ Ban 42.9cm</span>
+            <ul id="phieuCurrent" role="list"></ul>
+          </div>
+          <div class="phieu-card__block" id="phieuSuggestBlock">
+            <span class="phieu-card__label">Kích thước chuẩn phong thủy nên đổi sang</span>
+            <ul id="phieuSuggest" role="list"></ul>
+          </div>
+
+          <p class="phieu-card__wish" id="phieuWish"></p>
+          <footer class="phieu-card__foot">
+            <span>2657 Quang Trung, Bồng Sơn, Gia Lai</span>
+            <strong>0909 001 336 · 0905 070 785</strong>
+          </footer>
+        </article>
+
+        <div class="phieu__actions">
+          <button class="btn btn--gold btn--block" type="button" id="phieuDownload">Tải phiếu về máy (ảnh)</button>
+          <button class="btn btn--zalo btn--block" type="button" id="phieuShare">Chia sẻ qua Zalo</button>
+        </div>
+        <p class="form-status" id="phieuNote" role="status" hidden></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -945,8 +1014,18 @@
   </div>
 </section>
 
+<!-- ─────────── SẢN PHẨM KHÁC (accordion — mặc định đóng) ─────────── -->
+<section class="product-cat acc-intro" aria-labelledby="acc-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <span class="eyebrow">Sản phẩm khác · Bấm để mở bảng giá</span>
+      <h2 id="acc-title">Gối, giường, sofa, ga —<br /><em>và nệm foam, bông ép.</em></h2>
+    </header>
+  </div>
+</section>
+
 <!-- ─────────── GỐI KYMDAN ─────────── -->
-<section class="product-cat" id="goi" aria-labelledby="goi-title">
+<section class="product-cat" id="goi" data-accordion="Gối Kymdan" aria-labelledby="goi-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Gối Kymdan · Cao su thiên nhiên 100%</span>
@@ -1134,7 +1213,7 @@
 </section>
 
 <!-- ─────────── GIƯỜNG KYMDAN ─────────── -->
-<section class="product-cat product-cat--alt" id="giuong" aria-labelledby="giuong-title">
+<section class="product-cat product-cat--alt" id="giuong" data-accordion="Giường Kymdan" aria-labelledby="giuong-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Giường Kymdan · Gỗ tự nhiên &amp; Giường gấp</span>
@@ -1242,7 +1321,7 @@
 </section>
 
 <!-- ─────────── SOFA KYMDAN ─────────── -->
-<section class="product-cat" id="sofa" aria-labelledby="sofa-title">
+<section class="product-cat" id="sofa" data-accordion="Sofa Kymdan" aria-labelledby="sofa-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Sofa Kymdan · Đệm cao su thiên nhiên</span>
@@ -1350,7 +1429,7 @@
 </section>
 
 <!-- ─────────── GA TRẢI GIƯỜNG KYMDAN ─────────── -->
-<section class="product-cat product-cat--alt" id="ga" aria-labelledby="ga-title">
+<section class="product-cat product-cat--alt" id="ga" data-accordion="Ga trải giường Kymdan" aria-labelledby="ga-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Ga trải giường Kymdan · Chất liệu cao cấp</span>
@@ -1464,7 +1543,7 @@
 </section>
 
 <!-- ─────────── NỆM FOAM ─────────── -->
-<section class="product-cat" id="foam" aria-labelledby="foam-title">
+<section class="product-cat" id="foam" data-accordion="Nệm Foam" aria-labelledby="foam-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Nệm Foam cao cấp · Công nghệ Hàn Quốc</span>
@@ -1565,7 +1644,7 @@
 </section>
 
 <!-- ─────────── NỆM BÔNG ÉP HÀN QUỐC ─────────── -->
-<section class="product-cat product-cat--alt" id="bong-ep" aria-labelledby="be-title">
+<section class="product-cat product-cat--alt" id="bong-ep" data-accordion="Nệm Bông ép Hàn Quốc" aria-labelledby="be-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Nệm Bông ép Hàn Quốc · Thoáng mát, kháng khuẩn</span>
@@ -1842,7 +1921,7 @@
     </div>
 
     <form class="booking__form" id="bookingForm"
-          action="https://formsubmit.co/nemnhatduy@gmail.com"
+          action="https://formsubmit.co/ductan07bs@gmail.com"
           method="POST"
           novalidate>
       <h3>Đặt lịch tại Showroom</h3>
@@ -1856,76 +1935,84 @@
 
       <label class="field">
         <span class="field__label">Họ &amp; tên</span>
-        <input type="text" name="name" required autocomplete="name" placeholder="Anh / Chị…" />
+        <input type="text" name="name" autocomplete="name" placeholder="Anh / Chị…"
+               data-required="Vui lòng nhập họ tên để Nhật Duy tiện xưng hô" />
       </label>
 
       <label class="field">
         <span class="field__label">Số điện thoại</span>
-        <input type="tel" name="phone" required inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" />
+        <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx"
+               data-required="Vui lòng nhập số điện thoại để Nhật Duy gọi lại" />
       </label>
-
-      <label class="field">
-        <span class="field__label">Khu vực của bạn (Bồng Sơn – Gia Lai &amp; lân cận)</span>
-        <select name="ward" required>
-          <option value="">— Chọn khu vực —</option>
-          <option>P. Bồng Sơn</option>
-          <option>P. Hoài Nhơn</option>
-          <option>P. Hoài Ân</option>
-          <option>P. An Lão</option>
-          <option>P. Phù Mỹ</option>
-          <option>TP. Quy Nhơn</option>
-          <option>TP. Pleiku</option>
-          <option>Khu vực khác</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span class="field__label">Bạn cần dịch vụ nào?</span>
-        <select name="service" required id="bookingService">
-          <option value="kymdan">Trải nghiệm nệm Kymdan tại Showroom</option>
-          <option value="noithat">Xem nội thất Kymdan đồng bộ</option>
-          <option value="foam">Xem nệm foam &amp; bông ép Hàn Quốc</option>
-          <option value="phong-thuy">Tư vấn phong thủy phòng ngủ (Lỗ Ban)</option>
-          <option value="combo">Tư vấn combo phòng ngủ trọn gói</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span class="field__label">Ngày muốn ghé Showroom</span>
-        <input type="date" name="visit_date" required id="visitDate" placeholder="Chọn ngày…" />
-      </label>
-
-      <label class="field">
-        <span class="field__label">Khung giờ mong muốn</span>
-        <select name="visit_time" required>
-          <option value="">— Chọn khung giờ —</option>
-          <option value="sang">Buổi sáng (8:00 – 11:30)</option>
-          <option value="chieu">Buổi chiều (13:00 – 17:00)</option>
-          <option value="toi">Buổi tối (17:30 – 20:30)</option>
-        </select>
-      </label>
-
-      <label class="field field--checkbox">
-        <input type="checkbox" name="zalo" checked />
-        <span>Nhận xác nhận qua Zalo &amp; SMS</span>
-      </label>
-
-      <p class="booking__urgency">
-        <span class="booking__urgency-dot" aria-hidden="true"></span>
-        Đặt lịch trước để được dành riêng khung giờ tư vấn 1:1
-      </p>
 
       <button class="btn btn--gold btn--block" id="dat-lich" type="submit">Gửi yêu cầu — Nhật Duy gọi lại trong 30 phút</button>
+
+      <div class="form-status form-status--ok booking__ok" id="bookingOk" role="status" hidden>
+        <strong>Đã gửi</strong> — một chuyên viên sẽ gọi bạn trong 30 phút.
+        Cảm ơn bạn đã tin Nhật Duy.
+      </div>
+      <div class="form-status form-status--err" id="bookingErr" role="alert" hidden>
+        <strong>Chưa gửi được yêu cầu.</strong> Mạng đang chập chờn — thông tin bạn nhập vẫn còn nguyên, bạn bấm gửi lại giúp nhé.
+        Hoặc gọi ngay <a href="tel:0909001336">0909&nbsp;001&nbsp;336</a> /
+        <a href="https://zalo.me/0909001336" target="_blank" rel="noopener">nhắn Zalo</a> để Nhật Duy giữ lịch cho bạn.
+      </div>
+
+      <details class="booking__more">
+        <summary>Thêm khu vực, ngày &amp; giờ ghé (không bắt buộc)</summary>
+        <div class="booking__more-body">
+          <label class="field">
+            <span class="field__label">Khu vực của bạn (không bắt buộc)</span>
+            <select name="ward">
+              <option value="">— Chọn khu vực —</option>
+              <option>P. Bồng Sơn</option>
+              <option>P. Hoài Nhơn</option>
+              <option>P. Hoài Ân</option>
+              <option>P. An Lão</option>
+              <option>P. Phù Mỹ</option>
+              <option>TP. Quy Nhơn</option>
+              <option>TP. Pleiku</option>
+              <option>Khu vực khác</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Bạn cần dịch vụ nào? (không bắt buộc)</span>
+            <select name="service" id="bookingService">
+              <option value="kymdan">Trải nghiệm nệm Kymdan tại Showroom</option>
+              <option value="noithat">Xem nội thất Kymdan đồng bộ</option>
+              <option value="foam">Xem nệm foam &amp; bông ép Hàn Quốc</option>
+              <option value="phong-thuy">Tư vấn phong thủy phòng ngủ (Lỗ Ban)</option>
+              <option value="combo">Tư vấn combo phòng ngủ trọn gói</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Ngày muốn ghé Showroom (không bắt buộc)</span>
+            <input type="date" name="visit_date" id="visitDate" placeholder="Chọn ngày…" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Khung giờ mong muốn (không bắt buộc)</span>
+            <select name="visit_time">
+              <option value="">— Chọn khung giờ —</option>
+              <option value="sang">Buổi sáng (8:00 – 11:30)</option>
+              <option value="chieu">Buổi chiều (13:00 – 17:00)</option>
+              <option value="toi">Buổi tối (17:30 – 20:30)</option>
+            </select>
+          </label>
+
+          <label class="field field--checkbox">
+            <input type="checkbox" name="zalo" checked />
+            <span>Nhận xác nhận qua Zalo &amp; SMS</span>
+          </label>
+        </div>
+      </details>
 
       <p class="booking__legal">
         Thông tin của bạn chỉ dùng để xác nhận lịch hẹn. Nhật Duy không chia sẻ
         cho bên thứ ba.
       </p>
 
-      <div class="booking__ok" id="bookingOk" hidden>
-        <strong>Đã gửi.</strong> Một chuyên viên Nhật Duy sẽ gọi bạn trong 30
-        phút tới. Cảm ơn bạn đã tin chúng tôi.
-      </div>
     </form>
 
   </div>
@@ -2089,7 +2176,7 @@
         <li><a href="tel:0909001336">0909&nbsp;001&nbsp;336</a></li>
         <li><a href="tel:0905070785">0905&nbsp;070&nbsp;785</a></li>
       </ul>
-      <p><a href="mailto:nemnhatduy@gmail.com">nemnhatduy@gmail.com</a></p>
+      <p><a href="mailto:ductan07bs@gmail.com">ductan07bs@gmail.com</a></p>
       <p>Mở cửa: 7:30 – 21:00 mỗi ngày</p>
     </div>
 
@@ -2179,31 +2266,6 @@
     f.addEventListener('mouseenter', loadMap);
     f.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadMap(); }
-    });
-  })();
-
-  // Gợi ý cuộn ngang cho các bảng giá rộng (chỉ khi nội dung tràn khung)
-  (function () {
-    var wrappers = document.querySelectorAll('.price-table__wrapper');
-    wrappers.forEach(function (w) {
-      function check() {
-        var table = w.querySelector('table');
-        if (!table) return;
-        var overflow = table.scrollWidth > w.clientWidth + 4;
-        w.classList.toggle('is-scrollable', overflow);
-        var hint = w.previousElementSibling;
-        var hasHint = hint && hint.classList && hint.classList.contains('scroll-hint');
-        if (overflow && !hasHint) {
-          var el = document.createElement('p');
-          el.className = 'scroll-hint';
-          el.innerHTML = '<span aria-hidden="true">→</span> Vuốt ngang để xem thêm kích thước <span aria-hidden="true">→</span>';
-          w.parentNode.insertBefore(el, w);
-        } else if (!overflow && hasHint) {
-          hint.remove();
-        }
-      }
-      check();
-      window.addEventListener('resize', check);
     });
   })();
 
