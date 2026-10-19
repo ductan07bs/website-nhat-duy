@@ -123,14 +123,14 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "- Nệm Bông ép Hàn Quốc (Nhập khẩu · Thoáng mát đặc biệt): Thoáng mát vượt trội trong khí hậu nóng; Kháng khuẩn, an toàn trẻ em; Nhẹ, dễ vệ sinh; Giá hợp lý nhất; Độ bền 5–8 năm; Bảo hành 3 năm. Tốt nhất cho: Phòng trẻ em · Người hay đổ mồ hôi · Ngân sách hợp lý\n" +
   "\n" +
   "## CAM KẾT DỊCH VỤ\n" +
-  "- 4 giờ: Giao & lắp đặt trong bán kính 30 km: Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ. Ngoài bán kính: trong 24 giờ.\n" +
+  "- 4 giờ: Giao & lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.\n" +
   "- 30 phút: Trải nghiệm trọn buổi tại Showroom 2657 Quang Trung — nằm thử, so sánh và nhận tư vấn 1:1 trong khung giờ dành riêng cho bạn.\n" +
   "- 15 năm: Bảo hành nệm Kymdan chính hãng 15 năm. Bảo trì tận nhà tại Gia Lai — không cần gửi nệm ngược lên TP.HCM hay Quy Nhơn.\n" +
   "- 200–500K: Thu lại nệm cũ tận nơi khi đổi nệm mới. Niêm yết giá rõ ràng theo kích thước & chất liệu.\n" +
   "- Phát hiện hàng Kymdan giả — Nhật Duy đền 200% giá trị đơn hàng.\n" +
   "\n" +
   "## CÂU HỎI THƯỜNG GẶP\n" +
-  "- Hỏi: Nhật Duy có giao tới phường / xã của tôi không? Đáp: Trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ) chúng tôi giao & lắp đặt trong 4 giờ — miễn phí. Quy Nhơn, An Khê, Pleiku: trong 24 giờ.\n" +
+  "- Hỏi: Nhật Duy có giao tới phường / xã của tôi không? Đáp: Giao & lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.\n" +
   "- Hỏi: Tôi muốn thử nệm trước khi mua — có được không? Đáp: Có. Ghé Showroom Nhật Duy tại 2657 Quang Trung, Bồng Sơn — bạn được nằm thử trực tiếp các dòng Kymdan Deluxe, Kymdan Special Deluxe Pillow Top, nệm foam và bông ép Hàn Quốc trên khung giường mẫu, drap lụa và đèn ngủ thật. Đặt lịch trước để chuyên viên dành riêng 30 phút tư vấn 1:1.\n" +
   "- Hỏi: Bạn đo phong thủy bằng thước nào? Đáp: Thước Lỗ Ban 42.9cm — chuẩn dành cho khối đặc và đồ nội thất. Tại Showroom Nhật Duy, chuyên viên sẽ đo trực tiếp khung giường mẫu, đối chiếu kích thước phòng của bạn và đề xuất kích thước nệm chuẩn cung cát.\n" +
   "- Hỏi: Nội Thất Nhật Duy có mối quan hệ như thế nào với thương hiệu Liên Á – Hồng Loan? Đáp: Nội Thất Nhật Duy kế thừa cơ sở kinh doanh nệm lâu năm tại Bồng Sơn. Hiện tại Nhật Duy là đại lý phân phối chính hãng Kymdan tại khu vực Bồng Sơn — Hoài Nhơn — tập trung chuyên sâu vào thương hiệu Kymdan để đảm bảo chất lượng dịch vụ và cam kết chính hãng tuyệt đối. Bên cạnh nệm Kymdan, Nhật Duy cũng kinh doanh nệm foam và nệm bông ép Hàn Quốc nhập khẩu chất lượng cao.\n" +

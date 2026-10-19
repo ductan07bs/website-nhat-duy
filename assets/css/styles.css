@@ -918,29 +918,6 @@ em { font-style: italic; color: var(--walnut-mid); }
   .hero__seal { top: -14px; right: 6px; }
 }
 
-/* ─── 6. Trust marquee ───────────────────────────────────── */
-.trust-marquee {
-  background: var(--navy);
-  color: var(--sand);
-  padding: 16px 0;
-  overflow: hidden;
-  border-block: 1px solid rgba(232,213,183,.15);
-}
-.trust-marquee__track {
-  display: flex;
-  gap: 40px;
-  width: max-content;
-  animation: marquee 38s linear infinite;
-  font-size: 0.85rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold-soft);
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
 /* ─── 7. Space filter ────────────────────────────────────── */
 .space-filter {
   padding: clamp(80px, 10vw, 140px) 0;

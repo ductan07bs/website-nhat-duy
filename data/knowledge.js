@@ -12,7 +12,10 @@
    ========================================================= */
 
 const GENERATED = require('./knowledge-generated.js');
+/* Thông điệp giao lắp lấy từ cấu hình dùng chung với trang web */
+const { delivery: DELIVERY } = require('../assets/js/site-config.js');
 
+/* TODO: Ba Tân xác nhận hoặc bỏ cam kết "đền 200%" bên dưới — nếu bỏ ở website thì bỏ cả ở đây. */
 const MANUAL = `
 ## THÔNG TIN CỬA HÀNG
 - Tên: Nội Thất Nhật Duy — đại lý Kymdan chính hãng tại Bồng Sơn, Gia Lai.
@@ -28,7 +31,7 @@ const MANUAL = `
 - Cam kết chính hãng: phát hiện hàng Kymdan giả — Nhật Duy đền 200% giá trị đơn hàng.
 - Thu nệm cũ: thu lại tận nơi khi đổi nệm mới, 200.000₫ – 500.000₫ tùy kích thước & chất liệu.
 - Trả góp 0% lãi suất qua thẻ tín dụng Vietcombank, Techcombank, VPBank, MB, ACB, Sacombank — kỳ hạn 3 / 6 / 9 / 12 tháng.
-- Giao & lắp đặt: trong 4 giờ, miễn phí trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Quy Nhơn, An Khê, Pleiku và ngoài bán kính: trong 24 giờ, phí giao lắp báo riêng.
+- ${DELIVERY.long} Không tự hứa thời gian giao cho khu vực ngoài 30 km.
 - Giá trên website là giá niêm yết / khuyến mãi tham khảo, có thể thay đổi theo từng thời điểm; ưu đãi đại lý cụ thể do chuyên viên báo khi gọi lại.
 
 ## THƯỚC LỖ BAN 42.9CM (phong thủy giường nệm)

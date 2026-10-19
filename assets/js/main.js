@@ -28,6 +28,13 @@ const ZALO_URL = 'https://zalo.me/0909001336';
 (() => {
   'use strict';
 
+  /* ── Thông điệp dùng chung (site-config.js) ──────────── */
+  const CFG = window.SITE_CONFIG || {};
+  if (CFG.delivery) {
+    document.querySelectorAll('[data-cfg="delivery-short"]').forEach(el => { el.textContent = CFG.delivery.short; });
+    document.querySelectorAll('[data-cfg="delivery-long"]').forEach(el => { el.textContent = CFG.delivery.long; });
+  }
+
   /* ── Mobile nav ──────────────────────────────────────── */
   const navToggle = document.getElementById('navToggle');
   const primaryNav = document.querySelector('.primary-nav');

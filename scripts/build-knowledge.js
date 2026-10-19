@@ -113,13 +113,13 @@ blocks.push(['SO SÁNH BA DÒNG NỆM',
 
 /* 5. Cam kết dịch vụ */
 blocks.push(['CAM KẾT DỊCH VỤ',
-  ...all(/<article>\s*<h3>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g,
+  ...all(/<article>\s*<h3>([\s\S]*?)<\/h3>\s*<p[^>]*>([\s\S]*?)<\/p>/g,
     first(/<section class="local-trust"[^>]*>([\s\S]*?)\n<\/section>/, html)).map(m => '- ' + text(m[1]) + ': ' + text(m[2])),
   '- ' + text(first(/<p class="trust-badge__guarantee">([\s\S]*?)<\/p>/, html))]);
 
 /* 6. Câu hỏi thường gặp */
 blocks.push(['CÂU HỎI THƯỜNG GẶP',
-  ...all(/<details class="faq__item"[^>]*>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>/g, html)
+  ...all(/<details class="faq__item"[^>]*>\s*<summary>([\s\S]*?)<\/summary>\s*<p[^>]*>([\s\S]*?)<\/p>/g, html)
     .map(m => '- Hỏi: ' + text(m[1]) + ' Đáp: ' + text(m[2]))]);
 
 const body = blocks.map(b => '## ' + b[0] + '\n' + b.slice(1).filter(Boolean).join('\n')).join('\n\n');
