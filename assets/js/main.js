@@ -103,7 +103,9 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     };
   }
 
-  /* Tìm kích thước cát gần nhất bằng cách quét quanh giá trị nhập */
+  /* Tìm kích thước cát gần nhất bằng cách quét quanh giá trị nhập.
+     Chỉ nhận số cách ranh cung ≥ 0.5cm để đo lệch chút vẫn nằm trong cung tốt. */
+  const SAFE_CM = 0.5;
   function nearestGoodSize(target, range = 20, step = 0.5) {
     let best = null;
     let bestDist = Infinity;
@@ -112,7 +114,8 @@ const ZALO_URL = 'https://zalo.me/0909001336';
         const v = +(target + sign * d).toFixed(1);
         if (v <= 0) continue;
         const r = lookupCm(v);
-        if (r.good && d < bestDist) {
+        const safe = lookupCm(v - SAFE_CM).cungIdx === r.cungIdx && lookupCm(v + SAFE_CM).cungIdx === r.cungIdx;
+        if (r.good && safe && d < bestDist) {
           best = { value: v, ...r };
           bestDist = d;
         }
@@ -137,13 +140,26 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     const w = parseFloat(document.getElementById('lbWidth').value);
     const l = parseFloat(document.getElementById('lbLength').value);
     const h = parseFloat(document.getElementById('lbHeight').value);
-    if (!w || !l || !h) return;
+    /* Thiếu số đo → báo rõ thay vì để trống kết quả */
+    if (!(w > 0 && l > 0 && h > 0)) {
+      verdict.classList.remove('is-good');
+      verdict.classList.add('is-bad');
+      verdict.innerHTML = '<strong>Bạn nhập đủ 3 kích thước Rộng, Dài, Cao (cm)</strong> để Nhật Duy đối chiếu nhé — ví dụ 160 × 200 × 25.';
+      rows.innerHTML = '';
+      suggestBox.hidden = true;
+      rulerCungs.forEach(el => el.classList.remove('is-hit'));
+      result.hidden = false;
+      return;
+    }
 
     const dims = [
       { key: 'Rộng', cm: w, range: 20 },
       { key: 'Dài',  cm: l, range: 25 },
       { key: 'Cao',  cm: h, range: 6  }
-    ].map(d => ({ ...d, res: lookupCm(d.cm) }));
+    ].map(d => {
+      const res = lookupCm(d.cm);
+      return { ...d, res, fix: res.good ? null : nearestGoodSize(d.cm, d.range) };
+    });
 
     const allGood = dims.every(d => d.res.good);
     const someGood = dims.some(d => d.res.good);
@@ -170,8 +186,9 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     rows.innerHTML = dims.map(d => `
       <div class="loban__row" data-good="${d.res.good ? 1 : 0}" role="listitem">
         <span>${d.key} <b>${d.cm}cm</b></span>
-        <span>Cung <strong>${d.res.cung}</strong> · ${d.res.sub}</span>
-        <span class="cung-tag">${d.res.good ? 'Cát' : 'Hung'}</span>
+        <span>Cung <strong>${d.res.cung}</strong> · ${d.res.sub}${d.fix
+          ? `<em class="loban__row-fix">Gần nhất đẹp: <b>${d.fix.value}cm</b> (cung ${d.fix.cung})</em>` : ''}</span>
+        <span class="cung-tag">${d.res.good ? 'Tốt · Cát' : 'Xấu · Hung'}</span>
       </div>
     `).join('');
 
@@ -185,7 +202,7 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     /* suggestions if any bad */
     if (!allGood) {
       const items = dims.filter(d => !d.res.good).map(d => {
-        const n = nearestGoodSize(d.cm, d.range);
+        const n = d.fix;
         if (!n) return '';
         return `<li>
           <span>${d.key} <strong>${d.cm}cm</strong> → đổi sang <strong>${n.value}cm</strong></span>
@@ -201,10 +218,12 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     lastDims = dims;
     resetPhieu();
     result.hidden = false;
-    /* gentle scroll to result on first calc */
-    requestAnimationFrame(() => {
-      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
+    /* Chỉ cuộn khi khách bấm đối chiếu — lần tính sẵn lúc tải trang không được kéo trang xuống */
+    if (e) {
+      requestAnimationFrame(() => {
+        result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
   }
 
   if (form) {

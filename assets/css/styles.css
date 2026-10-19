@@ -2717,3 +2717,15 @@ em { font-style: italic; color: var(--walnut-mid); }
   .quiz__lead { padding: 16px; }
   .quiz__lead-fields { grid-template-columns: 1fr; }
 }
+
+/* ─── 34. Thước Lỗ Ban — gợi ý ngay trong từng dòng ───────── */
+.loban__row-fix {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-size: 0.84rem;
+  color: var(--stone);
+}
+.loban__row-fix b { color: var(--good, #2f6b3a); }
+.quick-contact__soft { margin: 0; font-size: 0.88rem; color: var(--stone); }
+.quick-contact__soft a { color: inherit; font-weight: 700; text-decoration: underline; }
