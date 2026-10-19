@@ -15,7 +15,6 @@ const GENERATED = require('./knowledge-generated.js');
 /* Thông điệp giao lắp lấy từ cấu hình dùng chung với trang web */
 const { delivery: DELIVERY } = require('../assets/js/site-config.js');
 
-/* TODO: Ba Tân xác nhận hoặc bỏ cam kết "đền 200%" bên dưới — nếu bỏ ở website thì bỏ cả ở đây. */
 const MANUAL = `
 ## THÔNG TIN CỬA HÀNG
 - Tên: Nội Thất Nhật Duy — đại lý Kymdan chính hãng tại Bồng Sơn, Gia Lai.
@@ -24,12 +23,14 @@ const MANUAL = `
 - Zalo: https://zalo.me/0909001336
 - Giờ mở cửa: 7:30 – 21:00 mỗi ngày.
 - Sản phẩm: nệm cao su thiên nhiên Kymdan, gối, giường, sofa, ga trải giường Kymdan; nệm foam; nệm bông ép Hàn Quốc.
+- Website chưa có đánh giá khách hàng nào đăng tải; KHÔNG kể tên hay trích lời khách.
+- Combo phòng ngủ: ưu đãi tối đa 15% so với tổng giá lẻ; giá cụ thể báo theo mẫu khách chọn.
 - Khách được nằm thử trực tiếp tại showroom; đặt lịch trước để có chuyên viên tư vấn 1:1 trong 30 phút.
 
 ## CHÍNH SÁCH
 - Bảo hành: nệm Kymdan chính hãng 15 năm (kể cả Nệm Xếp, Mini, Pillow Top, Y tế UltimateCare+ — theo kymdan.com); nệm foam 2 năm; nệm bông ép Hàn Quốc 3 năm. Bảo trì tận nhà tại Gia Lai.
 - Giá nệm Kymdan trên website lấy từ niêm yết của kymdan.com. Riêng Pillow Top, Kymdan ghi là "giá chào mới".
-- Cam kết chính hãng: phát hiện hàng Kymdan giả — Nhật Duy đền 200% giá trị đơn hàng.
+- Cam kết chính hãng: hàng Kymdan chính hãng, bảo hành theo chính sách Kymdan. KHÔNG hứa đền bù theo phần trăm.
 - Thu nệm cũ: thu lại tận nơi khi đổi nệm mới, 200.000₫ – 500.000₫ tùy kích thước & chất liệu.
 - Trả góp 0% lãi suất qua thẻ tín dụng Vietcombank, Techcombank, VPBank, MB, ACB, Sacombank — kỳ hạn 3 / 6 / 9 / 12 tháng.
 - ${DELIVERY.long} Không tự hứa thời gian giao cho khu vực ngoài 30 km.

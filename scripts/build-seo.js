@@ -124,6 +124,7 @@ const store = {
   url: HOME,
   image: ogImage,
   telephone: biz.phones[0],
+  ...(biz.email ? { email: biz.email } : {}),
   contactPoint: biz.phones.map(t => ({ '@type': 'ContactPoint', telephone: t, contactType: 'sales', areaServed: 'VN', availableLanguage: 'Vietnamese' })),
   address: {
     '@type': 'PostalAddress',

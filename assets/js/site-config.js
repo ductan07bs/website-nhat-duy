@@ -36,6 +36,7 @@
       addressLocality: 'Phường Bồng Sơn',
       addressRegion: 'Gia Lai',
       phones: ['+84909001336', '+84905070785'],
+      email: 'ductan07bs@gmail.com',
       opens: '07:30',
       closes: '21:00',
       areaServed: ['Bồng Sơn', 'Hoài Nhơn', 'Hoài Ân', 'An Lão', 'Phù Mỹ'],

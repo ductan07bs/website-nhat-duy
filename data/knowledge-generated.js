@@ -114,7 +114,7 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "Ghi chú: Giá niêm yết tham khảo (nguồn Hàn Việt Hải 2026) — thay đổi theo kích thước & độ dày. Có đủ size 1m → 1m8. Gọi 0909 001 336 để báo giá chính xác từng size.\n" +
   "\n" +
   "## COMBO PHÒNG NGỦ TRỌN BỘ\n" +
-  "- Combo Kymdan Tinh Giản (Căn hộ hiện đại · Bắc Âu): Giường Kymdan gỗ 1m6 — chân tầng thấp, kiểu dáng tinh giản; Nệm cao su thiên nhiên Kymdan Deluxe 10cm chính hãng (độ dày tiêu chuẩn, êm chắc); Gối Kymdan + Ga trải giường Kymdan Serenity đồng bộ | Độ cứng/mềm: Vừa phải — phù hợp mọi tư thế ngủ | Giá niêm yết , giá ưu đãi Liên hệ báo giá (; Báo giá trọn bộ theo kích thước giường · Trả góp 0%)\n" +
+  "- Combo Kymdan Tinh Giản (Căn hộ hiện đại · Bắc Âu): Giường Kymdan gỗ 1m6 — chân tầng thấp, kiểu dáng tinh giản; Nệm cao su thiên nhiên Kymdan Deluxe 10cm chính hãng (độ dày tiêu chuẩn, êm chắc); Gối Kymdan + Ga trải giường Kymdan Serenity đồng bộ | Độ cứng/mềm: Vừa phải — phù hợp mọi tư thế ngủ | Giá niêm yết , giá ưu đãi Liên hệ báo giá (Ưu đãi đến 15%; So với mua lẻ từng món · báo giá theo mẫu giường bạn chọn · Trả góp 0%)\n" +
   "- Combo Hoàng Kim (Nhóm 02 · Biệt thự & nhà phố): Giường bọc nhung · gỗ óc chó dán đồng thau xước; Nệm cao su thiên nhiên Kymdan Deluxe 20cm chính hãng (nâng đỡ cột sống toàn diện); Bộ ga gối lụa tơ tằm Hoàng Kim 25 momme | Độ cứng/mềm: Mềm mại — lý tưởng cho người thích cảm giác ôm ấp | Giá niêm yết 112.000.000₫, giá ưu đãi 95.200.000₫ (Tiết kiệm 15%; Trả góp 0% — 7.933.000₫/tháng)\n" +
   "- Combo Bông Ép Hàn Quốc (Phòng ngủ phụ · Phòng trẻ em): Giường gỗ tự nhiên 1m6 — thiết kế gọn nhẹ, bền đẹp; Nệm bông ép Hàn Quốc nhập khẩu (thoáng mát, kháng khuẩn, phù hợp khí hậu nhiệt đới); Bộ ga gối cotton cao cấp mát lành mùa hè | Độ cứng/mềm: Vừa-cứng — thoáng mát, phù hợp phòng trẻ em | Giá niêm yết 12.500.000₫, giá ưu đãi 9.900.000₫ (Tiết kiệm 21%; Trả góp 0% — 825.000₫/tháng)\n" +
   "\n" +
@@ -128,7 +128,7 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "- 30 phút: Trải nghiệm trọn buổi tại Showroom 2657 Quang Trung — nằm thử, so sánh và nhận tư vấn 1:1 trong khung giờ dành riêng cho bạn.\n" +
   "- 15 năm: Bảo hành nệm Kymdan chính hãng 15 năm. Bảo trì tận nhà tại Gia Lai — không cần gửi nệm ngược lên TP.HCM hay Quy Nhơn.\n" +
   "- 200–500K: Thu lại nệm cũ tận nơi khi đổi nệm mới. Niêm yết giá rõ ràng theo kích thước & chất liệu.\n" +
-  "- Phát hiện hàng Kymdan giả — Nhật Duy đền 200% giá trị đơn hàng.\n" +
+  "- \n" +
   "\n" +
   "## CÂU HỎI THƯỜNG GẶP\n" +
   "- Hỏi: Nhật Duy có giao tới phường / xã của tôi không? Đáp: Giao & lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.\n" +
