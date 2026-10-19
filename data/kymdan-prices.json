@@ -1,14 +1,14 @@
 {
   "source": "https://kymdan.com",
   "note": "Giá bán lẻ Kymdan (VND/bộ, đã gồm VAT) lấy tự động từ kymdan.com. Không sửa tay — chạy npm run update-kymdan-prices.",
-  "updatedAt": "2026-10-19T19:23:30+07:00",
+  "updatedAt": "2026-10-19T21:45:18+07:00",
   "products": {
     "deluxe": {
       "name": "Kymdan Deluxe",
       "group": "Deluxe",
       "slug": "nem-kymdan-deluxe",
       "url": "https://kymdan.com/san-pham/nem-kymdan-deluxe?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:21+07:00",
+      "fetchedAt": "2026-10-19T21:45:09+07:00",
       "priceLabel": "Giá niêm yết",
       "promotion": {
         "from": "2026-10-01",
@@ -513,7 +513,7 @@
       "group": "Special Deluxe Pillow Top",
       "slug": "nem-kymdan-special-deluxe-pillow-top-royal",
       "url": "https://kymdan.com/san-pham/nem-kymdan-special-deluxe-pillow-top-royal?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:22+07:00",
+      "fetchedAt": "2026-10-19T21:45:10+07:00",
       "priceLabel": "Giá chào mới",
       "promotion": {
         "from": "2026-10-01",
@@ -631,7 +631,7 @@
       "group": "Special Deluxe Pillow Top",
       "slug": "nem-kymdan-special-deluxe-pillow-top-cloud",
       "url": "https://kymdan.com/san-pham/nem-kymdan-special-deluxe-pillow-top-cloud?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:24+07:00",
+      "fetchedAt": "2026-10-19T21:45:11+07:00",
       "priceLabel": "Giá chào mới",
       "promotion": {
         "from": "2026-10-01",
@@ -839,7 +839,7 @@
       "group": "Special Deluxe Pillow Top",
       "slug": "nem-kymdan-special-deluxe-pillow-top-soft",
       "url": "https://kymdan.com/san-pham/nem-kymdan-special-deluxe-pillow-top-soft?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:25+07:00",
+      "fetchedAt": "2026-10-19T21:45:12+07:00",
       "priceLabel": "Giá chào mới",
       "promotion": {
         "from": "2026-10-01",
@@ -1047,7 +1047,7 @@
       "group": "Massage",
       "slug": "nem-kymdan-massage",
       "url": "https://kymdan.com/san-pham/nem-kymdan-massage?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:26+07:00",
+      "fetchedAt": "2026-10-19T21:45:14+07:00",
       "priceLabel": "Giá niêm yết",
       "promotion": {
         "from": "2026-10-01",
@@ -1552,7 +1552,7 @@
       "group": "Nệm xếp",
       "slug": "nem-xep-kymdan",
       "url": "https://kymdan.com/san-pham/nem-xep-kymdan?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:27+07:00",
+      "fetchedAt": "2026-10-19T21:45:15+07:00",
       "priceLabel": "Giá niêm yết",
       "promotion": {
         "from": "2026-10-01",
@@ -1934,7 +1934,7 @@
       "group": "Mini",
       "slug": "nem-mini-kymdan",
       "url": "https://kymdan.com/san-pham/nem-mini-kymdan?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:28+07:00",
+      "fetchedAt": "2026-10-19T21:45:16+07:00",
       "priceLabel": "Giá niêm yết",
       "promotion": {
         "from": "2026-10-01",
@@ -1998,7 +1998,7 @@
       "group": "Nệm y tế UltimateCare+",
       "slug": "nem-kymdan-y-te-vo-boc-ultimatecareplus",
       "url": "https://kymdan.com/san-pham/nem-kymdan-y-te-vo-boc-ultimatecareplus?lang=vi",
-      "fetchedAt": "2026-10-19T19:23:29+07:00",
+      "fetchedAt": "2026-10-19T21:45:17+07:00",
       "priceLabel": "Giá niêm yết",
       "promotion": {
         "from": "2026-10-01",
