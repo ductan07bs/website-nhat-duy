@@ -24,7 +24,9 @@
       title: 'Nệm Kymdan chính hãng Bồng Sơn, Gia Lai | Nội Thất Nhật Duy',
       description: 'Đại lý Kymdan Gia Lai tại 2657 Quang Trung, Bồng Sơn: nệm Kymdan chính hãng, nội thất phòng ngủ, nệm foam, bông ép. Mua nệm Kymdan trả góp 0%.',
       ogImage: '/assets/img/og-image.png',   // 1200 × 630
-      ogImageAlt: 'Nội Thất Nhật Duy — đại lý nệm Kymdan chính hãng tại Bồng Sơn, Gia Lai'
+      ogImageAlt: 'Nội Thất Nhật Duy — đại lý nệm Kymdan chính hãng tại Bồng Sơn, Gia Lai',
+      /* Mã xác minh Google Search Console (thẻ HTML) — giữ nguyên, xóa là mất quyền quản lý */
+      googleSiteVerification: 'hbPae7SEoGPTwzOppdJPQrN1j12qipnbEkE2fnAxW-w'
     },
 
     /* Thông tin cửa hàng thật — dùng cho JSON-LD (FurnitureStore) */

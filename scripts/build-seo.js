@@ -52,7 +52,8 @@ const head = [
   `<meta name="twitter:title" content="${esc(seo.title)}" />`,
   `<meta name="twitter:description" content="${esc(seo.description)}" />`,
   `<meta name="twitter:image" content="${ogImage}" />`,
-  `<meta name="twitter:image:alt" content="${esc(seo.ogImageAlt)}" />`
+  `<meta name="twitter:image:alt" content="${esc(seo.ogImageAlt)}" />`,
+  ...(seo.googleSiteVerification ? ['', `<meta name="google-site-verification" content="${esc(seo.googleSiteVerification)}" />`] : [])
 ].join('\n');
 
 /* Ảnh chia sẻ phải đúng 1200 × 630 */
