@@ -27,9 +27,9 @@
                      Hết hạn → trang tự quay về giá niêm yết (kể cả khi chưa chạy lại build).
          'nhatduy' — giá riêng của Nhật Duy, điền trong data/nhatduy-prices.json; size chưa điền hiện "Liên hệ".
        Đổi xong chạy:  npm run build
-       Ba Tân đã chọn 'list' (19/10/2026). */
+       Ba Tân đã chọn 'promo' (19/10/2026). */
     prices: {
-      priceDisplayMode: 'list'
+      priceDisplayMode: 'promo'
     }
   };
   if (typeof module === 'object' && module.exports) module.exports = SITE_CONFIG;
