@@ -39,11 +39,10 @@
       opens: '07:30',
       closes: '21:00',
       areaServed: ['Bồng Sơn', 'Hoài Nhơn', 'Hoài Ân', 'An Lão', 'Phù Mỹ'],
-      /* TODO: Ba Tân cung cấp vĩ độ, kinh độ của showroom (lấy trên Google Maps: nhấn giữ vào
-         vị trí cửa hàng → copy 2 số). Điền dạng { latitude: 14.xxx, longitude: 109.xxx }. */
-      geo: null,
-      /* TODO: Ba Tân xác nhận số đánh giá thật (lấy từ hồ sơ Google doanh nghiệp).
-         Điền dạng { ratingValue: 4.9, reviewCount: 25 }. Để null = không khai báo — KHÔNG điền số ước lượng. */
+      /* Tọa độ ghim của hồ sơ Google "Đai Lý Kymdan-Nội Thất Nhật Duy" (kiểm tra 19/10/2026) */
+      geo: { latitude: 14.4375628, longitude: 109.0182714 },
+      /* Số đánh giá thật trên hồ sơ Google. 19/10/2026 hồ sơ CHƯA có đánh giá nào → để null.
+         Khi có, điền đúng số Google hiển thị, dạng { ratingValue: 4.9, reviewCount: 25 }. KHÔNG điền số ước lượng. */
       rating: null
     },
 
