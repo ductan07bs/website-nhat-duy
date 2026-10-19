@@ -1,19 +1,20 @@
 /* FILE TỰ SINH từ index.html bằng `node scripts/build-knowledge.js` — ĐỪNG SỬA TAY.
    Muốn đổi giá: sửa index.html rồi chạy lại lệnh trên. */
 module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng × dài)\n" +
-  "- Kymdan Deluxe — Cao su thiên nhiên · Độ dày 10cm | 1m × 2m: 16.530.000₫ | 1m2 × 2m: 19.970.000₫ | 1m4 × 2m: 22.550.000₫ | 1m6 × 2m: 25.840.000₫ | 1m8 × 2m: 29.360.000₫ | Bảo hành: 15 năm\n" +
-  "- Kymdan Deluxe — Cao su thiên nhiên · Độ dày 15cm | 1m × 2m: 22.130.000₫ | 1m2 × 2m: 26.660.000₫ | 1m4 × 2m: 30.580.000₫ | 1m6 × 2m: 35.560.000₫ | 1m8 × 2m: 39.050.000₫ | Bảo hành: 15 năm\n" +
-  "- Kymdan Deluxe — Cao su thiên nhiên · Độ dày 20cm | 1m × 2m: 29.240.000₫ | 1m2 × 2m: 35.480.000₫ | 1m4 × 2m: 41.550.000₫ | 1m6 × 2m: 46.970.000₫ | 1m8 × 2m: 53.880.000₫ | Bảo hành: 15 năm\n" +
-  "- Kymdan Massage — Bề mặt massage · Độ dày 11cm | 1m × 2m: 19.110.000₫ | 1m2 × 2m: 23.410.000₫ | 1m4 × 2m: 26.650.000₫ | 1m6 × 2m: 30.140.000₫ | 1m8 × 2m: 34.300.000₫ | Bảo hành: 15 năm\n" +
-  "- Kymdan Massage — Bề mặt massage · Độ dày 16cm | 1m × 2m: 24.510.000₫ | 1m2 × 2m: 30.090.000₫ | 1m4 × 2m: 34.670.000₫ | 1m6 × 2m: 39.870.000₫ | 1m8 × 2m: 44.210.000₫ | Bảo hành: 15 năm\n" +
-  "- Special Deluxe Pillow Top Soft — Pillow Top mềm · Độ dày 25cm | 1m × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m2 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m4 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m6 × 2m: 223.000.000₫ | 1m8 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | Bảo hành: 15 năm\n" +
-  "- Special Deluxe Pillow Top Cloud — Pillow Top thoáng · Độ dày 27cm | 1m × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m2 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m4 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m6 × 2m: 234.110.000₫ | 1m8 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | Bảo hành: 15 năm\n" +
-  "- Special Deluxe Pillow Top Royal — Cao cấp nhất · Độ dày 32cm | 1m × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m2 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m4 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | 1m6 × 2m: 242.460.000₫ | 1m8 × 2m: chưa niêm yết — chuyên viên báo giá khi gọi lại | Bảo hành: 15 năm\n" +
-  "- Nệm Xếp Kymdan — Gấp gọn · Độ dày 5cm | 1m × 2m: 13.860.000₫ | 1m2 × 2m: 17.090.000₫ | 1m4 × 2m: 19.260.000₫ | 1m6 × 2m: 21.940.000₫ | 1m8 × 2m: 24.120.000₫ | Bảo hành: 10 năm\n" +
-  "- Kymdan Mini — Cho trẻ em · Giường cũi | Size 50×70: từ 1.640.000₫ · Size 60×80: từ 2.140.000₫ | Bảo hành: 15 năm\n" +
+  "- Kymdan Deluxe — Cao su thiên nhiên · Độ dày 10cm | 1m × 2m: 17.618.000₫ | 1m2 × 2m: 21.235.000₫ | 1m4 × 2m: 23.953.000₫ | 1m6 × 2m: 27.629.000₫ | 1m8 × 2m: 31.328.000₫ | Bảo hành: 15 năm\n" +
+  "- Kymdan Deluxe — Cao su thiên nhiên · Độ dày 15cm | 1m × 2m: 23.508.000₫ | 1m2 × 2m: 28.486.000₫ | 1m4 × 2m: 32.617.000₫ | 1m6 × 2m: 38.073.000₫ | 1m8 × 2m: 41.743.000₫ | Bảo hành: 15 năm\n" +
+  "- Kymdan Deluxe — Cao su thiên nhiên · Độ dày 20cm | 1m × 2m: 31.203.000₫ | 1m2 × 2m: 37.987.000₫ | 1m4 × 2m: 44.377.000₫ | 1m6 × 2m: 50.289.000₫ | 1m8 × 2m: 57.560.000₫ | Bảo hành: 15 năm\n" +
+  "- Kymdan Massage — Bề mặt massage · Độ dày 11cm | 1m × 2m: 20.331.000₫ | 1m2 × 2m: 24.853.000₫ | 1m4 × 2m: 28.480.000₫ | 1m6 × 2m: 32.152.000₫ | 1m8 × 2m: 36.746.000₫ | Bảo hành: 15 năm\n" +
+  "- Kymdan Massage — Bề mặt massage · Độ dày 16cm | 1m × 2m: 26.227.000₫ | 1m2 × 2m: 32.095.000₫ | 1m4 × 2m: 37.133.000₫ | 1m6 × 2m: 42.602.000₫ | 1m8 × 2m: 47.169.000₫ | Bảo hành: 15 năm\n" +
+  "- Special Deluxe Pillow Top Soft * — Pillow Top mềm · Độ dày 25cm | 1m × 2m: 142.400.000₫ | 1m2 × 2m: 165.380.000₫ | 1m4 × 2m: 195.000.000₫ | 1m6 × 2m: 223.800.000₫ | 1m8 × 2m: 256.730.000₫ | Bảo hành: 15 năm\n" +
+  "- Special Deluxe Pillow Top Cloud * — Pillow Top thoáng · Độ dày 27cm | 1m × 2m: 148.580.000₫ | 1m2 × 2m: 172.570.000₫ | 1m4 × 2m: 203.490.000₫ | 1m6 × 2m: 234.910.000₫ | 1m8 × 2m: 269.490.000₫ | Bảo hành: 15 năm\n" +
+  "- Special Deluxe Pillow Top Royal * — Cao cấp nhất · Độ dày 32cm | 1m × 2m: 154.780.000₫ | 1m2 × 2m: 179.760.000₫ | 1m4 × 2m: 211.960.000₫ | 1m6 × 2m: 243.260.000₫ | 1m8 × 2m: 279.060.000₫ | Bảo hành: 15 năm\n" +
+  "- Nệm Xếp Kymdan — Gấp gọn · Độ dày 5cm | 1m × 2m: 14.591.000₫ | 1m2 × 2m: 18.207.000₫ | 1m4 × 2m: 20.493.000₫ | 1m6 × 2m: 23.315.000₫ | 1m8 × 2m: 25.815.000₫ | Bảo hành: 15 năm\n" +
+  "- Kymdan Mini — Cho trẻ em · Giường cũi | 50×70×5cm: 2.254.000₫ 60×80×5cm: 4.306.000₫ 50×70×2,5cm: 1.733.000₫ 60×80×2,5cm: 2.422.000₫ | Bảo hành: 15 năm\n" +
+  "- Kymdan Y tế UltimateCare+ — Nệm y tế · Vỏ bọc UltimateCare+ | 80×200×15cm: 28.151.000₫ 90×200×15cm: 31.391.000₫ 80×200×10cm: 21.380.000₫ 90×200×10cm: 24.176.000₫ | Bảo hành: 15 năm\n" +
   "- Nệm Foam cao cấp — Bọt biển đa tầng · Công nghệ Hàn Quốc | Từ 1.720.000₫ · Nhiều dòng 5–20cm — xem mục Nệm Foam | Bảo hành: 2 năm\n" +
   "- Nệm Bông ép Hàn Quốc — Thoáng mát · Kháng khuẩn | Từ 2.620.000₫ · Nhiều dòng 5–28cm — xem mục Bông ép Hàn Quốc | Bảo hành: 3 năm\n" +
-  "Ghi chú: Giá khuyến mãi tham khảo theo niêm yết Kymdan 2026 trên kymdanshop.vn (đã gồm VAT, chưa gồm phí giao lắp ngoài bán kính 30km). Giá Pillow Top các size khác đang được cập nhật. Giá có thể thay đổi theo chính sách Kymdan từng thời điểm. Gọi 0909 001 336 để nhận báo giá chính xác và kiểm tra ưu đãi đại lý Nhật Duy tại Showroom.\n" +
+  "Ghi chú: Giá tham khảo theo niêm yết Kymdan, cập nhật ngày 19/10/2026 từ kymdan.com (VND/bộ, đã gồm VAT). (*) Pillow Top: Kymdan niêm yết là “giá chào mới”. Kymdan đang khuyến mại giảm 8% từ 01/10/2026 đến 05/02/2027 — gọi Nhật Duy để được báo giá khuyến mại. Giá có thể thay đổi theo từng đợt của Kymdan. Giá chưa gồm phí giao lắp ngoài bán kính 30 km. Gọi 0909 001 336 để nhận báo giá chính xác và kiểm tra ưu đãi đại lý Nhật Duy tại Showroom.\n" +
   "\n" +
   "## GỐI KYMDAN\n" +
   "Bộ sưu tập gối cao su thiên nhiên Kymdan — kháng khuẩn, kháng nấm mốc, kháng côn trùng. Có đầy đủ các dòng cho người lớn, trẻ em, đi du lịch và hỗ trợ cột sống cổ.\n" +

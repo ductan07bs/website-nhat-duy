@@ -27,7 +27,8 @@ const MANUAL = `
 - Khách được nằm thử trực tiếp tại showroom; đặt lịch trước để có chuyên viên tư vấn 1:1 trong 30 phút.
 
 ## CHÍNH SÁCH
-- Bảo hành: nệm Kymdan chính hãng 15 năm (Nệm Xếp Kymdan 10 năm); nệm foam 2 năm; nệm bông ép Hàn Quốc 3 năm. Bảo trì tận nhà tại Gia Lai.
+- Bảo hành: nệm Kymdan chính hãng 15 năm (kể cả Nệm Xếp, Mini, Pillow Top, Y tế UltimateCare+ — theo kymdan.com); nệm foam 2 năm; nệm bông ép Hàn Quốc 3 năm. Bảo trì tận nhà tại Gia Lai.
+- Giá nệm Kymdan trên website lấy từ niêm yết của kymdan.com. Riêng Pillow Top, Kymdan ghi là "giá chào mới".
 - Cam kết chính hãng: phát hiện hàng Kymdan giả — Nhật Duy đền 200% giá trị đơn hàng.
 - Thu nệm cũ: thu lại tận nơi khi đổi nệm mới, 200.000₫ – 500.000₫ tùy kích thước & chất liệu.
 - Trả góp 0% lãi suất qua thẻ tín dụng Vietcombank, Techcombank, VPBank, MB, ACB, Sacombank — kỳ hạn 3 / 6 / 9 / 12 tháng.
@@ -45,7 +46,6 @@ const MANUAL = `
 
 ## DỮ LIỆU CÒN THIẾU — khi khách hỏi các mục này, nói rõ là cần chuyên viên báo chính xác và xin số để gọi lại
 - Giá nệm foam và bông ép theo TỪNG kích thước (website chỉ có giá niêm yết "từ").
-- Giá Pillow Top các size ngoài 1m6 × 2m.
 - Phí giao lắp ngoài bán kính 30 km.
 - Chương trình khuyến mãi / quà tặng đang chạy.
 `;

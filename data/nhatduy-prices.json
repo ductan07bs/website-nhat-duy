@@ -1,0 +1,5 @@
+{
+  "_huong_dan": "Giá riêng của Nhật Duy — chỉ dùng khi priceDisplayMode = 'nhatduy' trong assets/js/site-config.js. Khóa dạng '<mã sản phẩm>|<rộng>x<dài>x<dày>' (cm), giá là số nguyên VND, ví dụ \"deluxe|160x200x10\": 25000000. Mã sản phẩm: deluxe, massage, pillowTopSoft, pillowTopCloud, pillowTopRoyal, nemXep, mini, ultimateCare. Size chưa điền sẽ hiện 'Liên hệ'. Sửa xong chạy: npm run build",
+  "updatedAt": "",
+  "prices": {}
+}

@@ -1,0 +1,2062 @@
+{
+  "source": "https://kymdan.com",
+  "note": "Giá bán lẻ Kymdan (VND/bộ, đã gồm VAT) lấy tự động từ kymdan.com. Không sửa tay — chạy npm run update-kymdan-prices.",
+  "updatedAt": "2026-10-19T19:23:30+07:00",
+  "products": {
+    "deluxe": {
+      "name": "Kymdan Deluxe",
+      "group": "Deluxe",
+      "slug": "nem-kymdan-deluxe",
+      "url": "https://kymdan.com/san-pham/nem-kymdan-deluxe?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:21+07:00",
+      "priceLabel": "Giá niêm yết",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": 8,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "",
+          "priceLabel": "Giá niêm yết",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": 8,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "80 x 200 x 20",
+              "width": 80,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 25320000,
+              "promoPrice": 23290000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 20",
+              "width": 90,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 28942000,
+              "promoPrice": 26620000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 20",
+              "width": 100,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 31203000,
+              "promoPrice": 28700000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 20",
+              "width": 120,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 37987000,
+              "promoPrice": 34940000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 20",
+              "width": 140,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 44377000,
+              "promoPrice": 40820000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 20",
+              "width": 150,
+              "length": 190,
+              "thickness": 20,
+              "listPrice": 45736000,
+              "promoPrice": 42070000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 20",
+              "width": 160,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 50289000,
+              "promoPrice": 46260000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 20",
+              "width": 180,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 57560000,
+              "promoPrice": 52950000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 20",
+              "width": 200,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 62870000,
+              "promoPrice": 57840000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 20",
+              "width": 200,
+              "length": 220,
+              "thickness": 20,
+              "listPrice": 69141000,
+              "promoPrice": 63600000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 20",
+              "width": 220,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 69141000,
+              "promoPrice": 63600000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 15",
+              "width": 80,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 18990000,
+              "promoPrice": 17470000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 15",
+              "width": 90,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 21699000,
+              "promoPrice": 19960000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 15",
+              "width": 100,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 23508000,
+              "promoPrice": 21620000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 15",
+              "width": 120,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 28486000,
+              "promoPrice": 26200000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 15",
+              "width": 140,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 32617000,
+              "promoPrice": 30000000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 15",
+              "width": 150,
+              "length": 190,
+              "thickness": 15,
+              "listPrice": 33974000,
+              "promoPrice": 31250000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 15",
+              "width": 160,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 38073000,
+              "promoPrice": 35020000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 15",
+              "width": 180,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 41743000,
+              "promoPrice": 38400000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 15",
+              "width": 200,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 47487000,
+              "promoPrice": 43680000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 15",
+              "width": 200,
+              "length": 220,
+              "thickness": 15,
+              "listPrice": 52220000,
+              "promoPrice": 48040000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 15",
+              "width": 220,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 52220000,
+              "promoPrice": 48040000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 12.5",
+              "width": 160,
+              "length": 200,
+              "thickness": 12.5,
+              "listPrice": 32863000,
+              "promoPrice": 30230000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 10",
+              "width": 80,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 13433000,
+              "promoPrice": 12350000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 10",
+              "width": 90,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 15816000,
+              "promoPrice": 14550000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 10",
+              "width": 100,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 17618000,
+              "promoPrice": 16200000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 10",
+              "width": 120,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 21235000,
+              "promoPrice": 19530000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 10",
+              "width": 140,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 23953000,
+              "promoPrice": 22030000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 10",
+              "width": 150,
+              "length": 190,
+              "thickness": 10,
+              "listPrice": 24896000,
+              "promoPrice": 22900000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 10",
+              "width": 160,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 27629000,
+              "promoPrice": 25410000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 10",
+              "width": 180,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 31328000,
+              "promoPrice": 28820000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 10",
+              "width": 200,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 34527000,
+              "promoPrice": 31760000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 10",
+              "width": 200,
+              "length": 220,
+              "thickness": 10,
+              "listPrice": 37966000,
+              "promoPrice": 34920000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 10",
+              "width": 220,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 37966000,
+              "promoPrice": 34920000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 7.5",
+              "width": 100,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 14675000,
+              "promoPrice": 13500000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 7.5",
+              "width": 120,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 17394000,
+              "promoPrice": 16000000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 7.5",
+              "width": 140,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 19885000,
+              "promoPrice": 18290000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 7.5",
+              "width": 160,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 23109000,
+              "promoPrice": 21260000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 7.5",
+              "width": 180,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 26126000,
+              "promoPrice": 24030000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 7.5",
+              "width": 200,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 28790000,
+              "promoPrice": 26480000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 7.5",
+              "width": 200,
+              "length": 220,
+              "thickness": 7.5,
+              "listPrice": 31656000,
+              "promoPrice": 29120000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 7.5",
+              "width": 220,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 31656000,
+              "promoPrice": 29120000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 5",
+              "width": 80,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 8896000,
+              "promoPrice": 8180000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 5",
+              "width": 90,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 10839000,
+              "promoPrice": 9970000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 5",
+              "width": 100,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 11733000,
+              "promoPrice": 10790000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 5",
+              "width": 120,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 13553000,
+              "promoPrice": 12460000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 5",
+              "width": 140,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 15815000,
+              "promoPrice": 14540000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 5",
+              "width": 150,
+              "length": 190,
+              "thickness": 5,
+              "listPrice": 16298000,
+              "promoPrice": 14990000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 5",
+              "width": 160,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 18589000,
+              "promoPrice": 17100000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 5",
+              "width": 180,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 20925000,
+              "promoPrice": 19250000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 5",
+              "width": 200,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 23053000,
+              "promoPrice": 21200000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 5",
+              "width": 200,
+              "length": 220,
+              "thickness": 5,
+              "listPrice": 25346000,
+              "promoPrice": 23310000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 5",
+              "width": 220,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 25346000,
+              "promoPrice": 23310000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    },
+    "pillowTopRoyal": {
+      "name": "Kymdan Special Deluxe Pillow Top Royal",
+      "group": "Special Deluxe Pillow Top",
+      "slug": "nem-kymdan-special-deluxe-pillow-top-royal",
+      "url": "https://kymdan.com/san-pham/nem-kymdan-special-deluxe-pillow-top-royal?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:22+07:00",
+      "priceLabel": "Giá chào mới",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": null,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "",
+          "priceLabel": "Giá chào mới",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": null,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "80 x 200 x 32",
+              "width": 80,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 126560000,
+              "promoPrice": 116430000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 32",
+              "width": 90,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 141460000,
+              "promoPrice": 130140000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 32",
+              "width": 100,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 154780000,
+              "promoPrice": 142390000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 32",
+              "width": 120,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 179760000,
+              "promoPrice": 165370000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 32",
+              "width": 140,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 211960000,
+              "promoPrice": 195000000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 32",
+              "width": 160,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 243260000,
+              "promoPrice": 223790000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 32",
+              "width": 180,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 279060000,
+              "promoPrice": 256730000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 32",
+              "width": 200,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 314860000,
+              "promoPrice": 289670000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 32",
+              "width": 200,
+              "length": 220,
+              "thickness": 32,
+              "listPrice": 350660000,
+              "promoPrice": 322600000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 32",
+              "width": 220,
+              "length": 200,
+              "thickness": 32,
+              "listPrice": 350660000,
+              "promoPrice": 322600000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    },
+    "pillowTopCloud": {
+      "name": "Kymdan Special Deluxe Pillow Top Cloud",
+      "group": "Special Deluxe Pillow Top",
+      "slug": "nem-kymdan-special-deluxe-pillow-top-cloud",
+      "url": "https://kymdan.com/san-pham/nem-kymdan-special-deluxe-pillow-top-cloud?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:24+07:00",
+      "priceLabel": "Giá chào mới",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": null,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "",
+          "priceLabel": "Giá chào mới",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": null,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "80 x 200 x 27",
+              "width": 80,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 121500000,
+              "promoPrice": 111780000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 27",
+              "width": 90,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 135790000,
+              "promoPrice": 124920000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 27",
+              "width": 100,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 148580000,
+              "promoPrice": 136690000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 27",
+              "width": 120,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 172570000,
+              "promoPrice": 158760000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 27",
+              "width": 140,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 203490000,
+              "promoPrice": 187210000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 27",
+              "width": 160,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 234910000,
+              "promoPrice": 216110000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 27",
+              "width": 180,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 269490000,
+              "promoPrice": 247930000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 27",
+              "width": 200,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 304060000,
+              "promoPrice": 279730000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 27",
+              "width": 200,
+              "length": 220,
+              "thickness": 27,
+              "listPrice": 338640000,
+              "promoPrice": 311540000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 27",
+              "width": 220,
+              "length": 200,
+              "thickness": 27,
+              "listPrice": 338640000,
+              "promoPrice": 311540000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 22",
+              "width": 80,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 112410000,
+              "promoPrice": 103410000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 22",
+              "width": 90,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 125320000,
+              "promoPrice": 115290000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 22",
+              "width": 100,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 137550000,
+              "promoPrice": 126540000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 22",
+              "width": 120,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 159170000,
+              "promoPrice": 146430000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 22",
+              "width": 140,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 186960000,
+              "promoPrice": 172000000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 22",
+              "width": 160,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 216100000,
+              "promoPrice": 198810000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 22",
+              "width": 180,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 245660000,
+              "promoPrice": 226000000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 22",
+              "width": 200,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 275220000,
+              "promoPrice": 253200000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 22",
+              "width": 200,
+              "length": 220,
+              "thickness": 22,
+              "listPrice": 304770000,
+              "promoPrice": 280380000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 22",
+              "width": 220,
+              "length": 200,
+              "thickness": 22,
+              "listPrice": 304770000,
+              "promoPrice": 280380000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    },
+    "pillowTopSoft": {
+      "name": "Kymdan Special Deluxe Pillow Top Soft",
+      "group": "Special Deluxe Pillow Top",
+      "slug": "nem-kymdan-special-deluxe-pillow-top-soft",
+      "url": "https://kymdan.com/san-pham/nem-kymdan-special-deluxe-pillow-top-soft?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:25+07:00",
+      "priceLabel": "Giá chào mới",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": null,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "",
+          "priceLabel": "Giá chào mới",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": null,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "80 x 200 x 25",
+              "width": 80,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 116440000,
+              "promoPrice": 107120000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 25",
+              "width": 90,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 130140000,
+              "promoPrice": 119720000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 25",
+              "width": 100,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 142400000,
+              "promoPrice": 131000000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 25",
+              "width": 120,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 165380000,
+              "promoPrice": 152140000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 25",
+              "width": 140,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 195000000,
+              "promoPrice": 179400000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 25",
+              "width": 160,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 223800000,
+              "promoPrice": 205890000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 25",
+              "width": 180,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 256730000,
+              "promoPrice": 236190000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 25",
+              "width": 200,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 289670000,
+              "promoPrice": 266490000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 25",
+              "width": 200,
+              "length": 220,
+              "thickness": 25,
+              "listPrice": 322610000,
+              "promoPrice": 296800000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 25",
+              "width": 220,
+              "length": 200,
+              "thickness": 25,
+              "listPrice": 322610000,
+              "promoPrice": 296800000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 20",
+              "width": 80,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 98270000,
+              "promoPrice": 90400000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 20",
+              "width": 90,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 109200000,
+              "promoPrice": 100460000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 20",
+              "width": 100,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 120330000,
+              "promoPrice": 110700000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 20",
+              "width": 120,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 138570000,
+              "promoPrice": 127480000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 20",
+              "width": 140,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 161980000,
+              "promoPrice": 149020000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 20",
+              "width": 160,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 188950000,
+              "promoPrice": 173830000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 20",
+              "width": 180,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 212250000,
+              "promoPrice": 195270000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 20",
+              "width": 200,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 235570000,
+              "promoPrice": 216720000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 20",
+              "width": 200,
+              "length": 220,
+              "thickness": 20,
+              "listPrice": 258880000,
+              "promoPrice": 238160000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 20",
+              "width": 220,
+              "length": 200,
+              "thickness": 20,
+              "listPrice": 258880000,
+              "promoPrice": 238160000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    },
+    "massage": {
+      "name": "Kymdan Massage",
+      "group": "Massage",
+      "slug": "nem-kymdan-massage",
+      "url": "https://kymdan.com/san-pham/nem-kymdan-massage?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:26+07:00",
+      "priceLabel": "Giá niêm yết",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": 8,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "",
+          "priceLabel": "Giá niêm yết",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": 8,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "80 x 200 x 21",
+              "width": 80,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 28038000,
+              "promoPrice": 25790000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 21",
+              "width": 90,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 31664000,
+              "promoPrice": 29130000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 21",
+              "width": 100,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 33915000,
+              "promoPrice": 31200000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 21",
+              "width": 120,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 41607000,
+              "promoPrice": 38270000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 21",
+              "width": 140,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 48899000,
+              "promoPrice": 44980000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 21",
+              "width": 150,
+              "length": 190,
+              "thickness": 21,
+              "listPrice": 50263000,
+              "promoPrice": 46240000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 21",
+              "width": 160,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 54802000,
+              "promoPrice": 50410000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 21",
+              "width": 180,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 62995000,
+              "promoPrice": 57950000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 21",
+              "width": 200,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 68473000,
+              "promoPrice": 62990000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 21",
+              "width": 200,
+              "length": 220,
+              "thickness": 21,
+              "listPrice": 75305000,
+              "promoPrice": 69280000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 21",
+              "width": 220,
+              "length": 200,
+              "thickness": 21,
+              "listPrice": 75305000,
+              "promoPrice": 69280000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 16",
+              "width": 80,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 21692000,
+              "promoPrice": 19950000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 16",
+              "width": 90,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 24422000,
+              "promoPrice": 22460000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 16",
+              "width": 100,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 26227000,
+              "promoPrice": 24120000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 16",
+              "width": 120,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 32095000,
+              "promoPrice": 29520000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 16",
+              "width": 140,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 37133000,
+              "promoPrice": 34160000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 16",
+              "width": 150,
+              "length": 190,
+              "thickness": 16,
+              "listPrice": 38495000,
+              "promoPrice": 35410000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 16",
+              "width": 160,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 42602000,
+              "promoPrice": 39190000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 16",
+              "width": 180,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 47169000,
+              "promoPrice": 43390000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 16",
+              "width": 200,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 53369000,
+              "promoPrice": 49090000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 16",
+              "width": 200,
+              "length": 220,
+              "thickness": 16,
+              "listPrice": 58691000,
+              "promoPrice": 53990000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 16",
+              "width": 220,
+              "length": 200,
+              "thickness": 16,
+              "listPrice": 58691000,
+              "promoPrice": 53990000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 13.5",
+              "width": 160,
+              "length": 200,
+              "thickness": 13.5,
+              "listPrice": 37390000,
+              "promoPrice": 34390000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 11",
+              "width": 80,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 16138000,
+              "promoPrice": 14840000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 11",
+              "width": 90,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 18527000,
+              "promoPrice": 17040000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 11",
+              "width": 100,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 20331000,
+              "promoPrice": 18700000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 11",
+              "width": 120,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 24853000,
+              "promoPrice": 22860000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 11",
+              "width": 140,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 28480000,
+              "promoPrice": 26200000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 11",
+              "width": 150,
+              "length": 190,
+              "thickness": 11,
+              "listPrice": 29422000,
+              "promoPrice": 27060000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 11",
+              "width": 160,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 32152000,
+              "promoPrice": 29570000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 11",
+              "width": 180,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 36746000,
+              "promoPrice": 33800000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 11",
+              "width": 200,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 40140000,
+              "promoPrice": 36920000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 11",
+              "width": 200,
+              "length": 220,
+              "thickness": 11,
+              "listPrice": 44139000,
+              "promoPrice": 40600000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 11",
+              "width": 220,
+              "length": 200,
+              "thickness": 11,
+              "listPrice": 44139000,
+              "promoPrice": 40600000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 8.5",
+              "width": 100,
+              "length": 200,
+              "thickness": 8.5,
+              "listPrice": 17396000,
+              "promoPrice": 16000000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 8.5",
+              "width": 120,
+              "length": 200,
+              "thickness": 8.5,
+              "listPrice": 21009000,
+              "promoPrice": 19320000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 8.5",
+              "width": 140,
+              "length": 200,
+              "thickness": 8.5,
+              "listPrice": 24406000,
+              "promoPrice": 22450000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 8.5",
+              "width": 160,
+              "length": 200,
+              "thickness": 8.5,
+              "listPrice": 27631000,
+              "promoPrice": 25420000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 8.5",
+              "width": 180,
+              "length": 200,
+              "thickness": 8.5,
+              "listPrice": 31548000,
+              "promoPrice": 29020000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 8.5",
+              "width": 200,
+              "length": 200,
+              "thickness": 8.5,
+              "listPrice": 34394000,
+              "promoPrice": 31640000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 8.5",
+              "width": 200,
+              "length": 220,
+              "thickness": 8.5,
+              "listPrice": 37820000,
+              "promoPrice": 34790000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 8.5",
+              "width": 220,
+              "length": 200,
+              "thickness": 8.5,
+              "listPrice": 37820000,
+              "promoPrice": 34790000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 6",
+              "width": 80,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 11604000,
+              "promoPrice": 10670000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 6",
+              "width": 90,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 13552000,
+              "promoPrice": 12460000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 6",
+              "width": 100,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 14460000,
+              "promoPrice": 13300000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 6",
+              "width": 120,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 17165000,
+              "promoPrice": 15790000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 6",
+              "width": 140,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 20331000,
+              "promoPrice": 18700000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 6",
+              "width": 150,
+              "length": 190,
+              "thickness": 6,
+              "listPrice": 20820000,
+              "promoPrice": 19150000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 6",
+              "width": 160,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 23111000,
+              "promoPrice": 21260000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 6",
+              "width": 180,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 26350000,
+              "promoPrice": 24240000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 6",
+              "width": 200,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 28648000,
+              "promoPrice": 26350000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 6",
+              "width": 200,
+              "length": 220,
+              "thickness": 6,
+              "listPrice": 31501000,
+              "promoPrice": 28980000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 6",
+              "width": 220,
+              "length": 200,
+              "thickness": 6,
+              "listPrice": 31501000,
+              "promoPrice": 28980000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    },
+    "nemXep": {
+      "name": "Nệm Xếp Kymdan",
+      "group": "Nệm xếp",
+      "slug": "nem-xep-kymdan",
+      "url": "https://kymdan.com/san-pham/nem-xep-kymdan?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:27+07:00",
+      "priceLabel": "Giá niêm yết",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": 8,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "1. Nệm xếp (folding mattress) Kymdan (gồm nệm + vỏ bọc Kymdan AirFresh + vỏ bọc Kymdan ClassicCare)",
+          "priceLabel": "Giá niêm yết",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": 8,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "100 x 200 x 7.5",
+              "width": 100,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 17826000,
+              "promoPrice": 16390000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 7.5",
+              "width": 120,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 22569000,
+              "promoPrice": 20760000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 7.5",
+              "width": 140,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 25089000,
+              "promoPrice": 23080000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 7.5",
+              "width": 160,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 28367000,
+              "promoPrice": 26090000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 7.5",
+              "width": 180,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 31542000,
+              "promoPrice": 29010000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 7.5",
+              "width": 200,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 35972000,
+              "promoPrice": 33090000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 7.5",
+              "width": 200,
+              "length": 220,
+              "thickness": 7.5,
+              "listPrice": 39543000,
+              "promoPrice": 36370000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 7.5",
+              "width": 220,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 39543000,
+              "promoPrice": 36370000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 5",
+              "width": 80,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 11858000,
+              "promoPrice": 10900000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 5",
+              "width": 90,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 13667000,
+              "promoPrice": 12570000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 5",
+              "width": 100,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 14591000,
+              "promoPrice": 13420000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 5",
+              "width": 120,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 18207000,
+              "promoPrice": 16750000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 5",
+              "width": 140,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 20493000,
+              "promoPrice": 18850000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 5",
+              "width": 150,
+              "length": 190,
+              "thickness": 5,
+              "listPrice": 21000000,
+              "promoPrice": 19320000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 5",
+              "width": 160,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 23315000,
+              "promoPrice": 21440000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 5",
+              "width": 180,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 25815000,
+              "promoPrice": 23740000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 5",
+              "width": 200,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 29524000,
+              "promoPrice": 27160000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 5",
+              "width": 200,
+              "length": 220,
+              "thickness": 5,
+              "listPrice": 32460000,
+              "promoPrice": 29860000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 5",
+              "width": 220,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 32460000,
+              "promoPrice": 29860000,
+              "discountPercent": 8
+            }
+          ]
+        },
+        {
+          "label": "2. Nệm xếp (folding mattress) Kymdan UltimateCare+ (gồm nệm + vỏ bọc Kymdan AirFresh + vỏ bọc Kymdan UltimateCare+)",
+          "priceLabel": "Giá niêm yết",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": 8,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "100 x 200 x 7.5",
+              "width": 100,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 24255000,
+              "promoPrice": 22310000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 7.5",
+              "width": 120,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 30145000,
+              "promoPrice": 27730000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 7.5",
+              "width": 140,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 33716000,
+              "promoPrice": 31010000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 7.5",
+              "width": 160,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 38110000,
+              "promoPrice": 35060000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 7.5",
+              "width": 180,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 42187000,
+              "promoPrice": 38810000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 7.5",
+              "width": 200,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 47538000,
+              "promoPrice": 43730000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 7.5",
+              "width": 200,
+              "length": 220,
+              "thickness": 7.5,
+              "listPrice": 52003000,
+              "promoPrice": 47840000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 7.5",
+              "width": 220,
+              "length": 200,
+              "thickness": 7.5,
+              "listPrice": 52003000,
+              "promoPrice": 47840000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 5",
+              "width": 80,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 17029000,
+              "promoPrice": 15660000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 5",
+              "width": 90,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 19338000,
+              "promoPrice": 17790000,
+              "discountPercent": 8
+            },
+            {
+              "size": "100 x 200 x 5",
+              "width": 100,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 20784000,
+              "promoPrice": 19120000,
+              "discountPercent": 8
+            },
+            {
+              "size": "120 x 200 x 5",
+              "width": 120,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 25548000,
+              "promoPrice": 23500000,
+              "discountPercent": 8
+            },
+            {
+              "size": "140 x 200 x 5",
+              "width": 140,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 28885000,
+              "promoPrice": 26570000,
+              "discountPercent": 8
+            },
+            {
+              "size": "150 x 190 x 5",
+              "width": 150,
+              "length": 190,
+              "thickness": 5,
+              "listPrice": 29911000,
+              "promoPrice": 27510000,
+              "discountPercent": 8
+            },
+            {
+              "size": "160 x 200 x 5",
+              "width": 160,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 32911000,
+              "promoPrice": 30270000,
+              "discountPercent": 8
+            },
+            {
+              "size": "180 x 200 x 5",
+              "width": 180,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 36234000,
+              "promoPrice": 33330000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 200 x 5",
+              "width": 200,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 40864000,
+              "promoPrice": 37590000,
+              "discountPercent": 8
+            },
+            {
+              "size": "200 x 220 x 5",
+              "width": 200,
+              "length": 220,
+              "thickness": 5,
+              "listPrice": 44696000,
+              "promoPrice": 41120000,
+              "discountPercent": 8
+            },
+            {
+              "size": "220 x 200 x 5",
+              "width": 220,
+              "length": 200,
+              "thickness": 5,
+              "listPrice": 44696000,
+              "promoPrice": 41120000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    },
+    "mini": {
+      "name": "Nệm Mini Kymdan",
+      "group": "Mini",
+      "slug": "nem-mini-kymdan",
+      "url": "https://kymdan.com/san-pham/nem-mini-kymdan?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:28+07:00",
+      "priceLabel": "Giá niêm yết",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": 8,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "",
+          "priceLabel": "Giá niêm yết",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": 8,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "50 x 70 x 5",
+              "width": 50,
+              "length": 70,
+              "thickness": 5,
+              "listPrice": 2254000,
+              "promoPrice": 2070000,
+              "discountPercent": 8
+            },
+            {
+              "size": "60 x 80 x 5",
+              "width": 60,
+              "length": 80,
+              "thickness": 5,
+              "listPrice": 4306000,
+              "promoPrice": 3960000,
+              "discountPercent": 8
+            },
+            {
+              "size": "50 x 70 x 2.5",
+              "width": 50,
+              "length": 70,
+              "thickness": 2.5,
+              "listPrice": 1733000,
+              "promoPrice": 1590000,
+              "discountPercent": 8
+            },
+            {
+              "size": "60 x 80 x 2.5",
+              "width": 60,
+              "length": 80,
+              "thickness": 2.5,
+              "listPrice": 2422000,
+              "promoPrice": 2220000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    },
+    "ultimateCare": {
+      "name": "Nệm Kymdan Y tế UltimateCare+",
+      "group": "Nệm y tế UltimateCare+",
+      "slug": "nem-kymdan-y-te-vo-boc-ultimatecareplus",
+      "url": "https://kymdan.com/san-pham/nem-kymdan-y-te-vo-boc-ultimatecareplus?lang=vi",
+      "fetchedAt": "2026-10-19T19:23:29+07:00",
+      "priceLabel": "Giá niêm yết",
+      "promotion": {
+        "from": "2026-10-01",
+        "to": "2027-02-05",
+        "discountPercent": 8,
+        "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+      },
+      "variants": [
+        {
+          "label": "",
+          "priceLabel": "Giá niêm yết",
+          "promotion": {
+            "from": "2026-10-01",
+            "to": "2027-02-05",
+            "discountPercent": 8,
+            "text": "Khuyến mại từ 01/10/2026 đến 05/02/2027"
+          },
+          "rows": [
+            {
+              "size": "80 x 200 x 15",
+              "width": 80,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 28151000,
+              "promoPrice": 25890000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 15",
+              "width": 90,
+              "length": 200,
+              "thickness": 15,
+              "listPrice": 31391000,
+              "promoPrice": 28870000,
+              "discountPercent": 8
+            },
+            {
+              "size": "80 x 200 x 10",
+              "width": 80,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 21380000,
+              "promoPrice": 19660000,
+              "discountPercent": 8
+            },
+            {
+              "size": "90 x 200 x 10",
+              "width": 90,
+              "length": 200,
+              "thickness": 10,
+              "listPrice": 24176000,
+              "promoPrice": 22240000,
+              "discountPercent": 8
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "errors": []
+}

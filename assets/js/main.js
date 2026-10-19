@@ -514,7 +514,8 @@ const ZALO_URL = 'https://zalo.me/0909001336';
   }
 
   /* ── Quiz chọn nệm → gợi ý + thu số điện thoại ──────────── */
-  /* Giá trích từ bảng giá trên trang (size 1m6 × 2m). Đổi giá ở bảng thì sửa cả ở đây. */
+  /* Giá nệm Kymdan đọc từ ô bảng giá (data-pkey) — luôn khớp bảng giá & kiểu hiển thị đang chọn.
+     Bông ép không phải hàng Kymdan → giữ giá "từ" như dòng bông ép trong bảng. */
   const QUIZ_PRODUCTS = {
     bongEp: {
       title: 'Nệm Bông ép Hàn Quốc',
@@ -526,28 +527,28 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     deluxe10: {
       title: 'Nệm Kymdan Deluxe 10cm',
       desc: 'Dòng nền tảng của Kymdan — cao su thiên nhiên 100%, nâng đỡ cột sống tốt, bảo hành chính hãng 15 năm.',
-      price: 'Giá tham khảo size 1m6 × 2m: 25.840.000₫',
+      priceKey: 'deluxe|160x200x10',
       img: 'assets/img/products/nem-deluxe.webp',
       service: 'kymdan'
     },
     deluxe20: {
       title: 'Nệm Kymdan Deluxe 20cm',
       desc: 'Bản dày nhất của dòng Deluxe — bề mặt chắc, nâng đỡ trọn thân, bảo hành chính hãng 15 năm.',
-      price: 'Giá tham khảo size 1m6 × 2m: 46.970.000₫',
+      priceKey: 'deluxe|160x200x20',
       img: 'assets/img/products/nem-deluxe.webp',
       service: 'kymdan'
     },
     cloud: {
       title: 'Nệm Kymdan Special Deluxe Pillow Top Cloud',
       desc: 'Lớp Pillow Top thoáng hơi trên nền cao su thiên nhiên — êm mà vẫn thông thoáng, bảo hành 15 năm.',
-      price: 'Giá tham khảo size 1m6 × 2m: 234.110.000₫',
+      priceKey: 'pillowTopCloud|160x200x27',
       img: 'assets/img/products/nem-pillowtop.webp',
       service: 'kymdan'
     },
     royal: {
       title: 'Nệm Kymdan Special Deluxe Pillow Top Royal',
       desc: 'Dòng cao cấp nhất của Kymdan — dày 32cm, lớp Pillow Top êm ái, nâng đỡ cột sống toàn diện.',
-      price: 'Giá tham khảo size 1m6 × 2m: 242.460.000₫',
+      priceKey: 'pillowTopRoyal|160x200x32',
       img: 'assets/img/products/nem-pillowtop.webp',
       service: 'kymdan'
     }
@@ -582,10 +583,19 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     if (a.s2 === 'C') reasons.push('Cho trẻ em, ưu tiên nệm kháng khuẩn, nhẹ, dễ vệ sinh và giá hợp lý.');
 
     if (a.s3 === 'A') reasons.push('Vừa ngân sách dưới 10 triệu. Nếu thích cảm giác ôm người hơn, Nhật Duy có thêm nệm Foam từ 1.720.000₫ để bạn so sánh.');
-    if (key === 'deluxe10') reasons.push('Vừa tầm 10–30 triệu: size 1m6 × 2m khoảng 25,8 triệu, size nhỏ hơn còn thấp hơn — xem đủ các size ở bảng giá bên dưới.');
+    if (key === 'deluxe10') reasons.push('Vừa tầm 10–30 triệu cho các size phổ biến — xem đủ giá từng size ở bảng giá bên dưới.');
     if (a.s3 === 'C' && (key === 'royal' || key === 'cloud')) reasons.push('Nếu muốn cân đối ngân sách hơn, Kymdan Deluxe 15–20cm cũng là lựa chọn rất đáng cân nhắc.');
 
     return { key, product: QUIZ_PRODUCTS[key], reasons };
+  }
+
+  /* Giá đang hiển thị trong bảng cho size 1m6 × 2m; không có ô → không ghi giá (không đoán) */
+  function quizPrice(p) {
+    if (p.price) return p.price;
+    const cell = document.querySelector(`.kd-price[data-pkey="${p.priceKey}"]`);
+    if (!cell) return '';
+    const now = cell.querySelector('.kd-price__now');
+    return (now ? 'Giá khuyến mại Kymdan' : 'Giá niêm yết Kymdan') + ' size 1m6 × 2m: ' + (now || cell).textContent.trim();
   }
 
   const quizCard = document.getElementById('quizCard');
@@ -612,7 +622,7 @@ const ZALO_URL = 'https://zalo.me/0909001336';
       pick = quizPick(answers);
       const p = pick.product;
       document.getElementById('qResultTitle').textContent = p.title;
-      document.getElementById('qResultDesc').textContent = p.desc + ' ' + p.price + '.';
+      document.getElementById('qResultDesc').textContent = p.desc + (quizPrice(p) ? ' ' + quizPrice(p) + '.' : '');
       document.getElementById('qResultReasons').innerHTML =
         pick.reasons.map(r => `<li>${r}</li>`).join('');
       const thumb = document.getElementById('qResultImg');
@@ -679,6 +689,19 @@ const ZALO_URL = 'https://zalo.me/0909001336';
       }).finally(() => { sending = false; });
     });
   }
+
+  /* ── Bảng giá Kymdan: hết đợt khuyến mại → tự quay về giá niêm yết ──
+     (giá KM chỉ hiện kèm hạn; phòng khi chưa kịp chạy lại npm run build) */
+  const todayVN = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh' });
+  const fmtVnd = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '₫';
+  document.querySelectorAll('.kd-price[data-promo-end]').forEach(el => {
+    if (el.dataset.promoEnd >= todayVN) return;
+    el.textContent = fmtVnd(el.dataset.list);
+    el.removeAttribute('data-promo-end');
+  });
+  document.querySelectorAll('[data-promo-note][data-promo-end]').forEach(el => {
+    if (el.dataset.promoEnd < todayVN) el.textContent = 'Đợt khuyến mại của Kymdan đã kết thúc — bảng đang hiển thị giá niêm yết.';
+  });
 
   /* ── Bảng giá: gắn nhãn cột cho bố cục thẻ trên mobile ── */
   document.querySelectorAll('.price-grid').forEach(table => {

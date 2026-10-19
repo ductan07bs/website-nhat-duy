@@ -3,6 +3,8 @@
   "private": true,
   "description": "Landing page Nội Thất Nhật Duy + chatbox AI (Vercel Serverless Functions trong /api)",
   "scripts": {
+    "update-kymdan-prices": "node scripts/update-kymdan-prices.js",
+    "build": "node scripts/render-price-table.js && node scripts/build-knowledge.js",
     "knowledge": "node scripts/build-knowledge.js"
   },
   "dependencies": {

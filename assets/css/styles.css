@@ -2715,3 +2715,12 @@ em { font-style: italic; color: var(--walnut-mid); }
   outline: 1px dashed rgba(181,72,47,.6);
   outline-offset: -4px;
 }
+
+/* ─── 36. Bảng giá Kymdan tự sinh — giá KM kèm giá niêm yết gạch ngang ─ */
+.kd-price { white-space: nowrap; }
+.kd-price__was { display: block; font-size: 0.78em; opacity: .6; font-weight: 400; }
+.kd-price__now { color: #d4a84b; }
+.price-grid sup { color: #d4a84b; font-weight: 700; }
+.price-grid td.kd-compact { text-align: center; }
+.kd-item { display: inline-block; margin: 3px 12px; white-space: nowrap; }
+.kd-item .kd-price__was { display: inline; margin-right: 4px; }

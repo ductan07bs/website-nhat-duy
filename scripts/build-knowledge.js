@@ -126,7 +126,14 @@ const body = blocks.map(b => '## ' + b[0] + '\n' + b.slice(1).filter(Boolean).jo
 
 /* Chặn trường hợp index.html đổi cấu trúc khiến bóc tách ra rỗng */
 blocks.forEach(b => { if (b.length < 3) throw new Error('Mục "' + b[0] + '" bóc tách ra rỗng — kiểm tra lại index.html'); });
-if (!/25\.840\.000/.test(body)) console.warn('CẢNH BÁO: không thấy giá Kymdan Deluxe 10cm 1m6 quen thuộc — kiểm tra bảng giá.');
+/* Giá Kymdan Deluxe 10cm 1m6 trong bảng phải trùng với data/kymdan-prices.json (đã chạy npm run build chưa?) */
+{
+  const kd = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'kymdan-prices.json'), 'utf8'));
+  const r = ((kd.products.deluxe || {}).variants || [{ rows: [] }])[0].rows.find(x => x.width === 160 && x.length === 200 && x.thickness === 10);
+  const shown = r && String(r.listPrice).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  const mode = require(path.join(ROOT, 'assets', 'js', 'site-config.js')).prices.priceDisplayMode;
+  if (mode !== 'nhatduy' && shown && !body.includes(shown)) console.warn('CẢNH BÁO: bảng giá chưa khớp data/kymdan-prices.json (không thấy Deluxe 10cm 1m6 = ' + shown + ') — chạy npm run build.');
+}
 
 const outFile = path.join(ROOT, 'data', 'knowledge-generated.js');
 fs.mkdirSync(path.dirname(outFile), { recursive: true });
