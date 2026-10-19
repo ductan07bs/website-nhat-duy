@@ -4,7 +4,8 @@
    - Sticky-header state
    - Combo filter
    - Lỗ Ban 42.9cm calculator
-   - Gửi lead (form đặt lịch + Phiếu phong thủy) về LEAD_ENDPOINT
+   - Gửi lead (form đặt lịch + Phiếu phong thủy + quiz chọn nệm) về LEAD_ENDPOINT
+   - Quiz chọn nệm: gợi ý dòng nệm + thu số điện thoại
    - Bảng giá dạng thẻ trên mobile, accordion nhóm sản phẩm phụ
    - Scroll reveal
    ========================================================= */
@@ -483,6 +484,173 @@ const ZALO_URL = 'https://zalo.me/0909001336';
         imgFail();
         window.open(ZALO_URL, '_blank', 'noopener');
       });
+    });
+  }
+
+  /* ── Quiz chọn nệm → gợi ý + thu số điện thoại ──────────── */
+  /* Giá trích từ bảng giá trên trang (size 1m6 × 2m). Đổi giá ở bảng thì sửa cả ở đây. */
+  const QUIZ_PRODUCTS = {
+    bongEp: {
+      title: 'Nệm Bông ép Hàn Quốc',
+      desc: 'Thoáng mát, kháng khuẩn, nhẹ và dễ vệ sinh — hợp phòng trẻ em, người hay nóng lưng và ngân sách vừa phải.',
+      price: 'Giá tham khảo: từ 2.620.000₫ · bảo hành 3 năm',
+      img: 'assets/img/products/bong-ep-korea-plus.webp',
+      service: 'foam'
+    },
+    deluxe10: {
+      title: 'Nệm Kymdan Deluxe 10cm',
+      desc: 'Dòng nền tảng của Kymdan — cao su thiên nhiên 100%, nâng đỡ cột sống tốt, bảo hành chính hãng 15 năm.',
+      price: 'Giá tham khảo size 1m6 × 2m: 25.840.000₫',
+      img: 'assets/img/products/nem-deluxe.webp',
+      service: 'kymdan'
+    },
+    deluxe20: {
+      title: 'Nệm Kymdan Deluxe 20cm',
+      desc: 'Bản dày nhất của dòng Deluxe — bề mặt chắc, nâng đỡ trọn thân, bảo hành chính hãng 15 năm.',
+      price: 'Giá tham khảo size 1m6 × 2m: 46.970.000₫',
+      img: 'assets/img/products/nem-deluxe.webp',
+      service: 'kymdan'
+    },
+    cloud: {
+      title: 'Nệm Kymdan Special Deluxe Pillow Top Cloud',
+      desc: 'Lớp Pillow Top thoáng hơi trên nền cao su thiên nhiên — êm mà vẫn thông thoáng, bảo hành 15 năm.',
+      price: 'Giá tham khảo size 1m6 × 2m: 234.110.000₫',
+      img: 'assets/img/products/nem-pillowtop.webp',
+      service: 'kymdan'
+    },
+    royal: {
+      title: 'Nệm Kymdan Special Deluxe Pillow Top Royal',
+      desc: 'Dòng cao cấp nhất của Kymdan — dày 32cm, lớp Pillow Top êm ái, nâng đỡ cột sống toàn diện.',
+      price: 'Giá tham khảo size 1m6 × 2m: 242.460.000₫',
+      img: 'assets/img/products/nem-pillowtop.webp',
+      service: 'kymdan'
+    }
+  };
+  const QUIZ_LABELS = {
+    s1: { A: 'Nằm ngửa', B: 'Nằm nghiêng', C: 'Nằm sấp' },
+    s2: { A: 'Đau lưng / cột sống', B: 'Hay đổ mồ hôi, nóng lưng', C: 'Dành cho trẻ em', D: 'Không vấn đề đặc biệt' },
+    s3: { A: 'Dưới 10 triệu', B: '10–30 triệu', C: 'Trên 30 triệu' }
+  };
+
+  /* Ngân sách quyết định nhóm dòng nệm; tư thế và nhu cầu chọn dòng cụ thể + lý do */
+  function quizPick(a) {
+    const reasons = [];
+    let key;
+    if (a.s3 === 'A' || a.s2 === 'C' || (a.s2 === 'B' && a.s3 === 'B')) {
+      key = 'bongEp';
+    } else if (a.s3 === 'C') {
+      key = a.s1 === 'C' ? 'deluxe20' : a.s2 === 'B' ? 'cloud' : 'royal';
+    } else {
+      key = 'deluxe10';
+    }
+
+    if (a.s1 === 'A') reasons.push('Nằm ngửa cần nệm nâng đỡ đều từ lưng tới hông để cột sống giữ được đường cong tự nhiên.');
+    if (a.s1 === 'B') reasons.push('Nằm nghiêng cần bề mặt đủ êm để vai và hông lún vừa phải, không bị tê mỏi khi thức dậy.');
+    if (a.s1 === 'C') reasons.push('Nằm sấp nên chọn bề mặt chắc, tránh nệm quá mềm làm võng vùng bụng và mỏi thắt lưng.');
+
+    if (a.s2 === 'A') reasons.push('Với người đau lưng, cao su thiên nhiên nâng đỡ chắc và đàn hồi đều — nên nằm thử trực tiếp để chọn độ dày vừa người.');
+    if (a.s2 === 'B') reasons.push(
+      key === 'cloud' ? 'Bạn hay nóng lưng nên Nhật Duy ưu tiên bản Cloud — lớp Pillow Top thoáng hơi.'
+      : key === 'bongEp' ? 'Bạn hay nóng lưng nên Nhật Duy ưu tiên dòng thoáng mát, thoát nhiệt tốt.'
+      : 'Bạn hay nóng lưng — khi ghé showroom, chuyên viên sẽ tư vấn thêm ga, vỏ bọc thoáng khí đi kèm.');
+    if (a.s2 === 'C') reasons.push('Cho trẻ em, ưu tiên nệm kháng khuẩn, nhẹ, dễ vệ sinh và giá hợp lý.');
+
+    if (a.s3 === 'A') reasons.push('Vừa ngân sách dưới 10 triệu. Nếu thích cảm giác ôm người hơn, Nhật Duy có thêm nệm Foam từ 1.720.000₫ để bạn so sánh.');
+    if (key === 'deluxe10') reasons.push('Vừa tầm 10–30 triệu: size 1m6 × 2m khoảng 25,8 triệu, size nhỏ hơn còn thấp hơn — xem đủ các size ở bảng giá bên dưới.');
+    if (a.s3 === 'C' && (key === 'royal' || key === 'cloud')) reasons.push('Nếu muốn cân đối ngân sách hơn, Kymdan Deluxe 15–20cm cũng là lựa chọn rất đáng cân nhắc.');
+
+    return { key, product: QUIZ_PRODUCTS[key], reasons };
+  }
+
+  const quizCard = document.getElementById('quizCard');
+  if (quizCard) {
+    let answers = {};
+    let pick = null;
+    const step = (n) => document.getElementById('qStep' + n);
+    const qResult = document.getElementById('qResult');
+    const leadForm = document.getElementById('quizLeadForm');
+    const leadOk = document.getElementById('quizLeadOk');
+    const leadErr = document.getElementById('quizLeadErr');
+    const leadBtn = leadForm.querySelector('button[type="submit"]');
+    const leadBtnText = leadBtn.textContent;
+    let sending = false;
+
+    const resetLead = () => {
+      leadOk.hidden = true;
+      leadErr.hidden = true;
+      leadBtn.disabled = false;
+      leadBtn.textContent = leadBtnText;
+    };
+
+    const showResult = () => {
+      pick = quizPick(answers);
+      const p = pick.product;
+      document.getElementById('qResultTitle').textContent = p.title;
+      document.getElementById('qResultDesc').textContent = p.desc + ' ' + p.price + '.';
+      document.getElementById('qResultReasons').innerHTML =
+        pick.reasons.map(r => `<li>${r}</li>`).join('');
+      const thumb = document.getElementById('qResultImg');
+      thumb.src = p.img; thumb.alt = p.title; thumb.hidden = false;
+      resetLead();
+      qResult.hidden = false;
+      qResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+
+    quizCard.querySelectorAll('.quiz__opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const n = +btn.dataset.step;
+        answers['s' + n] = btn.dataset.val;
+        step(n).hidden = true;
+        if (n < 3) step(n + 1).hidden = false;
+        else showResult();
+      });
+    });
+
+    document.getElementById('qRestart').addEventListener('click', () => {
+      answers = {};
+      pick = null;
+      qResult.hidden = true;
+      step(1).hidden = false;
+      step(2).hidden = true;
+      step(3).hidden = true;
+    });
+
+    /* "Xem luôn tại showroom" → chọn sẵn dịch vụ phù hợp trong form đặt lịch */
+    document.getElementById('qResultCTA').addEventListener('click', () => {
+      const svc = document.getElementById('bookingService');
+      if (svc && pick) svc.value = pick.product.service;
+    });
+
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (sending || !pick) return;
+      leadOk.hidden = true;
+      leadErr.hidden = true;
+      if (!validateForm(leadForm)) return;
+      if (leadForm._honey && leadForm._honey.value) return;
+
+      sending = true;
+      leadBtn.disabled = true;
+      leadBtn.textContent = 'Đang gửi...';
+      const summary = ['s1', 's2', 's3'].map(k => QUIZ_LABELS[k][answers[k]]).join(' · ');
+      sendLead({
+        _subject: '[Nhật Duy] Khách làm quiz chọn nệm — xin báo giá',
+        source: 'Quiz chọn nệm',
+        /* Apps Script bắt buộc có tên → khách bỏ trống thì ghi rõ để chuyên viên hỏi khi gọi */
+        name: leadForm.elements.name.value.trim() || '(Khách quiz — chưa để tên)',
+        phone: normalizePhone(leadForm.elements.phone.value),
+        service: 'Báo giá ' + pick.product.title,
+        note: 'Quiz: ' + summary + ' → gợi ý ' + pick.product.title
+      }).then(() => {
+        leadOk.innerHTML = '<strong>Đã nhận số của bạn.</strong> Nhật Duy sẽ gọi gửi báo giá ' +
+          pick.product.title + ' và tư vấn 1:1 trong giờ mở cửa (7:30 – 21:00). Cảm ơn bạn!';
+        leadOk.hidden = false;
+        leadBtn.textContent = 'Đã gửi — Cảm ơn bạn';
+      }).catch(() => {
+        leadErr.hidden = false;
+        leadBtn.disabled = false;
+        leadBtn.textContent = leadBtnText;
+      }).finally(() => { sending = false; });
     });
   }
 

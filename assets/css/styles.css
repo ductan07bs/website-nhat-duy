@@ -1865,10 +1865,12 @@ em { font-style: italic; color: var(--walnut-mid); }
 }
 
 /* ─── 16. Reveal on scroll ──────────────────────────────── */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease-soft), transform .9s var(--ease-soft); }
-.reveal.is-in { opacity: 1; transform: none; }
-.reveal-stagger > * { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease-soft), transform .8s var(--ease-soft); }
-.reveal-stagger.is-in > * { opacity: 1; transform: none; }
+/* Chỉ trượt nhẹ, KHÔNG ẩn (opacity 0): nội dung luôn thấy được kể cả khi
+   IntersectionObserver chưa chạy — ảnh chụp toàn trang, cuộn nhanh, máy yếu. */
+.reveal { transform: translateY(28px); transition: transform .9s var(--ease-soft); }
+.reveal.is-in { transform: none; }
+.reveal-stagger > * { transform: translateY(24px); transition: transform .8s var(--ease-soft); }
+.reveal-stagger.is-in > * { transform: none; }
 .reveal-stagger.is-in > *:nth-child(1) { transition-delay: .05s; }
 .reveal-stagger.is-in > *:nth-child(2) { transition-delay: .15s; }
 .reveal-stagger.is-in > *:nth-child(3) { transition-delay: .25s; }
@@ -2647,3 +2649,71 @@ em { font-style: italic; color: var(--walnut-mid); }
   .acc__panel { padding: 24px 0 40px; }
 }
 @media (prefers-reduced-motion: reduce) { .acc__icon::before, .acc__icon::after { transition: none; } }
+
+/* ─── 33. Quiz chọn nệm — lý do gợi ý & thu số điện thoại ─── */
+.quiz__progress {
+  display: block;
+  text-align: center;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4a84b;
+  margin-bottom: 8px;
+}
+.quiz__result-kicker {
+  display: block;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b0b0b0;
+  margin-bottom: 6px;
+}
+.quiz__result-inner .quiz__reasons {
+  list-style: none;
+  margin: -8px 0 24px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+.quiz__reasons li {
+  position: relative;
+  padding-left: 22px;
+  color: #c8c6c0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.quiz__reasons li::before {
+  content: '✓';
+  position: absolute; left: 0; top: 0;
+  color: #d4a84b;
+  font-weight: 700;
+}
+.quiz__lead {
+  display: grid;
+  gap: 14px;
+  text-align: left;
+  background: #0f1117;
+  border: 1px solid rgba(212,168,75,.45);
+  border-radius: 12px;
+  padding: 20px;
+}
+.quiz__lead-title {
+  margin: 0;
+  color: #e8e6e0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.quiz__lead-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.quiz__lead .field__label { color: #b0b0b0; letter-spacing: 0.1em; }
+.quiz__lead-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.quiz__lead-actions .btn { flex: 1 1 200px; justify-content: center; }
+.quiz__result-inner .quiz__lead-note { margin: 0; font-size: 12.5px; color: #8a8a8a; line-height: 1.5; }
+.quiz__lead .field__error { color: #f0a0a0; }
+.btn--ghost-light { --bg: transparent; --fg: #e8e6e0; border-color: rgba(232,230,224,.55); }
+.btn--ghost-light:hover { background: #e8e6e0; color: #1a1a2e; }
+@media (max-width: 600px) {
+  .quiz__lead { padding: 16px; }
+  .quiz__lead-fields { grid-template-columns: 1fr; }
+}

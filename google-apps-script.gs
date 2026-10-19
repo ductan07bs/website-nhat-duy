@@ -3,9 +3,9 @@
  * ===========================================================================
  * File này KHÔNG chạy trên website. Dán toàn bộ nội dung vào Google Apps Script.
  *
- * Nhận lead từ 2 nguồn:
+ * Nhận lead từ các nguồn:
  *   - Chatbox AI      → website gọi /api/lead → /api/lead POST JSON sang đây
- *   - Form đặt lịch / Phiếu phong thủy → trình duyệt POST thẳng sang đây
+ *   - Form đặt lịch / Phiếu phong thủy / Quiz chọn nệm → trình duyệt POST thẳng sang đây
  * Mỗi lead: ghi 1 dòng vào Sheet + gửi email về NOTIFY_EMAIL.
  *
  * HƯỚNG DẪN TỪNG BƯỚC (làm một lần, khoảng 5 phút)
@@ -28,7 +28,7 @@
  *       a) Vercel → Project → Settings → Environment Variables → biến SHEET_ENDPOINT
  *          (cho chatbox AI)
  *       b) Dòng  const SHEET_ENDPOINT = '';  ở đầu file assets/js/main.js
- *          (cho form đặt lịch và Phiếu phong thủy)
+ *          (cho form đặt lịch, Phiếu phong thủy và Quiz chọn nệm)
  *  7. Kiểm tra nhanh: mở URL ở bước 5 trên trình duyệt → thấy {"ok":true,...} là đúng.
  *
  * LƯU Ý: mỗi lần SỬA code ở đây phải Deploy → Manage deployments → biểu tượng bút chì →

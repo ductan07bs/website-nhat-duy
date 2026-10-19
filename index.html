@@ -353,6 +353,7 @@
     <div class="quiz__card" id="quizCard">
 
       <div class="quiz__step" id="qStep1">
+        <span class="quiz__progress">Câu 1/3</span>
         <p class="quiz__question">Bạn thường ngủ theo tư thế nào?</p>
         <div class="quiz__options">
           <button type="button" class="quiz__opt" data-step="1" data-val="A">😴 Nằm ngửa</button>
@@ -362,6 +363,7 @@
       </div>
 
       <div class="quiz__step" id="qStep2" hidden>
+        <span class="quiz__progress">Câu 2/3</span>
         <p class="quiz__question">Bạn hoặc người dùng nệm có vấn đề gì không?</p>
         <div class="quiz__options">
           <button type="button" class="quiz__opt" data-step="2" data-val="A">🦴 Đau lưng / cột sống</button>
@@ -372,6 +374,7 @@
       </div>
 
       <div class="quiz__step" id="qStep3" hidden>
+        <span class="quiz__progress">Câu 3/3</span>
         <p class="quiz__question">Ngân sách đầu tư cho bộ nệm của bạn là?</p>
         <div class="quiz__options">
           <button type="button" class="quiz__opt" data-step="3" data-val="A">💰 Dưới 10 triệu</button>
@@ -384,9 +387,39 @@
         <div class="quiz__result-inner">
           <span class="quiz__result-icon" aria-hidden="true">✦</span>
           <img class="quiz__result-thumb" id="qResultImg" src="" alt="" width="120" height="90" hidden />
+          <span class="quiz__result-kicker">Gợi ý của Nhật Duy cho bạn</span>
           <h3 id="qResultTitle"></h3>
           <p id="qResultDesc"></p>
-          <a class="btn btn--gold" href="#mac-thu" id="qResultCTA">Đặt lịch nằm thử dòng này tại Showroom</a>
+          <ul class="quiz__reasons" id="qResultReasons" role="list"></ul>
+
+          <!-- Thu lead ngay tại kết quả quiz — gửi cùng nơi với form đặt lịch, nguồn "Quiz chọn nệm" -->
+          <form class="quiz__lead" id="quizLeadForm" novalidate>
+            <p class="quiz__lead-title">Để lại số, Nhật Duy gửi báo giá dòng nệm phù hợp và tư vấn 1:1</p>
+            <div class="quiz__lead-fields">
+              <label class="field">
+                <span class="field__label">Số điện thoại</span>
+                <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx"
+                       data-required="Vui lòng nhập số điện thoại để Nhật Duy gửi báo giá" />
+              </label>
+              <label class="field">
+                <span class="field__label">Tên (không bắt buộc)</span>
+                <input type="text" name="name" autocomplete="name" placeholder="Anh / Chị…" />
+              </label>
+            </div>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="quiz__lead-actions">
+              <button class="btn btn--gold" type="submit">Nhận báo giá &amp; tư vấn</button>
+              <a class="btn btn--ghost-light" href="#mac-thu" id="qResultCTA">Xem luôn tại showroom</a>
+            </div>
+            <p class="quiz__lead-note">Nhật Duy chỉ dùng số này để gửi báo giá và gọi tư vấn — không chia sẻ cho bên thứ ba.</p>
+            <div class="form-status form-status--ok" id="quizLeadOk" role="status" hidden></div>
+            <div class="form-status form-status--err" id="quizLeadErr" role="alert" hidden>
+              <strong>Chưa gửi được.</strong> Mạng đang chập chờn — số bạn nhập vẫn còn nguyên, bấm gửi lại giúp nhé.
+              Hoặc gọi <a href="tel:0909001336">0909&nbsp;001&nbsp;336</a> /
+              <a href="https://zalo.me/0909001336" target="_blank" rel="noopener">nhắn Zalo</a>.
+            </div>
+          </form>
+
           <div class="quick-contact quick-contact--dark">
             <a class="btn btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener">Nhắn Zalo giữ dòng nệm này</a>
             <p class="quick-contact__phones">
@@ -2281,73 +2314,6 @@
       var mm = String(today.getMonth() + 1).padStart(2, '0');
       var dd = String(today.getDate()).padStart(2, '0');
       d.min = yyyy + '-' + mm + '-' + dd;
-    }
-  })();
-
-  // Mattress Quiz logic
-  (function () {
-    var answers = {};
-    var opts = document.querySelectorAll('.quiz__opt');
-    if (!opts.length) return;
-
-    opts.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var step = this.dataset.step;
-        var val = this.dataset.val;
-        answers['s' + step] = val;
-
-        if (step === '1') {
-          document.getElementById('qStep1').hidden = true;
-          document.getElementById('qStep2').hidden = false;
-        } else if (step === '2') {
-          document.getElementById('qStep2').hidden = true;
-          document.getElementById('qStep3').hidden = false;
-        } else if (step === '3') {
-          document.getElementById('qStep3').hidden = true;
-          showResult();
-        }
-      });
-    });
-
-    var restart = document.getElementById('qRestart');
-    if (restart) {
-      restart.addEventListener('click', function () {
-        answers = {};
-        document.getElementById('qResult').hidden = true;
-        document.getElementById('qStep1').hidden = false;
-        document.getElementById('qStep2').hidden = true;
-        document.getElementById('qStep3').hidden = true;
-      });
-    }
-
-    function showResult() {
-      var title, desc, img;
-      var s2 = answers.s2, s3 = answers.s3;
-
-      if (s2 === 'C' || s3 === 'A') {
-        title = 'Nệm Bông ép Hàn Quốc nhập khẩu';
-        desc = 'Thoáng mát, kháng khuẩn, giá hợp lý — lý tưởng cho phòng trẻ em hoặc người có ngân sách vừa phải. Nhật Duy có hàng nhập khẩu trực tiếp tại Showroom.';
-        img = 'assets/img/products/bong-ep-korea-plus.webp';
-      } else if (s2 === 'B') {
-        title = 'Nệm Kymdan Special Deluxe Pillow Top Cloud';
-        desc = 'Thiết kế đặc biệt thoáng hơi, phù hợp người hay đổ mồ hôi. Cao su thiên nhiên 100%, bảo hành 15 năm.';
-        img = 'assets/img/products/nem-pillowtop.webp';
-      } else if (s3 === 'C') {
-        title = 'Nệm Kymdan Special Deluxe Pillow Top Royal';
-        desc = 'Dòng cao cấp nhất trong hệ sinh thái Kymdan. Lớp Pillow Top êm ái như khách sạn 5 sao, nâng đỡ cột sống hoàn hảo. Xứng đáng với đầu tư của bạn.';
-        img = 'assets/img/products/nem-pillowtop.webp';
-      } else {
-        title = 'Nệm Kymdan Deluxe';
-        desc = 'Dòng nền tảng của Kymdan — cao su thiên nhiên 100%, bền 15–20 năm, phù hợp mọi tư thế ngủ, bảo hành chính hãng 15 năm. Lựa chọn đáng tin cậy nhất trong tầm giá.';
-        img = 'assets/img/products/nem-deluxe.webp';
-      }
-
-      document.getElementById('qResultTitle').textContent = title;
-      document.getElementById('qResultDesc').textContent = desc;
-      document.getElementById('qResultCTA').textContent = 'Đặt lịch nằm thử ' + title + ' tại Showroom';
-      var thumb = document.getElementById('qResultImg');
-      thumb.src = img; thumb.alt = title; thumb.hidden = false;
-      document.getElementById('qResult').hidden = false;
     }
   })();
 
