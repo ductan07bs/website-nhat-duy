@@ -1,4 +1,6 @@
+# Tự sinh bằng npm run build (scripts/build-seo.js) — đừng sửa tay
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://noithatnhatduy.vn/sitemap.xml
+Sitemap: https://noithatnhatduy.vercel.app/sitemap.xml

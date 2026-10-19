@@ -697,6 +697,15 @@ em { font-style: italic; color: var(--walnut-mid); }
   animation: hero-rise .9s var(--ease-soft) both;
 }
 .hero__copy .eyebrow { animation-delay: .05s; }
+/* Eyebrow nằm trong H1 (SEO) nhưng giữ đúng kiểu chữ nhỏ như cũ */
+.hero__title .eyebrow {
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 1.5;
+  margin-bottom: 1.1rem;
+}
 .hero__title { animation-delay: .15s; }
 .hero__lede { animation-delay: .28s; }
 .hero__actions { animation-delay: .4s; }

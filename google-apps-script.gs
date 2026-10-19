@@ -171,7 +171,7 @@ function testLead() {
         phone: '0909001336',
         note: 'Hỏi giá nệm Kymdan Deluxe 1m6',
         source: 'Chạy thử từ Apps Script',
-        page_url: 'https://noithatnhatduy.vn/'
+        page_url: 'https://noithatnhatduy.vercel.app/'
       })
     }
   });
