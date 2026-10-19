@@ -2729,3 +2729,12 @@ em { font-style: italic; color: var(--walnut-mid); }
 .loban__row-fix b { color: var(--good, #2f6b3a); }
 .quick-contact__soft { margin: 0; font-size: 0.88rem; color: var(--stone); }
 .quick-contact__soft a { color: inherit; font-weight: 700; text-decoration: underline; }
+
+/* ─── 35. Ô giá chưa có dữ liệu — placeholder để chủ shop điền ─ */
+.price-grid td.price-todo {
+  color: #b5482f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: 1px dashed rgba(181,72,47,.6);
+  outline-offset: -4px;
+}

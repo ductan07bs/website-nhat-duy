@@ -49,7 +49,8 @@ function tableLines(sec) {
       let col = 0;
       all(/<td([^>]*)>([\s\S]*?)<\/td>/g, tr[1]).forEach(td => {
         const span = Number(first(/colspan="(\d+)"/, td[1])) || 1;
-        const val = text(td[2]);
+        /* Ô giá chưa điền (placeholder TODO) → nói rõ để chatbox không đọc nhầm thành giá */
+        const val = /^TODO/.test(text(td[2])) ? 'chưa niêm yết — chuyên viên báo giá khi gọi lại' : text(td[2]);
         if (col === 0) parts.push(val);
         else if (span > 1) parts.push(val);
         else parts.push(heads[col] + ': ' + val);
