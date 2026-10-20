@@ -1,7 +1,7 @@
 # Báo cáo CRO — Website Nội Thất Nhật Duy (nhánh `cro-overhaul`, 20/10/2026)
 
 Website: https://noithatnhatduy.vercel.app · Công nghệ: HTML tĩnh + JS thuần, build bằng Node (`npm run build`), deploy Vercel.
-Chưa gộp vào `master`, chưa đẩy lên GitHub/Vercel — Ba xem bản thử rồi mới gộp.
+Nhánh đã đẩy lên GitHub (Vercel tạo bản xem thử). Chưa gộp vào `master` — gộp là lên trang chính thức.
 
 > **Lưu ý về bối cảnh:** một số yêu cầu đã được làm ở các commit trước ngày 20/10 (domain vercel.app, ảnh combo Hoàng Kim, bỏ "5,0 Google").
 > Ngày 19/10/2026 Ba đã chốt **bỏ** cam kết "đền 200%", "Đã thông báo Bộ Công Thương" và 3 lời khách tự viết. Các mục này giờ chỉ còn là **cờ tắt sẵn** — không hiện lại trên trang.
@@ -126,8 +126,8 @@ Khi test, lệnh gửi form bị chặn trong trình duyệt nên **không có e
 2. **Giá trong prompt đã cũ:** prompt ghi Deluxe 10cm 1m6 = 25.840.000₫; dữ liệu kymdan.com ngày 19/10/2026 là niêm yết 27.629.000₫ / khuyến mại 25.410.000₫ — trang hiện đúng theo dữ liệu mới. Ngoài lệch giá giường bọc vải/da (mục 2), không thấy sản phẩm nào hiện 2 giá khác nhau. "Bông ép Beauty" có 2 dòng giá nhưng là 2 loại khác nhau (gấp 3 5–9cm / gấp 2 12cm).
 3. **Ảnh thật chưa có → mỗi lượt xem có 2 yêu cầu ảnh 404** (trang thử tải `mat-tien.webp`, `giay-chung-nhan.webp`). Không ảnh hưởng khách; hết khi Ba chép ảnh vào.
 4. **Link ra kymdan.com** ở ghi chú bảng giá (nguồn giá) có thể dẫn khách sang web hãng. Giữ vì là bằng chứng giá; Ba muốn bỏ link thì sửa `scripts/render-price-table.js`.
-5. **Tuyên bố chưa có chứng cứ, nên xác nhận:** "Bền 15–20 năm", "Cảm giác như khách sạn 5 sao", "Bãi đỗ ô tô 7 chỗ", "30 phút tư vấn 1:1", bông ép "Độ bền 5–8 năm".
+5. **Tuyên bố chưa có chứng cứ, nên xác nhận:** "Bền 15–20 năm", "Bãi đỗ ô tô 7 chỗ", "30 phút tư vấn 1:1", bông ép "Độ bền 5–8 năm".
 6. **Tài liệu cũ đã lệch:** `docs/UI-UX-REVIEW-2026-05-28.md` và các file `.md` chưa commit ở thư mục gốc còn mô tả bố cục cũ.
-7. **CSS thừa** của mục "Sảnh phố" (`.space-filter`, `.space-card`) còn trong `styles.css` — vô hại, dọn sau được.
-8. Chữ khẩu hiệu chân trang (`.site-footer__sig`) màu tối trên nền tối, khó đọc — có từ trước.
-9. Nút "lên đầu trang" và nút chatbox ở góc phải dưới hơi đè dòng bản quyền chân trang trên điện thoại — có từ trước.
+7. ~~CSS thừa của mục "Sảnh phố"~~ — **đã dọn** (commit dọn dẹp). "Cảm giác như khách sạn 5 sao" đổi thành "Cảm giác êm, sang trọng".
+8. ~~Chữ khẩu hiệu chân trang tối trên nền tối~~ — **đã sửa** (màu vàng nhạt).
+9. ~~Nút nổi đè dòng bản quyền chân trang trên điện thoại~~ — **đã sửa** (chừa lề phải 72px).

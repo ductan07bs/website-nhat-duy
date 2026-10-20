@@ -120,7 +120,7 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "\n" +
   "## SO SÁNH BA DÒNG NỆM\n" +
   "- Nệm Kymdan Deluxe (Cao su thiên nhiên 100%): Bền 15–20 năm; Bảo hành 15 năm chính hãng; Nâng đỡ cột sống tốt; Kháng khuẩn, kháng nấm mốc; Phù hợp mọi tư thế ngủ; Độ dày 10 / 15 / 20cm (có cả loại mỏng 5–12,5cm); Giá tầm trung. Phù hợp: Phòng ngủ chính · Người lớn tuổi · Đau lưng\n" +
-  "- Kymdan Special Deluxe Pillow Top (Cao su thiên nhiên · Lớp Pillow Top êm): Bền 15–20 năm; Bảo hành 15 năm chính hãng; Lớp Pillow Top cực êm ái; Cảm giác sang trọng như khách sạn 5 sao; Nâng đỡ cột sống toàn diện; Giá cao hơn dòng Deluxe. Phù hợp: Biệt thự · Nhà phố · Ai thích nệm êm, dày\n" +
+  "- Kymdan Special Deluxe Pillow Top (Cao su thiên nhiên · Lớp Pillow Top êm): Bền 15–20 năm; Bảo hành 15 năm chính hãng; Lớp Pillow Top cực êm ái; Cảm giác êm, sang trọng; Nâng đỡ cột sống toàn diện; Giá cao hơn dòng Deluxe. Phù hợp: Biệt thự · Nhà phố · Ai thích nệm êm, dày\n" +
   "- Nệm Bông ép Hàn Quốc (Nhập khẩu · Thoáng mát đặc biệt): Thoáng mát vượt trội trong khí hậu nóng; Kháng khuẩn, an toàn trẻ em; Nhẹ, dễ vệ sinh; Giá hợp lý; Độ bền 5–8 năm; Bảo hành 3 năm. Phù hợp: Phòng trẻ em · Người hay đổ mồ hôi · Ngân sách hợp lý\n" +
   "\n" +
   "## CAM KẾT DỊCH VỤ\n" +
