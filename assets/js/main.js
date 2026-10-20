@@ -79,6 +79,20 @@ window.track = track;
     else (moitLink.closest('[data-flag]') || moitLink).remove();
   }
 
+  /* ── Đo lường bấm nút liên hệ ─────────────────────────
+     Nút có data-cta="zalo|call|booking|…" và data-pos="hero|sticky|product|footer|…".
+     Link Zalo / tel: chưa gắn nhãn (vd. trong thông báo lỗi, chatbox) tự suy ra loại
+     và lấy vị trí theo khu vực chứa nó. */
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[data-cta], a[href*="zalo.me"], a[href^="tel:"]');
+    if (!a) return;
+    const href = a.getAttribute('href') || '';
+    const cta = a.dataset.cta || (href.startsWith('tel:') ? 'call' : 'zalo');
+    const area = a.closest('section[id], footer, header, .ndchat');
+    const pos = a.dataset.pos || (area ? (area.id || area.className.split(' ')[0]) : 'other');
+    track('click_' + cta, { cta, position: pos, link_text: a.textContent.trim().slice(0, 60) });
+  });
+
   /* ── Mobile nav ──────────────────────────────────────── */
   const navToggle = document.getElementById('navToggle');
   const primaryNav = document.querySelector('.primary-nav');
@@ -268,6 +282,7 @@ window.track = track;
 
     lastDims = dims;
     resetPhieu();
+    if (e) track('use_loban', { width: w, length: l, height: h, all_good: allGood });
     result.hidden = false;
     /* Chỉ cuộn khi khách bấm đối chiếu — lần tính sẵn lúc tải trang không được kéo trang xuống */
     if (e) {
@@ -500,6 +515,7 @@ window.track = track;
         de_xuat: fixes.map(x => `${x.d.key} ${x.n.value}cm (${x.n.cung})`).join('; ') || 'Giữ nguyên'
       }).then(() => {
         btn.textContent = 'Đã gửi — Nhật Duy sẽ gọi tư vấn';
+        track('generate_lead', { form: 'phieu_phong_thuy' });
         note('Phiếu của bạn ở ngay trên. Nhật Duy đã nhận thông tin và sẽ gọi tư vấn kích thước cho bạn.');
       }).catch(() => {
         /* Khách vẫn nhận phiếu; chỉ báo thật là thông tin chưa về tới shop */
@@ -684,6 +700,7 @@ window.track = track;
       const thumb = document.getElementById('qResultImg');
       thumb.src = p.img; thumb.alt = p.title; thumb.hidden = false;
       resetLead();
+      track('quiz_complete', { result: pick.key, s1: answers.s1, s2: answers.s2, s3: answers.s3 });
       qResult.hidden = false;
       qResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     };
@@ -738,6 +755,7 @@ window.track = track;
           pick.product.title + ' và tư vấn 1:1 trong giờ mở cửa (7:30 – 21:00). Cảm ơn bạn!';
         leadOk.hidden = false;
         leadBtn.textContent = 'Đã gửi — Cảm ơn bạn';
+        track('generate_lead', { form: 'quiz' });
       }).catch(() => {
         leadErr.hidden = false;
         leadBtn.disabled = false;

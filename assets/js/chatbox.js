@@ -184,6 +184,7 @@
       }))
       .then(() => {
         state.leadDone = true;
+        if (typeof window.track === 'function') window.track('generate_lead', { form: 'chatbox' });
         leadForm.remove();
         const thanks = 'Cảm ơn anh/chị, Nhật Duy sẽ gọi lại trong 30 phút.';
         state.messages.push({ role: 'user', content: 'Tôi đã để lại tên ' + name + ' và số điện thoại.' });
