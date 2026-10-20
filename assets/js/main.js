@@ -35,6 +35,34 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     document.querySelectorAll('[data-cfg="delivery-long"]').forEach(el => { el.textContent = CFG.delivery.long; });
   }
 
+  /* ── Cờ bật/tắt tuyên bố (SITE_CONFIG.flags) ─────────────
+     data-flag="X"     → chỉ hiện khi cờ X = true (trong HTML luôn để sẵn hidden)
+     data-flag-off="X" → chỉ hiện khi cờ X = false
+     Cờ thiếu hoặc site-config.js không tải được → coi như false (ẩn tuyên bố). */
+  const FLAGS = CFG.flags || {};
+  document.querySelectorAll('[data-flag]').forEach(el => {
+    if (FLAGS[el.dataset.flag] === true) el.hidden = false;
+    else el.remove();
+  });
+  document.querySelectorAll('[data-flag-off]').forEach(el => {
+    if (FLAGS[el.dataset.flagOff] === true) el.remove();
+  });
+
+  /* Điểm sao Google: chỉ hiện khi bật cờ VÀ đã điền số thật trong business.rating */
+  const rating = (CFG.business || {}).rating;
+  document.querySelectorAll('[data-cfg="google-rating"]').forEach(el => {
+    if (rating && rating.ratingValue && rating.reviewCount) {
+      el.textContent = String(rating.ratingValue).replace('.', ',') + '/5 · ' + rating.reviewCount + ' đánh giá trên Google';
+    } else {
+      (el.closest('[data-flag]') || el).remove();
+    }
+  });
+  const moitLink = document.querySelector('[data-cfg="moit-link"]');
+  if (moitLink) {
+    if (CFG.moitNoticeUrl) moitLink.href = CFG.moitNoticeUrl;
+    else (moitLink.closest('[data-flag]') || moitLink).remove();
+  }
+
   /* ── Mobile nav ──────────────────────────────────────── */
   const navToggle = document.getElementById('navToggle');
   const primaryNav = document.querySelector('.primary-nav');

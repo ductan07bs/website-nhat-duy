@@ -13,7 +13,10 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+const { stripFlagged } = require('./lib-flags.js');
+/* Khối đang tắt cờ (trả góp 0%, đền 200%…) không đưa vào chatbox */
+const html = stripFlagged(fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8'),
+  require(path.join(ROOT, 'assets', 'js', 'site-config.js')).flags || {});
 
 /* Bỏ thẻ HTML, giải mã entity, gom khoảng trắng */
 function text(s) {
@@ -113,9 +116,9 @@ blocks.push(['SO SÁNH BA DÒNG NỆM',
 
 /* 5. Cam kết dịch vụ */
 blocks.push(['CAM KẾT DỊCH VỤ',
-  ...all(/<article>\s*<h3>([\s\S]*?)<\/h3>\s*<p[^>]*>([\s\S]*?)<\/p>/g,
+  ...all(/<article[^>]*>\s*<h3>([\s\S]*?)<\/h3>\s*<p[^>]*>([\s\S]*?)<\/p>/g,
     first(/<section class="local-trust"[^>]*>([\s\S]*?)\n<\/section>/, html)).map(m => '- ' + text(m[1]) + ': ' + text(m[2])),
-  '- ' + text(first(/<p class="trust-badge__guarantee">([\s\S]*?)<\/p>/, html))]);
+  ...[text(first(/<p class="trust-badge__guarantee"[^>]*>([\s\S]*?)<\/p>/, html))].filter(Boolean).map(t => '- ' + t)]);
 
 /* 6. Câu hỏi thường gặp */
 blocks.push(['CÂU HỎI THƯỜNG GẶP',

@@ -2733,3 +2733,19 @@ em { font-style: italic; color: var(--walnut-mid); }
 .price-grid td.kd-compact { text-align: center; }
 .kd-item { display: inline-block; margin: 3px 12px; white-space: nowrap; }
 .kd-item .kd-price__was { display: inline; margin-right: 4px; }
+
+/* ═══════════════════════════════════════════════════════════
+   CRO 10/2026 — cờ tuyên bố, CTA thống nhất, khối mới
+   ═══════════════════════════════════════════════════════════ */
+/* Tuyên bố chờ Ba xác nhận: ẩn chắc chắn kể cả khi class khác đặt display */
+[data-flag][hidden] { display: none !important; }
+
+.combo__installment {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+}
+.combo--featured .combo__installment { color: var(--sand); }
+.reviews-cta__rating { margin: 0 0 4px; font-weight: 700; color: var(--gold-deep); }
+.site-footer__moit { text-decoration: underline; }

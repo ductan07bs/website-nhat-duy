@@ -12,17 +12,33 @@
      2. Chạy  node scripts/build-knowledge.js  nếu có đổi bảng giá.
    ========================================================= */
 (function (root) {
-  /* Địa chỉ web DUY NHẤT của site — canonical, og:url, og:image, JSON-LD, robots.txt,
+  /* Địa chỉ web CHÍNH THỨC của site — canonical, og:url, og:image, JSON-LD, robots.txt,
      sitemap.xml đều sinh từ đây bằng `npm run build` (scripts/build-seo.js). */
   var SITE_URL = 'https://noithatnhatduy.vercel.app';
 
   var SITE_CONFIG = {
     siteUrl: SITE_URL,
 
+    /* ── CỜ BẬT/TẮT CÁC TUYÊN BỐ CẦN BA XÁC NHẬN ─────────────────
+       true  = hiện trên trang (và chatbox được phép nói tới)
+       false = ẩn HOÀN TOÀN: trang, chatbox, FAQ trên Google (JSON-LD)
+       Chỉ bật khi có giấy tờ / chính sách thật. Sửa xong chạy:  npm run build
+       Hướng dẫn chi tiết: BAO-CAO-CRO.md, mục 4. */
+    flags: {
+      SHOW_INSTALLMENT_0: false, // Trả góp 0% qua thẻ + tên 6 ngân hàng — cần hợp đồng trả góp với ngân hàng
+      SHOW_REFUND_200: false,    // "Phát hiện hàng giả đền 200%" — Ba đã bỏ ngày 19/10/2026
+      SHOW_GOOGLE_RATING: false, // Điểm sao Google — cần điền business.rating bên dưới bằng số THẬT
+      SHOW_MOIT_NOTICE: false,   // "Đã thông báo Bộ Công Thương" — cần mã/link online.gov.vn (moitNoticeUrl)
+      SHOW_TESTIMONIALS: false,  // Lời đánh giá có tên khách — chỉ lời khách THẬT, có khách đồng ý
+      SHOW_TRADE_IN: true        // Thu nệm cũ 200K–500K khi đổi nệm mới
+    },
+    /* Link xác nhận thông báo website trên online.gov.vn — dùng khi bật SHOW_MOIT_NOTICE */
+    moitNoticeUrl: '',
+
     /* SEO trang chủ — title ~60 ký tự, description ~155 ký tự để Google không cắt */
     seo: {
       title: 'Nệm Kymdan chính hãng Bồng Sơn, Gia Lai | Nội Thất Nhật Duy',
-      description: 'Đại lý Kymdan Gia Lai tại 2657 Quang Trung, Bồng Sơn: nệm Kymdan chính hãng, nội thất phòng ngủ, nệm foam, bông ép. Mua nệm Kymdan trả góp 0%.',
+      description: 'Đại lý Kymdan Gia Lai tại 2657 Quang Trung, Bồng Sơn: nệm Kymdan chính hãng, nội thất phòng ngủ, nệm foam, bông ép. Bảo hành 15 năm, giao lắp trong 4 giờ.',
       ogImage: '/assets/img/og-image.png',   // 1200 × 630
       ogImageAlt: 'Nội Thất Nhật Duy — đại lý nệm Kymdan chính hãng tại Bồng Sơn, Gia Lai',
       /* Mã xác minh Google Search Console (thẻ HTML) — giữ nguyên, xóa là mất quyền quản lý */

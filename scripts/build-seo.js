@@ -1,10 +1,11 @@
 /* =========================================================
-   Sinh phần SEO từ assets/js/site-config.js (SITE_URL duy nhất)
+   Sinh phần SEO từ assets/js/site-config.js (SITE_URL chính thức)
    ---------------------------------------------------------
    Chạy qua:  npm run build
    Ghi:
      - index.html giữa <!-- SEO:START --> … <!-- SEO:END -->       title, description, canonical, Open Graph, Twitter
      - index.html giữa <!-- SCHEMA:START --> … <!-- SCHEMA:END -->  JSON-LD FurnitureStore + WebSite + Product
+     - index.html giữa <!-- FAQ-SCHEMA:START --> … <!-- FAQ-SCHEMA:END -->  JSON-LD FAQPage (bỏ câu đang tắt cờ)
      - robots.txt, sitemap.xml
    Giá trong Product lấy từ data/kymdan-prices.json theo đúng kiểu hiển thị giá đang chọn.
    Không khai báo tọa độ / số đánh giá khi chưa có số thật (business.geo / business.rating = null).
@@ -15,6 +16,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const CFG = require(path.join(ROOT, 'assets', 'js', 'site-config.js'));
+const { stripFlagged } = require('./lib-flags.js');
 const PRICES = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'kymdan-prices.json'), 'utf8'));
 const OWN = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'nhatduy-prices.json'), 'utf8'));
 
@@ -165,6 +167,19 @@ const HTML_FILE = path.join(ROOT, 'index.html');
 let html = fs.readFileSync(HTML_FILE, 'utf8');
 html = replaceBetween(html, 'SEO', head);
 html = replaceBetween(html, 'SCHEMA', schema);
+
+/* FAQPage lấy đúng các câu đang hiện trong mục Câu hỏi thường gặp; câu tắt cờ (vd. trả góp) không lên Google */
+{
+  const plain = (s) => s.replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/\s+/g, ' ').replace(/\s+([,.;:])/g, '$1').trim();
+  const visible = stripFlagged(html, CFG.flags || {});
+  const qa = [...visible.matchAll(/<details class="faq__item"[^>]*>\s*<summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)]
+    .map(m => ({ '@type': 'Question', name: plain(m[1]), acceptedAnswer: { '@type': 'Answer', text: plain(m[2]) } }));
+  if (!qa.length) throw new Error('Không bóc được câu hỏi nào trong mục FAQ');
+  const faq = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qa };
+  html = replaceBetween(html, 'FAQ-SCHEMA', '<script type="application/ld+json">\n' + JSON.stringify(faq, null, 2).replace(/<\//g, '<\\/') + '\n</script>');
+}
 /* Form đặt lịch khi trình duyệt tắt JS: quay về đúng địa chỉ web */
 html = html.replace(/(<input type="hidden" name="_next" value=")[^"]*(")/, `$1${HOME}?booked=1$2`);
 fs.writeFileSync(HTML_FILE, html, 'utf8');

@@ -93,12 +93,12 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "- Foam Cozy massage (gấp 3) — Than hoạt tính · Vải gấm xốp | Độ dày: 10cm | Các kích thước: 1m → 1m8 | Giá niêm yết: 7.160.000₫\n" +
   "- Foam Cozy massage (thẳng) — Than hoạt tính · Vải gấm xốp | Độ dày: 15–20cm | Các kích thước: 1m → 1m8 | Giá niêm yết: 10.040.000₫\n" +
   "- Foam thông hơi Sapphire massage — Thoáng mát · Vỏ lông | Độ dày: 16–20cm | Các kích thước: 1m → 1m8 | Giá niêm yết: 11.320.000₫\n" +
-  "Ghi chú: Giá niêm yết tham khảo (nguồn Hàn Việt Hải 2026) — thay đổi theo kích thước & độ dày. Gọi 0909 001 336 để báo giá chính xác từng size.\n" +
+  "Ghi chú: Giá niêm yết tham khảo 2026 — thay đổi theo kích thước & độ dày. Gọi 0909 001 336 để báo giá chính xác từng size.\n" +
   "\n" +
   "## NỆM BÔNG ÉP HÀN QUỐC\n" +
   "Nệm bông ép theo công nghệ Hàn Quốc — thoáng khí vượt trội, kháng khuẩn, nhẹ và dễ vệ sinh. Phù hợp phòng trẻ em, người hay đổ mồ hôi và ngân sách hợp lý. Đa dạng loại gấp 2, gấp 3 tiện lợi.\n" +
   "Mẫu tiêu biểu:\n" +
-  "- Bông ép Korea Plus: Bông ép gấp 3 mảnh · Vải xốp gấm / cotton · Dày 10–15cm · Bán chạy nhất — giá từ 7.900.000₫\n" +
+  "- Bông ép Korea Plus: Bông ép gấp 3 mảnh · Vải xốp gấm / cotton · Dày 10–15cm — giá từ 7.900.000₫\n" +
   "- Bông ép Ruby khoan lỗ: Khoan lỗ thoáng khí · Vải gấm xốp / 4D · Gấp 3 · Dày 9–14cm — giá từ 8.460.000₫\n" +
   "- Bông thẳng Beauty: Bông thẳng không gấp · Vải cotton · Dày 17–22cm · Êm dày như nệm cao cấp — giá từ 8.360.000₫\n" +
   "Bảng giá:\n" +
@@ -107,34 +107,31 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "- Bông ép Beauty — Vải cotton | Độ dày: 5–9cm | Kiểu: Gấp 3 | Giá niêm yết: 4.300.000₫\n" +
   "- Bông ép Energy foam massage — Than hoạt tính · Vải gấm xốp | Độ dày: 28cm | Kiểu: Gấp 3 | Giá niêm yết: 5.280.000₫\n" +
   "- Bông ép Beauty — Vải cotton | Độ dày: 12cm | Kiểu: Gấp 2 | Giá niêm yết: 5.580.000₫\n" +
-  "- Bông ép Korea — Vải xốp gấm / cotton · Bán chạy | Độ dày: 9–14cm | Kiểu: Gấp 3 | Giá niêm yết: 6.840.000₫\n" +
+  "- Bông ép Korea — Vải xốp gấm / cotton | Độ dày: 9–14cm | Kiểu: Gấp 3 | Giá niêm yết: 6.840.000₫\n" +
   "- Bông ép Korea Plus — Bản nâng cấp | Độ dày: 10–15cm | Kiểu: Gấp 3 | Giá niêm yết: 7.900.000₫\n" +
   "- Bông thẳng Beauty — Vải cotton · Không gấp | Độ dày: 17–22cm | Kiểu: Thẳng | Giá niêm yết: 8.360.000₫\n" +
   "- Bông ép Ruby khoan lỗ — Vải xốp gấm / 4D · Thoáng khí | Độ dày: 9–14cm | Kiểu: Gấp 3 | Giá niêm yết: 8.460.000₫\n" +
-  "Ghi chú: Giá niêm yết tham khảo (nguồn Hàn Việt Hải 2026) — thay đổi theo kích thước & độ dày. Có đủ size 1m → 1m8. Gọi 0909 001 336 để báo giá chính xác từng size.\n" +
+  "Ghi chú: Giá niêm yết tham khảo 2026 — thay đổi theo kích thước & độ dày. Có đủ size 1m → 1m8. Gọi 0909 001 336 để báo giá chính xác từng size.\n" +
   "\n" +
   "## COMBO PHÒNG NGỦ TRỌN BỘ\n" +
-  "- Combo Kymdan Tinh Giản (Căn hộ hiện đại · Bắc Âu): Giường Kymdan gỗ 1m6 — chân tầng thấp, kiểu dáng tinh giản; Nệm cao su thiên nhiên Kymdan Deluxe 10cm chính hãng (độ dày tiêu chuẩn, êm chắc); Gối Kymdan + Ga trải giường Kymdan Serenity đồng bộ | Độ cứng/mềm: Vừa phải — phù hợp mọi tư thế ngủ | Giá niêm yết , giá ưu đãi Liên hệ báo giá (Ưu đãi đến 15%; So với mua lẻ từng món · báo giá theo mẫu giường bạn chọn · Trả góp 0%)\n" +
-  "- Combo Hoàng Kim (Biệt thự & nhà phố · Sang trọng): Giường bọc nhung · gỗ óc chó dán đồng thau xước; Nệm cao su thiên nhiên Kymdan Deluxe 20cm chính hãng (nâng đỡ cột sống toàn diện); Bộ ga gối lụa tơ tằm Hoàng Kim 25 momme | Độ cứng/mềm: Mềm mại — lý tưởng cho người thích cảm giác ôm ấp | Giá niêm yết 112.000.000₫, giá ưu đãi 95.200.000₫ (Tiết kiệm 15%; Trả góp 0% — 7.933.000₫/tháng)\n" +
-  "- Combo Bông Ép Hàn Quốc (Phòng ngủ phụ · Phòng trẻ em): Giường gỗ tự nhiên 1m6 — thiết kế gọn nhẹ, bền đẹp; Nệm bông ép Hàn Quốc nhập khẩu (thoáng mát, kháng khuẩn, phù hợp khí hậu nhiệt đới); Bộ ga gối cotton cao cấp mát lành mùa hè | Độ cứng/mềm: Vừa-cứng — thoáng mát, phù hợp phòng trẻ em | Giá niêm yết 12.500.000₫, giá ưu đãi 9.900.000₫ (Tiết kiệm 21%; Trả góp 0% — 825.000₫/tháng)\n" +
+  "- Combo Kymdan Tinh Giản (Căn hộ hiện đại · Bắc Âu): Giường Kymdan gỗ 1m6 — chân tầng thấp, kiểu dáng tinh giản; Nệm cao su thiên nhiên Kymdan Deluxe 10cm chính hãng (độ dày tiêu chuẩn, êm chắc); Gối Kymdan + Ga trải giường Kymdan Serenity đồng bộ | Độ cứng/mềm: Vừa phải — phù hợp mọi tư thế ngủ | Giá niêm yết , giá ưu đãi Liên hệ báo giá (Ưu đãi đến 15%; So với mua lẻ từng món · báo giá theo mẫu giường bạn chọn)\n" +
+  "- Combo Hoàng Kim (Biệt thự & nhà phố · Sang trọng): Giường bọc nhung · gỗ óc chó dán đồng thau xước; Nệm cao su thiên nhiên Kymdan Deluxe 20cm chính hãng (nâng đỡ cột sống toàn diện); Bộ ga gối lụa tơ tằm Hoàng Kim 25 momme | Độ cứng/mềm: Mềm mại — lý tưởng cho người thích cảm giác ôm ấp | Giá niêm yết 112.000.000₫, giá ưu đãi 95.200.000₫ (Tiết kiệm 15%; )\n" +
+  "- Combo Bông Ép Hàn Quốc (Phòng ngủ phụ · Phòng trẻ em): Giường gỗ tự nhiên 1m6 — thiết kế gọn nhẹ, bền đẹp; Nệm bông ép Hàn Quốc nhập khẩu (thoáng mát, kháng khuẩn, phù hợp khí hậu nhiệt đới); Bộ ga gối cotton cao cấp mát lành mùa hè | Độ cứng/mềm: Vừa-cứng — thoáng mát, phù hợp phòng trẻ em | Giá niêm yết 12.500.000₫, giá ưu đãi 9.900.000₫ (Tiết kiệm 21%; )\n" +
   "\n" +
   "## SO SÁNH BA DÒNG NỆM\n" +
-  "- Nệm Kymdan Deluxe (Cao su thiên nhiên 100%): Bền 15–20 năm; Bảo hành 15 năm chính hãng; Nâng đỡ cột sống tốt; Kháng khuẩn, kháng nấm mốc; Phù hợp mọi tư thế ngủ; Độ dày 5–20cm tùy chọn; Giá tầm trung. Tốt nhất cho: Phòng ngủ chính · Người lớn tuổi · Đau lưng\n" +
-  "- Kymdan Special Deluxe Pillow Top (Cao su thiên nhiên · Lớp êm ái nhất): Bền 15–20 năm; Bảo hành 15 năm chính hãng; Lớp Pillow Top cực êm ái; Cảm giác sang trọng như khách sạn 5 sao; Nâng đỡ cột sống toàn diện; Giá cao hơn dòng Deluxe. Tốt nhất cho: Biệt thự · Nhà phố · Ai muốn giấc ngủ hoàn hảo nhất\n" +
-  "- Nệm Bông ép Hàn Quốc (Nhập khẩu · Thoáng mát đặc biệt): Thoáng mát vượt trội trong khí hậu nóng; Kháng khuẩn, an toàn trẻ em; Nhẹ, dễ vệ sinh; Giá hợp lý nhất; Độ bền 5–8 năm; Bảo hành 3 năm. Tốt nhất cho: Phòng trẻ em · Người hay đổ mồ hôi · Ngân sách hợp lý\n" +
+  "- Nệm Kymdan Deluxe (Cao su thiên nhiên 100%): Bền 15–20 năm; Bảo hành 15 năm chính hãng; Nâng đỡ cột sống tốt; Kháng khuẩn, kháng nấm mốc; Phù hợp mọi tư thế ngủ; Độ dày 5–20cm tùy chọn; Giá tầm trung. Phù hợp: Phòng ngủ chính · Người lớn tuổi · Đau lưng\n" +
+  "- Kymdan Special Deluxe Pillow Top (Cao su thiên nhiên · Lớp Pillow Top êm): Bền 15–20 năm; Bảo hành 15 năm chính hãng; Lớp Pillow Top cực êm ái; Cảm giác sang trọng như khách sạn 5 sao; Nâng đỡ cột sống toàn diện; Giá cao hơn dòng Deluxe. Phù hợp: Biệt thự · Nhà phố · Ai thích nệm êm, dày\n" +
+  "- Nệm Bông ép Hàn Quốc (Nhập khẩu · Thoáng mát đặc biệt): Thoáng mát vượt trội trong khí hậu nóng; Kháng khuẩn, an toàn trẻ em; Nhẹ, dễ vệ sinh; Giá hợp lý; Độ bền 5–8 năm; Bảo hành 3 năm. Phù hợp: Phòng trẻ em · Người hay đổ mồ hôi · Ngân sách hợp lý\n" +
   "\n" +
   "## CAM KẾT DỊCH VỤ\n" +
   "- 4 giờ: Giao & lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.\n" +
   "- 30 phút: Trải nghiệm trọn buổi tại Showroom 2657 Quang Trung — nằm thử, so sánh và nhận tư vấn 1:1 trong khung giờ dành riêng cho bạn.\n" +
   "- 15 năm: Bảo hành nệm Kymdan chính hãng 15 năm. Bảo trì tận nhà tại Gia Lai — không cần gửi nệm ngược lên TP.HCM hay Quy Nhơn.\n" +
   "- 200–500K: Thu lại nệm cũ tận nơi khi đổi nệm mới. Niêm yết giá rõ ràng theo kích thước & chất liệu.\n" +
-  "- \n" +
   "\n" +
   "## CÂU HỎI THƯỜNG GẶP\n" +
   "- Hỏi: Nhật Duy có giao tới phường / xã của tôi không? Đáp: Giao & lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.\n" +
   "- Hỏi: Tôi muốn thử nệm trước khi mua — có được không? Đáp: Có. Ghé Showroom Nhật Duy tại 2657 Quang Trung, Bồng Sơn — bạn được nằm thử trực tiếp các dòng Kymdan Deluxe, Kymdan Special Deluxe Pillow Top, nệm foam và bông ép Hàn Quốc trên khung giường mẫu, drap lụa và đèn ngủ thật. Đặt lịch trước để chuyên viên dành riêng 30 phút tư vấn 1:1.\n" +
   "- Hỏi: Bạn đo phong thủy bằng thước nào? Đáp: Thước Lỗ Ban 42.9cm — chuẩn dành cho khối đặc và đồ nội thất. Tại Showroom Nhật Duy, chuyên viên sẽ đo trực tiếp khung giường mẫu, đối chiếu kích thước phòng của bạn và đề xuất kích thước nệm chuẩn cung cát.\n" +
-  "- Hỏi: Nội Thất Nhật Duy có mối quan hệ như thế nào với thương hiệu Liên Á – Hồng Loan? Đáp: Nội Thất Nhật Duy kế thừa cơ sở kinh doanh nệm lâu năm tại Bồng Sơn. Hiện tại Nhật Duy là đại lý phân phối chính hãng Kymdan tại khu vực Bồng Sơn — Hoài Nhơn — tập trung chuyên sâu vào thương hiệu Kymdan để đảm bảo chất lượng dịch vụ và cam kết chính hãng tuyệt đối. Bên cạnh nệm Kymdan, Nhật Duy cũng kinh doanh nệm foam và nệm bông ép Hàn Quốc nhập khẩu chất lượng cao.\n" +
-  "- Hỏi: Trả góp như thế nào? Đáp: 0% lãi suất qua thẻ tín dụng các ngân hàng Vietcombank, Techcombank, VPBank, MB, ACB, Sacombank — kỳ hạn 3 / 6 / 9 / 12 tháng.\n" +
-  "- Hỏi: Sự khác biệt giữa nệm Kymdan, nệm foam và nệm bông ép Hàn Quốc? Đáp: Nệm Kymdan — cao su thiên nhiên 100%, độ bền 15–20 năm, nâng đỡ cột sống, kháng khuẩn, kháng nấm mốc, bảo hành chính hãng 15 năm. Là lựa chọn tốt nhất cho phòng ngủ chính, người lớn tuổi hoặc ai có vấn đề cột sống. — Nệm foam — bọt biển đa tầng, nhẹ, giá hợp lý, dễ vận chuyển. Phù hợp phòng ngủ phụ, phòng khách hoặc khi ngân sách tiết kiệm hơn. — Nệm bông ép Hàn Quốc — nhập khẩu trực tiếp, thoáng mát đặc biệt trong khí hậu nóng, kháng khuẩn. Phù hợp phòng trẻ em, người hay đổ mồ hôi hoặc căn phòng thiếu gió tự nhiên.\n" +
-  "- Hỏi: Nệm Kymdan có những dòng nào đang bán tại Showroom Nhật Duy? Đáp: Showroom Nhật Duy tại 2657 Quang Trung, Bồng Sơn hiện có đầy đủ các dòng: Kymdan Deluxe (phổ thông, chất lượng chuẩn), Kymdan Special Deluxe Pillow Top Royal (cao cấp nhất, êm ái nhất), Kymdan Special Deluxe Pillow Top Cloud (mềm mại, thoáng mát), Kymdan Massage (bề mặt massage nhẹ nhàng), Kymdan Mini (cho trẻ em và giường đơn). Bạn được nằm thử trực tiếp trước khi quyết định mua.";
+  "- Hỏi: Sự khác biệt giữa nệm Kymdan, nệm foam và nệm bông ép Hàn Quốc? Đáp: Nệm Kymdan — cao su thiên nhiên 100%, độ bền 15–20 năm, nâng đỡ cột sống, kháng khuẩn, kháng nấm mốc, bảo hành chính hãng 15 năm. Phù hợp phòng ngủ chính, người lớn tuổi hoặc ai có vấn đề cột sống. — Nệm foam — bọt biển đa tầng, nhẹ, giá hợp lý, dễ vận chuyển. Phù hợp phòng ngủ phụ, phòng khách hoặc khi ngân sách tiết kiệm hơn. — Nệm bông ép Hàn Quốc — nhập khẩu trực tiếp, thoáng mát đặc biệt trong khí hậu nóng, kháng khuẩn. Phù hợp phòng trẻ em, người hay đổ mồ hôi hoặc căn phòng thiếu gió tự nhiên.\n" +
+  "- Hỏi: Nệm Kymdan có những dòng nào đang bán tại Showroom Nhật Duy? Đáp: Showroom Nhật Duy tại 2657 Quang Trung, Bồng Sơn hiện có đầy đủ các dòng: Kymdan Deluxe (phổ thông, chất lượng chuẩn), Kymdan Special Deluxe Pillow Top Royal (dòng cao cấp nhất của Kymdan), Kymdan Special Deluxe Pillow Top Cloud (mềm mại, thoáng mát), Kymdan Massage (bề mặt massage nhẹ nhàng), Kymdan Mini (cho trẻ em và giường đơn). Bạn được nằm thử trực tiếp trước khi quyết định mua.";

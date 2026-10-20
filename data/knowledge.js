@@ -13,7 +13,8 @@
 
 const GENERATED = require('./knowledge-generated.js');
 /* Thông điệp giao lắp lấy từ cấu hình dùng chung với trang web */
-const { delivery: DELIVERY } = require('../assets/js/site-config.js');
+const { delivery: DELIVERY, flags: FLAGS = {} } = require('../assets/js/site-config.js');
+/* Tuyên bố bật/tắt theo cờ trong site-config.js — cờ tắt thì chatbox nói rõ là KHÔNG có */
 
 const MANUAL = `
 ## THÔNG TIN CỬA HÀNG
@@ -30,9 +31,9 @@ const MANUAL = `
 ## CHÍNH SÁCH
 - Bảo hành: nệm Kymdan chính hãng 15 năm (kể cả Nệm Xếp, Mini, Pillow Top, Y tế UltimateCare+ — theo kymdan.com); nệm foam 2 năm; nệm bông ép Hàn Quốc 3 năm. Bảo trì tận nhà tại Gia Lai.
 - Giá nệm Kymdan trên website lấy từ niêm yết của kymdan.com. Riêng Pillow Top, Kymdan ghi là "giá chào mới".
-- Cam kết chính hãng: hàng Kymdan chính hãng, bảo hành theo chính sách Kymdan. KHÔNG hứa đền bù theo phần trăm.
-- Thu nệm cũ: thu lại tận nơi khi đổi nệm mới, 200.000₫ – 500.000₫ tùy kích thước & chất liệu.
-- Trả góp 0% lãi suất qua thẻ tín dụng Vietcombank, Techcombank, VPBank, MB, ACB, Sacombank — kỳ hạn 3 / 6 / 9 / 12 tháng.
+- Cam kết chính hãng: hàng Kymdan chính hãng, bảo hành theo chính sách Kymdan. ${FLAGS.SHOW_REFUND_200 ? 'Phát hiện hàng giả đền 200% giá trị sản phẩm.' : 'KHÔNG hứa đền bù theo phần trăm.'}
+- ${FLAGS.SHOW_TRADE_IN ? 'Thu nệm cũ: thu lại tận nơi khi đổi nệm mới, 200.000₫ – 500.000₫ tùy kích thước & chất liệu.' : 'Thu nệm cũ: chưa có chính sách công bố — KHÔNG hứa, mời khách hỏi chuyên viên.'}
+- ${FLAGS.SHOW_INSTALLMENT_0 ? 'Trả góp 0% lãi suất qua thẻ tín dụng Vietcombank, Techcombank, VPBank, MB, ACB, Sacombank — kỳ hạn 3 / 6 / 9 / 12 tháng.' : 'Trả góp: website chưa công bố chương trình trả góp — KHÔNG hứa trả góp 0% hay tên ngân hàng; khách hỏi thì xin số để chuyên viên báo cách thanh toán.'}
 - ${DELIVERY.long} Không tự hứa thời gian giao cho khu vực ngoài 30 km.
 - Giá trên website là giá niêm yết / khuyến mãi tham khảo, có thể thay đổi theo từng thời điểm; ưu đãi đại lý cụ thể do chuyên viên báo khi gọi lại.
 

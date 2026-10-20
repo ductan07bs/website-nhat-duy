@@ -17,7 +17,7 @@
   const STORE_KEY = 'nd_chat_v1';
   const MAX_INPUT = 500;
   const GREETING = 'Em là trợ lý của Nội Thất Nhật Duy. Anh/chị cần em tư vấn về nệm, giá hay phong thủy giường nệm ạ?';
-  const SUGGESTIONS = ['Giá nệm Kymdan 1m6', 'Nệm cho người đau lưng', 'Kích thước hợp phong thủy', 'Chính sách bảo hành & trả góp'];
+  const SUGGESTIONS = ['Giá nệm Kymdan 1m6', 'Nệm cho người đau lưng', 'Kích thước hợp phong thủy', ((window.SITE_CONFIG || {}).flags || {}).SHOW_INSTALLMENT_0 ? 'Chính sách bảo hành & trả góp' : 'Chính sách bảo hành & giao lắp'];
 
   /* ── Trạng thái (giữ trong phiên) ────────────────────── */
   let state = { messages: [], open: false, leadShown: false, leadDone: false };
