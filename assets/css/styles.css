@@ -2751,3 +2751,88 @@ em { font-style: italic; color: var(--walnut-mid); }
 .site-footer__moit { text-decoration: underline; }
 .combo__price-now--ask { font-size: 1.6rem; }
 .loban__hint--custom { font-style: normal; font-weight: 600; color: var(--sand); margin-top: 10px; }
+
+/* ── Hero: nút Zalo nổi bật nhất trang ── */
+.btn--cta-main { box-shadow: 0 16px 32px -14px rgba(0,104,214,.75); }
+.btn--cta-main:hover { box-shadow: 0 20px 36px -14px rgba(0,104,214,.85); }
+.hero__proof { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .hero__proof { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) {
+  .hero__actions { margin-bottom: 1.8rem; }
+  .hero__proof { gap: 12px 10px; }
+  .hero__proof li { padding-left: 10px; }
+  .hero__proof strong { font-size: 1.45rem; }
+  .hero__proof span { font-size: 0.7rem; letter-spacing: 0.04em; }
+}
+
+/* ── Vì sao chọn Nhật Duy ── */
+.why { padding: clamp(56px, 8vw, 100px) 0; background: linear-gradient(180deg, #FFFDF8 0%, var(--bone) 100%); }
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.why__item {
+  background: #fff;
+  border: 1px solid rgba(201,169,110,.3);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+}
+.why__num {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+  line-height: 1.05;
+  color: var(--gold-deep);
+  margin-bottom: 8px;
+}
+.why__item h3 { font-size: 1.12rem; color: var(--navy); margin: 0 0 6px; line-height: 1.3; }
+.why__item p { margin: 0; font-size: 0.92rem; color: var(--stone); }
+.why__item .trust-badge__guarantee { margin-top: 8px; }
+.cert__photo { width: 100%; height: auto; border-radius: var(--radius-sm); }
+@media (max-width: 900px) { .why__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .why__grid { grid-template-columns: 1fr; } }
+
+/* ── So sánh: giá từ ── */
+.compare__from { margin: 10px 0 4px; font-size: 0.85rem; color: #a9a59c; }
+.compare__from strong { font-size: 1.15rem; color: #d4a84b; }
+
+/* ── Bảng giá: 2 nút Zalo + Gọi ── */
+.price-table__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+/* ── Giao lắp, bảo hành, thu nệm cũ ── */
+.local-trust__title { color: var(--sand); font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 28px; font-weight: 400; }
+
+/* ── Accordion sản phẩm khác: giá từ ngay trên tiêu đề ── */
+.acc__from { font-family: "Nunito Sans", sans-serif; font-size: 0.82em; font-weight: 600; color: #d4a84b; white-space: nowrap; }
+
+/* ── Đặt lịch: thông báo thành công + nút Zalo ưu tiên ── */
+.booking__ok-zalo { margin-top: 12px; }
+.booking__ok:focus { outline: none; }
+
+/* ── Thanh cố định điện thoại: Zalo 60% · Gọi 40% ── */
+.sticky-cta {
+  bottom: calc(10px + env(safe-area-inset-bottom));
+}
+.sticky-cta__btn--call { flex: 0 0 40%; background: rgba(232,213,183,.12); }
+.sticky-cta__btn--zalo {
+  flex: 1 1 60%;
+  background: #0068d6;
+  color: #fff;
+  font-size: 0.95rem;
+}
+@media (max-width: 720px) {
+  main { padding-bottom: 0; }
+  /* Chừa chỗ cho thanh cố định để không che chân trang */
+  body { padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+  /* Điện thoại đã có nút Zalo ở thanh cố định → ẩn nút Zalo nổi trùng lặp */
+  .zalo-float { display: none; }
+  .back-to-top { bottom: 146px; }
+}
+
+/* Dải trên cùng: điện thoại chỉ giữ thông điệp giao lắp (địa chỉ đã có ở hero) */
+@media (max-width: 560px) {
+  .header-strip__pill,
+  .header-strip__divider { display: none; }
+}

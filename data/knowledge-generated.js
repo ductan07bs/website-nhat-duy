@@ -14,7 +14,7 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "- Kymdan Y tế UltimateCare+ — Nệm y tế · Vỏ bọc UltimateCare+ | 80×200×15cm: 28.151.000₫ 25.890.000₫ 90×200×15cm: 31.391.000₫ 28.870.000₫ 80×200×10cm: 21.380.000₫ 19.660.000₫ 90×200×10cm: 24.176.000₫ 22.240.000₫ | Bảo hành: 15 năm\n" +
   "- Nệm Foam cao cấp — Bọt biển đa tầng · Công nghệ Hàn Quốc | Từ 1.720.000₫ · Nhiều dòng 5–20cm — xem mục Nệm Foam | Bảo hành: 2 năm\n" +
   "- Nệm Bông ép Hàn Quốc — Thoáng mát · Kháng khuẩn | Từ 2.620.000₫ · Nhiều dòng 5–28cm — xem mục Bông ép Hàn Quốc | Bảo hành: 3 năm\n" +
-  "Ghi chú: Giá tham khảo theo niêm yết Kymdan, cập nhật ngày 19/10/2026 từ kymdan.com (VND/bộ, đã gồm VAT). (*) Pillow Top: Kymdan niêm yết là “giá chào mới”. Giá in đậm là giá khuyến mại — Kymdan đang khuyến mại giảm 8% từ 01/10/2026 đến 05/02/2027; giá gạch ngang là giá niêm yết. Giá có thể thay đổi theo từng đợt của Kymdan. Giá chưa gồm phí giao lắp ngoài bán kính 30 km. Gọi 0909 001 336 để nhận báo giá chính xác và kiểm tra ưu đãi đại lý Nhật Duy tại Showroom.\n" +
+  "Ghi chú: Giá tham khảo theo niêm yết Kymdan, cập nhật ngày 19/10/2026 từ kymdan.com (VND/bộ, đã gồm VAT). (*) Pillow Top: Kymdan niêm yết là “giá chào mới”. Giá in đậm là giá khuyến mại — Kymdan đang khuyến mại giảm 8% từ 01/10/2026 đến 05/02/2027; giá gạch ngang là giá niêm yết. Giá có thể thay đổi theo từng đợt của Kymdan. Giá chưa gồm phí giao lắp ngoài bán kính 30 km. Nhắn Zalo hoặc gọi để nhận báo giá chính xác và ưu đãi đại lý Nhật Duy.\n" +
   "\n" +
   "## GỐI KYMDAN\n" +
   "Bộ sưu tập gối cao su thiên nhiên Kymdan — kháng khuẩn, kháng nấm mốc, kháng côn trùng. Có đầy đủ các dòng cho người lớn, trẻ em, đi du lịch và hỗ trợ cột sống cổ.\n" +
@@ -43,7 +43,7 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "Ghi chú: Giá khuyến mãi tham khảo theo niêm yết Kymdan 2026 (đã gồm VAT). Giá có thể thay đổi theo từng thời điểm.\n" +
   "\n" +
   "## GIƯỜNG KYMDAN\n" +
-  "Bộ sưu tập giường gỗ Kymdan thiết kế chuẩn tỉ lệ — đồng bộ kích thước với toàn bộ nệm Kymdan. Khung gỗ tự nhiên, kết cấu chắc chắn, đa dạng kiểu dáng từ tinh giản đến cổ điển.\n" +
+  "Giường gỗ Kymdan thiết kế chuẩn tỉ lệ — đồng bộ kích thước với toàn bộ nệm Kymdan. Khung gỗ tự nhiên, kết cấu chắc chắn, đa dạng kiểu dáng từ tinh giản đến cổ điển.\n" +
   "Mẫu tiêu biểu:\n" +
   "- Giường gỗ bọc vải/da: Hơn 45 kiểu (Subtle, Comfort, Gallant…) · Bọc vải Premium hoặc da Simili · 1m6 × 2m — giá từ 44.530.000₫\n" +
   "- Giường gỗ tự nhiên: Kiểu Care, Chocolate, Living, Screen… · Khung gỗ tự nhiên chắc chắn · 1m6 × 2m — giá từ 33.020.000₫\n" +
@@ -125,8 +125,8 @@ module.exports = "## BẢNG GIÁ NỆM KYMDAN (giá theo kích thước rộng �
   "\n" +
   "## CAM KẾT DỊCH VỤ\n" +
   "- 4 giờ: Giao & lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.\n" +
-  "- 30 phút: Trải nghiệm trọn buổi tại Showroom 2657 Quang Trung — nằm thử, so sánh và nhận tư vấn 1:1 trong khung giờ dành riêng cho bạn.\n" +
-  "- 15 năm: Bảo hành nệm Kymdan chính hãng 15 năm. Bảo trì tận nhà tại Gia Lai — không cần gửi nệm ngược lên TP.HCM hay Quy Nhơn.\n" +
+  "- 30 phút: Nằm thử miễn phí tại showroom 2657 Quang Trung — so sánh các dòng nệm và được tư vấn riêng trong khung giờ bạn đặt.\n" +
+  "- 15 năm: Nệm Kymdan bảo hành chính hãng 15 năm, nệm bông ép 3 năm, nệm foam 2 năm. Bảo trì tận nhà tại Gia Lai.\n" +
   "- 200–500K: Thu lại nệm cũ tận nơi khi đổi nệm mới. Niêm yết giá rõ ràng theo kích thước & chất liệu.\n" +
   "\n" +
   "## CÂU HỎI THƯỜNG GẶP\n" +

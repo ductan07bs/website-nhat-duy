@@ -25,6 +25,22 @@ const FALLBACK_ENDPOINT = 'https://formsubmit.co/ajax/ductan07bs@gmail.com';
 const LEAD_ENDPOINT = SHEET_ENDPOINT || FALLBACK_ENDPOINT;
 const ZALO_URL = 'https://zalo.me/0909001336';
 
+/* ── Đo lường dùng chung ───────────────────────────────────
+   track('ten_su_kien', { ... }) gửi tới công cụ nào đang có trên trang:
+     - Google Analytics 4 (gtag)        → gtag('event', ...)
+     - Google Tag Manager (dataLayer)   → dataLayer.push(...)
+     - Vercel Web Analytics (window.va) → va('event', ...)
+   Chưa gắn công cụ nào thì không gửi đi đâu (xem BAO-CAO-CRO.md cách bật). */
+function track(eventName, params) {
+  const data = Object.assign({ page_path: location.pathname }, params || {});
+  try {
+    if (typeof window.gtag === 'function') window.gtag('event', eventName, data);
+    if (Array.isArray(window.dataLayer)) window.dataLayer.push(Object.assign({ event: eventName }, data));
+    if (typeof window.va === 'function') window.va('event', { name: eventName, data });
+  } catch (_) { /* đo lường lỗi không được làm hỏng trang */ }
+}
+window.track = track;
+
 (() => {
   'use strict';
 
@@ -373,20 +389,26 @@ const ZALO_URL = 'https://zalo.me/0909001336';
       btn.textContent = 'Đang gửi...';
 
       const selText = (sel) => (sel && sel.value ? sel.options[sel.selectedIndex].text : '');
+      const guestName = booking.elements.name.value.trim();
+      const guestPhone = normalizePhone(booking.elements.phone.value);
       sendLead({
         _subject: '[Nhật Duy] Đặt lịch trải nghiệm tại Showroom',
         source: 'Form đặt lịch',
-        name: booking.elements.name.value.trim(),
-        phone: normalizePhone(booking.elements.phone.value),
+        name: guestName,
+        phone: guestPhone,
         ward: booking.elements.ward.value,
         service: selText(booking.elements.service),
         visit_date: booking.elements.visit_date.value,
         visit_time: selText(booking.elements.visit_time),
         zalo: booking.elements.zalo.checked ? 'Có' : 'Không'
       }).then(() => {
+        document.getElementById('bookingOkMsg').textContent =
+          `Cảm ơn ${guestName}. Nhật Duy sẽ gọi số ${guestPhone} để xác nhận giờ ghé trong giờ mở cửa (7:30 – 21:00).`;
         ok.hidden = false;
         btn.textContent = 'Đã gửi — Cảm ơn bạn';
+        track('generate_lead', { form: 'booking' });
         ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        ok.focus({ preventScroll: true });
       }).catch(() => {
         /* Giữ nguyên dữ liệu khách đã nhập, cho gửi lại */
         err.hidden = false;
@@ -395,6 +417,12 @@ const ZALO_URL = 'https://zalo.me/0909001336';
         err.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }).finally(() => { sending = false; });
     });
+  }
+
+  /* Trình duyệt tắt JS gửi form thẳng tới FormSubmit rồi quay về ?booked=1 → báo đã nhận */
+  if (ok && /[?&]booked=1/.test(location.search)) {
+    ok.hidden = false;
+    requestAnimationFrame(() => ok.scrollIntoView({ block: 'center' }));
   }
 
   /* ── Phiếu Phong Thủy Giấc Ngủ ────────────────────────── */
@@ -731,6 +759,15 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     if (el.dataset.promoEnd < todayVN) el.textContent = 'Đợt khuyến mại của Kymdan đã kết thúc — bảng đang hiển thị giá niêm yết.';
   });
 
+  /* "Giá từ" ở khối So sánh: tính lại theo giá đang hiện (hết đợt KM thì theo giá niêm yết) */
+  document.querySelectorAll('[data-price-from]').forEach(el => {
+    const prices = el.dataset.priceFrom.split(',').flatMap(k =>
+      Array.from(document.querySelectorAll(`.kd-price[data-pkey^="${k}|"]`)).map(c =>
+        +(c.dataset.promoEnd && c.dataset.promo ? c.dataset.promo : c.dataset.list)))
+      .filter(n => n > 0);
+    if (prices.length) el.textContent = fmtVnd(Math.min(...prices));
+  });
+
   /* ── Bảng giá: gắn nhãn cột cho bố cục thẻ trên mobile ── */
   document.querySelectorAll('.price-grid').forEach(table => {
     const heads = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
@@ -768,7 +805,8 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     btnEl.id = 'acc-btn-' + sec.id;
     btnEl.setAttribute('aria-controls', panel.id);
     btnEl.innerHTML =
-      `<span class="acc__title">${sec.dataset.accordion}</span>` +
+      `<span class="acc__title">${sec.dataset.accordion}` +
+      (sec.dataset.accFrom ? ` <span class="acc__from">— ${sec.dataset.accFrom}</span>` : '') + '</span>' +
       `<span class="acc__meta">Xem mẫu &amp; bảng giá</span>` +
       `<span class="acc__icon" aria-hidden="true"></span>`;
     panel.setAttribute('aria-labelledby', btnEl.id);
@@ -776,7 +814,11 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     container.append(h, panel);
     sec.classList.add('acc');
     setAcc(sec, false);
-    btnEl.addEventListener('click', () => setAcc(sec, btnEl.getAttribute('aria-expanded') !== 'true'));
+    btnEl.addEventListener('click', () => {
+      const open = btnEl.getAttribute('aria-expanded') !== 'true';
+      setAcc(sec, open);
+      if (open) track('open_price_group', { group: sec.dataset.accordion });
+    });
   });
 
   if (accSections.length) accSections[accSections.length - 1].classList.add('acc--last');
@@ -799,6 +841,21 @@ const ZALO_URL = 'https://zalo.me/0909001336';
     });
     openAccFor(location.hash);
   }
+
+  /* ── Ảnh thật của showroom: có file trong assets/img/showroom/ thì tự thay ảnh tạm ── */
+  document.querySelectorAll('img[data-real-src]').forEach(img => {
+    const probe = new Image();
+    probe.onload = () => {
+      img.src = img.dataset.realSrc;
+      if (img.dataset.realAlt) img.alt = img.dataset.realAlt;
+      if (img.hidden) {
+        img.hidden = false;
+        const fallback = img.parentElement.querySelector('.js-photo-fallback');
+        if (fallback) fallback.remove();
+      }
+    };
+    probe.src = img.dataset.realSrc;
+  });
 
   /* ── Scroll reveal ────────────────────────────────────── */
   const reveals = document.querySelectorAll(

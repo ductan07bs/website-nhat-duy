@@ -7,7 +7,7 @@
 /* ─── Nút bong bóng ─────────────────────────────────────────
    Xếp chồng dọc góc phải-dưới, không đè nhau:
    desktop:  Zalo (24px) → Trợ lý (94px) → Lên đầu trang (164px)
-   mobile:   thanh CTA (12px) → Zalo (84px) → Trợ lý (146px) → Lên đầu trang (208px) */
+   mobile:   thanh CTA Gọi/Zalo (10px) → Trợ lý (84px) → Lên đầu trang (146px); nút Zalo nổi ẩn vì trùng thanh CTA */
 .ndchat-launcher {
   position: fixed;
   right: 20px; bottom: 94px;
@@ -381,9 +381,9 @@
 
 /* ─── Mobile ──────────────────────────────────────────────── */
 @media (max-width: 720px) {
-  .ndchat-launcher { right: 16px; bottom: 146px; width: 52px; height: 52px; }
+  .ndchat-launcher { right: 16px; bottom: calc(84px + env(safe-area-inset-bottom)); width: 52px; height: 52px; }
   .ndchat-launcher__label { display: none; }
-  .back-to-top { bottom: 208px; }
+  .back-to-top { bottom: calc(146px + env(safe-area-inset-bottom)); }
 
   /* Mở chat = phủ kín màn hình; ẩn các nút nổi phía dưới để không che nhau */
   .ndchat {

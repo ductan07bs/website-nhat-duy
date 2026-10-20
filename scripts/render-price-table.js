@@ -123,9 +123,33 @@ function replaceBetween(html, name, body) {
   return html.replace(re, (_, a, b) => a + '\n' + body + b);
 }
 
+/* Giá đang hiện ở một ô (cùng quy tắc với priceHtml); không có giá → null */
+function shownPrice(spec, r) {
+  if (!r) return null;
+  const p = DATA.products[spec.key];
+  const promo = (p.variants[spec.variant || 0] || {}).promotion || p.promotion;
+  if (MODE === 'nhatduy') {
+    const own = OWN.prices[`${spec.key}|${sizeKey(r)}`];
+    return Number.isInteger(own) && own > 0 ? own : null;
+  }
+  if (MODE === 'promo' && r.promoPrice && promo && promo.to && promo.to >= todayVN) return r.promoPrice;
+  return r.listPrice;
+}
+function shownRows(spec) {
+  const rows = rowsOf(spec) || [];
+  if (spec.compact) return rows;
+  return COLS.map(([w, l]) => rows.find(x => x.width === w && x.length === l && x.thickness === spec.thickness)).filter(Boolean);
+}
+
 let html = fs.readFileSync(HTML_FILE, 'utf8');
 html = replaceBetween(html, 'KYMDAN-PRICES', ROWS.map(renderRow).join('\n'));
 html = replaceBetween(html, 'KYMDAN-NOTE', renderNote());
+/* "Giá từ" ở khối So sánh = giá thấp nhất đang hiện trong bảng của các dòng đó */
+html = html.replace(/(<strong class="price-from" data-price-from="([\w,]+)">)[^<]*(<\/strong>)/g, (_, a, keys, b) => {
+  const want = keys.split(',');
+  const prices = ROWS.filter(s => want.includes(s.key)).flatMap(s => shownRows(s).map(r => shownPrice(s, r))).filter(Boolean);
+  return a + (prices.length ? vnd(Math.min(...prices)) : 'Liên hệ') + b;
+});
 fs.writeFileSync(HTML_FILE, html, 'utf8');
 
 const missing = ROWS.filter(s => !DATA.products[s.key]).map(s => s.title);

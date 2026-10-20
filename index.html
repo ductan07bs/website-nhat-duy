@@ -470,25 +470,23 @@
 
     <nav class="primary-nav" aria-label="Điều hướng chính">
       <ul>
-        <li><a href="#sanh-pho">Không gian</a></li>
-        <li><a href="#bo-suu-tap">Bộ sưu tập</a></li>
-        <li><a href="#so-sanh">So sánh</a></li>
         <li><a href="#bang-gia">Bảng giá</a></li>
-        <li><a href="#thuoc-lo-ban">Thước Lỗ Ban</a></li>
+        <li><a href="#so-sanh">So sánh</a></li>
+        <li><a href="#thuoc-lo-ban">Lỗ Ban</a></li>
         <li><a href="#mac-thu">Showroom</a></li>
-        <li><a href="#cau-chuyen">Đánh giá</a></li>
+        <li><a href="#lien-he">Liên hệ</a></li>
       </ul>
     </nav>
 
     <div class="header__cta">
-      <a class="hotline" href="tel:0909001336" aria-label="Gọi hotline Nhật Duy 0909 001 336">
+      <a class="hotline" href="tel:0909001336" aria-label="Gọi hotline Nhật Duy 0909 001 336" data-cta="call" data-pos="header">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
         <span class="hotline__label">Hotline Bồng Sơn – Gia Lai</span>
         <span class="hotline__number">
-          <span class="hotline__primary">0909&nbsp;001&nbsp;336</span><em class="hotline__sep" aria-hidden="true"> · </em><span class="hotline__alt">0905&nbsp;070&nbsp;785</span>
+          <span class="hotline__primary">0909&nbsp;001&nbsp;336</span>
         </span>
       </a>
-      <a class="btn btn--gold" href="#mac-thu" title="Đặt lịch trải nghiệm tại Showroom">Đặt lịch tại Showroom</a>
+      <a class="btn btn--gold" href="#mac-thu" data-cta="booking" data-pos="header">Đặt lịch nằm thử</a>
       <button class="nav-toggle" id="navToggle" aria-label="Mở menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -497,7 +495,6 @@
 </header>
 
 <main id="main">
-
 <!-- ─────────── HERO ─────────── -->
 <section class="hero" id="top">
   <div class="hero__bg" aria-hidden="true">
@@ -508,35 +505,31 @@
 
   <div class="container hero__grid">
     <div class="hero__copy">
+      <p class="eyebrow">Đại lý Kymdan chính hãng · 2657 Quang Trung, Bồng Sơn</p>
       <!-- Trang chỉ có một H1 -->
-      <h1 class="hero__title">
-        <span class="eyebrow">Nệm Kymdan chính hãng · Bồng Sơn, Gia Lai</span>
-        Giấc ngủ của bạn,<br />
-        <em>được tinh tuyển từng inch.</em>
-      </h1>
-      <p class="hero__lede">
-        <!-- Không dùng từ tuyệt đối hay số năm hoạt động khi chưa có giấy tờ chứng minh (Luật Quảng cáo). -->
-        Kế thừa cơ sở kinh doanh nệm lâu năm tại 2657 Quang Trung, Bồng Sơn — Nhật Duy là
-        <span class="hl-mark">đại lý Kymdan chính hãng</span> tại Bồng Sơn. Nệm cao su Kymdan, nội thất Kymdan đồng bộ,
-        nệm foam và bông ép Hàn Quốc. Đúng tỉ lệ. Đúng phong thủy.
-      </p>
+      <h1 class="hero__title">Nệm Kymdan chính hãng tại Bồng Sơn</h1>
+      <p class="hero__lede">Bảo hành 15 năm · Giao lắp trong 4 giờ · Nằm thử trước khi mua</p>
 
       <div class="hero__actions">
-        <a class="btn btn--gold btn--lg" href="#mac-thu" title="Đặt lịch trải nghiệm nệm tại Showroom 2657 Quang Trung">Đặt lịch trải nghiệm tại Showroom</a>
-        <a class="btn btn--ghost btn--lg" href="#thuoc-lo-ban">Kiểm Lỗ Ban miễn phí</a>
+        <a class="btn btn--zalo btn--lg btn--cta-main" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="hero"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 6h16v10H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Nhắn Zalo nhận báo giá</a>
+        <a class="btn btn--ghost btn--lg" href="tel:0909001336" data-cta="call" data-pos="hero">Gọi 0909&nbsp;001&nbsp;336</a>
       </div>
 
       <ul class="hero__proof" role="list">
-        <li><strong>15 năm</strong><span>bảo hành chính hãng</span></li>
-        <li><strong>4h</strong><span>giao &amp; lắp đặt</span></li>
-                <li><strong>30km</strong><span>bán kính miễn phí</span></li>
+        <li><strong>15 năm</strong><span>bảo hành</span></li>
+        <li><strong>4 giờ</strong><span>giao lắp</span></li>
+        <li><strong>30 km</strong><span>miễn phí giao</span></li>
       </ul>
     </div>
 
-    <figure class="hero__stage" aria-label="Phòng ngủ Kymdan tinh tuyển bởi Nội Thất Nhật Duy">
+    <figure class="hero__stage" aria-label="Nệm và giường Kymdan tại Nội Thất Nhật Duy">
       <div class="hero__frame">
+        <!-- [[CẦN BA CUNG CẤP ẢNH: mặt tiền showroom]] → lưu đúng tên assets/img/showroom/mat-tien.webp
+             (ảnh ngang, rộng ≥ 1200px). Có file là trang tự thay ảnh tạm bên dưới, không cần sửa code. -->
         <img class="hero__img"
              src="assets/img/products/giuong-boc-vai.webp"
+             data-real-src="assets/img/showroom/mat-tien.webp"
+             data-real-alt="Mặt tiền showroom Nội Thất Nhật Duy — 2657 Quang Trung, Bồng Sơn"
              width="960" height="640"
              fetchpriority="high"
              alt="Phòng ngủ Kymdan — giường bọc nệm cao su thiên nhiên, sang trọng tại Showroom Nhật Duy" />
@@ -566,13 +559,143 @@
   </div>
 </section>
 
+<!-- ─────────── VÌ SAO CHỌN NHẬT DUY ─────────── -->
+<section class="why" id="vi-sao" aria-labelledby="why-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <span class="eyebrow">Vì sao chọn Nhật Duy</span>
+      <h2 id="why-title">Mua Kymdan chính hãng, có người lo tận nhà</h2>
+      <p class="section-lede">Kế thừa cơ sở kinh doanh nệm lâu năm tại 2657 Quang Trung, Bồng Sơn.</p>
+    </header>
+
+    <div class="why__grid">
+      <article class="why__item">
+        <span class="why__num">Chính hãng</span>
+        <h3>Đại lý Kymdan chính hãng tại Bồng Sơn</h3>
+        <p>Giấy chứng nhận đại lý trưng bày tại showroom — khách hỏi là đưa xem.</p>
+        <!-- [[CẦN BA XÁC NHẬN: văn bản cam kết đền 200% hàng giả]] — Ba đã bỏ cam kết này ngày 19/10/2026; chỉ bật cờ khi có văn bản. -->
+        <p class="trust-badge__guarantee" data-flag="SHOW_REFUND_200" hidden><strong>Phát hiện hàng giả đền 200%</strong> giá trị sản phẩm.</p>
+      </article>
+      <article class="why__item">
+        <span class="why__num">15 năm</span>
+        <h3>Bảo hành chính hãng</h3>
+        <p>Nệm Kymdan bảo hành 15 năm theo chính sách Kymdan.</p>
+      </article>
+      <article class="why__item">
+        <span class="why__num">4 giờ</span>
+        <h3>Giao &amp; lắp tận nhà</h3>
+        <p data-cfg="delivery-short">Giao &amp; lắp đặt trong 4 giờ — bán kính 30 km</p>
+      </article>
+      <article class="why__item">
+        <span class="why__num">Tận nhà</span>
+        <h3>Bảo trì tại Gia Lai</h3>
+        <p>Không cần gửi nệm ngược lên TP.HCM hay Quy Nhơn.</p>
+      </article>
+    </div>
+
+    <section class="certs" aria-label="Giấy chứng nhận đại lý chính hãng">
+      <header class="certs__head">
+        <strong>Giấy chứng nhận đại lý Kymdan chính hãng</strong>
+        <span>Bản gốc trưng bày tại Showroom 2657 Quang Trung — sẵn sàng đối chiếu khi khách yêu cầu</span>
+      </header>
+      <div class="certs__row">
+        <figure class="cert" data-brand="kymdan">
+          <!-- [[CẦN BA CUNG CẤP ẢNH: giấy chứng nhận đại lý Kymdan]] → lưu assets/img/showroom/giay-chung-nhan.webp
+               (ảnh dọc, chụp thẳng, rõ chữ). Có file là trang tự hiện ảnh thật thay tấm biển tạm. -->
+          <img class="cert__photo" data-real-src="assets/img/showroom/giay-chung-nhan.webp"
+               width="800" height="1100" loading="lazy" decoding="async" hidden
+               alt="Giấy chứng nhận đại lý Kymdan chính hãng của Nội Thất Nhật Duy" />
+          <div class="cert__plate js-photo-fallback">
+            <span class="cert__seal" aria-hidden="true">✦</span>
+            <span class="cert__brand">KYMDAN</span>
+            <span class="cert__label">Đại lý phân phối chính hãng</span>
+          </div>
+          <figcaption>Giấy ủy quyền · MST &amp; tem chống giả Kymdan</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- ─────────── SO SÁNH DÒNG NỆM ─────────── -->
+<section class="compare" id="so-sanh" aria-labelledby="cmp-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <span class="eyebrow">So sánh 3 dòng nệm</span>
+      <h2 id="cmp-title">Deluxe, Pillow Top hay bông ép — chọn loại nào?</h2>
+    </header>
+
+    <div class="compare__grid">
+
+      <div class="compare__col">
+        <div class="compare__head">
+          <span class="compare__badge">Phổ thông</span>
+          <h3>Nệm Kymdan Deluxe</h3>
+          <p>Cao su thiên nhiên 100%</p>
+        </div>
+        <p class="compare__from">Giá từ <strong class="price-from" data-price-from="deluxe">16.200.000₫</strong></p>
+        <ul class="compare__list" role="list">
+          <li class="good">Bền 15–20 năm</li>
+          <li class="good">Bảo hành 15 năm chính hãng</li>
+          <li class="good">Nâng đỡ cột sống tốt</li>
+          <li class="good">Kháng khuẩn, kháng nấm mốc</li>
+          <li class="good">Phù hợp mọi tư thế ngủ</li>
+          <li class="neutral">Độ dày 10 / 15 / 20cm (có cả loại mỏng 5–12,5cm)</li>
+          <li class="neutral">Giá tầm trung</li>
+        </ul>
+        <p class="compare__best-for">Phù hợp: <strong>Phòng ngủ chính · Người lớn tuổi · Đau lưng</strong></p>
+        <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="compare">Nhắn Zalo nhận báo giá</a>
+      </div>
+
+      <div class="compare__col compare__col--featured">
+        <div class="compare__head">
+          <span class="compare__badge compare__badge--gold">Đề cử của Nhật Duy</span>
+          <h3>Kymdan Special Deluxe Pillow Top</h3>
+          <p>Cao su thiên nhiên · Lớp Pillow Top êm</p>
+        </div>
+        <p class="compare__from">Giá từ <strong class="price-from" data-price-from="pillowTopSoft,pillowTopCloud,pillowTopRoyal">131.000.000₫</strong></p>
+        <ul class="compare__list" role="list">
+          <li class="good">Bền 15–20 năm</li>
+          <li class="good">Bảo hành 15 năm chính hãng</li>
+          <li class="good">Lớp Pillow Top cực êm ái</li>
+          <li class="good">Cảm giác sang trọng như khách sạn 5 sao</li>
+          <li class="good">Nâng đỡ cột sống toàn diện</li>
+          <li class="neutral">Giá cao hơn dòng Deluxe</li>
+        </ul>
+        <p class="compare__best-for">Phù hợp: <strong>Biệt thự · Nhà phố · Ai thích nệm êm, dày</strong></p>
+        <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="compare">Nhắn Zalo nhận báo giá</a>
+      </div>
+
+      <div class="compare__col">
+        <div class="compare__head">
+          <span class="compare__badge">Tiết kiệm</span>
+          <h3>Nệm Bông ép Hàn Quốc</h3>
+          <p>Nhập khẩu · Thoáng mát đặc biệt</p>
+        </div>
+        <p class="compare__from">Giá từ <strong>2.620.000₫</strong></p>
+        <ul class="compare__list" role="list">
+          <li class="good">Thoáng mát vượt trội trong khí hậu nóng</li>
+          <li class="good">Kháng khuẩn, an toàn trẻ em</li>
+          <li class="good">Nhẹ, dễ vệ sinh</li>
+          <li class="good">Giá hợp lý</li>
+          <li class="neutral">Độ bền 5–8 năm</li>
+          <li class="neutral">Bảo hành 3 năm</li>
+        </ul>
+        <p class="compare__best-for">Phù hợp: <strong>Phòng trẻ em · Người hay đổ mồ hôi · Ngân sách hợp lý</strong></p>
+        <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="compare">Nhắn Zalo nhận báo giá</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─────────── MATTRESS QUIZ ─────────── -->
 <section class="quiz" id="chon-nem" aria-labelledby="qz-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Trắc nghiệm · Chỉ 3 câu hỏi</span>
-      <h2 id="qz-title">Nệm nào phù hợp<br /><em>với bạn nhất?</em></h2>
-      <p class="section-lede">Trả lời 3 câu hỏi nhanh — Nhật Duy gợi ý dòng nệm phù hợp nhất cho giấc ngủ của bạn.</p>
+      <h2 id="qz-title">Trả lời 3 câu, biết ngay nệm nào hợp với bạn</h2>
+      <p class="section-lede">Theo tư thế ngủ, sức khỏe và ngân sách — Nhật Duy gợi ý dòng nệm kèm giá size 1m6.</p>
     </header>
 
     <div class="quiz__card" id="quizCard">
@@ -634,7 +757,7 @@
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="quiz__lead-actions">
               <button class="btn btn--gold" type="submit">Nhận báo giá &amp; tư vấn</button>
-              <a class="btn btn--ghost-light" href="#mac-thu" id="qResultCTA">Xem luôn tại showroom</a>
+              <a class="btn btn--ghost-light" href="#mac-thu" id="qResultCTA" data-cta="booking" data-pos="quiz">Đặt lịch nằm thử</a>
             </div>
             <p class="quiz__lead-note">Nhật Duy chỉ dùng số này để gửi báo giá và gọi tư vấn — không chia sẻ cho bên thứ ba.</p>
             <div class="form-status form-status--ok" id="quizLeadOk" role="status" hidden></div>
@@ -646,11 +769,9 @@
           </form>
 
           <div class="quick-contact quick-contact--dark">
-            <a class="btn btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener">Nhắn Zalo giữ dòng nệm này</a>
+            <a class="btn btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="quiz">Nhắn Zalo nhận báo giá</a>
             <p class="quick-contact__phones">
-              Hoặc gọi ngay:
-              <a href="tel:0909001336">0909&nbsp;001&nbsp;336</a> ·
-              <a href="tel:0905070785">0905&nbsp;070&nbsp;785</a>
+              Hoặc <a href="tel:0909001336" data-cta="call" data-pos="quiz">Gọi 0909&nbsp;001&nbsp;336</a>
             </p>
           </div>
           <button type="button" class="btn btn--ghost" id="qRestart" style="margin-top:10px;">Làm lại từ đầu</button>
@@ -661,127 +782,17 @@
   </div>
 </section>
 
-<!-- ─────────── SPACE FILTER ─────────── -->
-<section class="space-filter" id="sanh-pho" aria-labelledby="sf-title">
-  <div class="container">
-    <header class="section-head">
-      <span class="eyebrow">Sảnh phố · Hai lối rẽ</span>
-      <h2 id="sf-title">Không gian của bạn,<br /><em>chọn đúng từ giây đầu tiên.</em></h2>
-      <p class="section-lede">
-        Hai con đường, hai tinh thần. Hãy bước vào sảnh dành cho bạn —
-        mọi gợi ý, bộ sưu tập và bảng giá đều được tinh chỉnh theo đúng
-        nhịp sống của căn nhà.
-      </p>
-    </header>
-
-    <div class="space-filter__grid">
-      <a class="space-card space-card--scandi" href="#bo-suu-tap" data-audience="scandi">
-        <div class="space-card__media">
-          <img src="https://images.unsplash.com/photo-1600494448655-ae58f58bb945?auto=format&amp;fit=crop&amp;q=80&amp;w=1000"
-               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1610307522657-8c0304960189?auto=format&amp;fit=crop&amp;q=80&amp;w=1000';"
-               width="1000" height="1333"
-               alt="Phòng ngủ căn hộ phong cách Bắc Âu — gỗ sồi sáng, vải linen, tỉ lệ tinh giản"
-               loading="lazy" decoding="async" />
-        </div>
-        <span class="space-card__num" aria-hidden="true">01</span>
-        <div class="space-card__body">
-          <span class="space-card__tag">Nhóm 01</span>
-          <h3>Căn hộ Hiện đại<br /><em>· Bắc Âu</em></h3>
-          <p>Tỉ lệ tinh giản, gỗ sồi sáng, vải linen kháng nhăn. Dành cho
-            các căn hộ 35–80 m² đề cao ánh sáng và sự gọn gàng.</p>
-          <ul class="space-card__bullets" role="list">
-            <li>Nệm Kymdan 1m4–1m6 hoặc nệm foam cao cấp</li>
-            <li>Giường Kymdan gỗ tầng thấp · thiết kế tinh giản</li>
-            <li>Ngân sách gợi ý 18 – 42 triệu</li>
-          </ul>
-          <span class="space-card__cta">
-            Vào sảnh Bắc Âu
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-          </span>
-        </div>
-      </a>
-
-      <a class="space-card space-card--manor" href="#bo-suu-tap" data-audience="manor">
-        <div class="space-card__media">
-          <img src="https://images.unsplash.com/photo-1770941633927-b7a15557e0e1?auto=format&amp;fit=crop&amp;q=80&amp;w=1000"
-               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1768487422639-7ba3900d0f02?auto=format&amp;fit=crop&amp;q=80&amp;w=1000';"
-               width="1000" height="1333"
-               alt="Phòng ngủ biệt thự sang trọng — giường lớn bọc da/nhung, khu ghế thư giãn, tone nâu trầm vàng champagne"
-               loading="lazy" decoding="async" />
-        </div>
-        <span class="space-card__num" aria-hidden="true">02</span>
-        <div class="space-card__body">
-          <span class="space-card__tag">Nhóm 02</span>
-          <h3>Biệt thự &amp; Nhà phố<br /><em>· Sang trọng</em></h3>
-          <p>Tỉ lệ rộng rãi, gỗ óc chó, đồng thau xước, da bê và nhung tơ.
-            Cho phòng ngủ chủ ≥ 25 m² đề cao chiều sâu và sự trầm tĩnh.</p>
-          <ul class="space-card__bullets" role="list">
-            <li>Nệm Kymdan Special Deluxe Pillow Top 1m8–2m</li>
-            <li>Nội thất Kymdan · giường bọc nhung đồng bộ</li>
-            <li>Ngân sách gợi ý 65 – 240 triệu</li>
-          </ul>
-          <span class="space-card__cta">
-            Vào sảnh Sang trọng
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-          </span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ─────────── COMBO CARDS ─────────── -->
 <section class="combos" id="bo-suu-tap" aria-labelledby="cb-title">
   <div class="container">
     <header class="section-head section-head--center">
-      <span class="eyebrow">Bộ sưu tập · Combo trọn phòng</span>
-      <h2 id="cb-title">Ba combo phòng ngủ —<br /><em>ba lối sống.</em></h2>
+      <span class="eyebrow">Combo trọn phòng</span>
+      <h2 id="cb-title">3 combo phòng ngủ trọn gói, giá rõ ràng</h2>
       <p class="section-lede">
-        Mỗi combo bao gồm giường, nệm cao su thiên nhiên và bộ ga gối lụa
-        tơ tằm. Giá minh bạch. Mỗi đơn đều có lịch hẹn nằm thử trực tiếp
-        tại Showroom 2657 Quang Trung.
+        Mỗi combo gồm giường, nệm và bộ ga gối. Nằm thử trước tại showroom
+        2657 Quang Trung rồi mới quyết định.
       </p>
     </header>
-
-    <aside class="trust-badge" role="note" aria-label="Cam kết chính hãng">
-      <span class="trust-badge__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="28" height="28">
-          <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-          <path d="M8.5 12l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-      <div class="trust-badge__copy">
-        <!-- Không ghi đại lý "độc nhất" khi chưa có văn bản Kymdan xác nhận. -->
-        <strong class="trust-badge__title">Đại lý Kymdan chính hãng tại Bồng Sơn</strong>
-        <p class="trust-badge__brands">
-          Phân phối chính hãng
-          <span class="trust-badge__name">Kymdan</span>
-          <span class="trust-badge__dot" aria-hidden="true">·</span>
-          <span class="trust-badge__name">Nội thất Kymdan</span>
-          <span class="trust-badge__dot" aria-hidden="true">·</span>
-          <span class="trust-badge__name">Foam &amp; Bông ép Hàn Quốc</span>
-        </p>
-        <!-- [[CẦN BA XÁC NHẬN: văn bản cam kết đền 200% hàng giả]] — Ba đã bỏ cam kết này ngày 19/10/2026; chỉ bật cờ khi có văn bản. -->
-        <p class="trust-badge__guarantee" data-flag="SHOW_REFUND_200" hidden><strong>Phát hiện hàng giả đền 200%</strong> giá trị sản phẩm.</p>
-      </div>
-    </aside>
-
-    <section class="certs" aria-label="Giấy chứng nhận đại lý chính hãng">
-      <header class="certs__head">
-        <strong>Giấy chứng nhận đại lý Kymdan chính hãng</strong>
-        <span>Bản gốc trưng bày tại Showroom 2657 Quang Trung — sẵn sàng đối chiếu khi khách yêu cầu</span>
-      </header>
-      <div class="certs__row">
-        <figure class="cert" data-brand="kymdan">
-          <div class="cert__plate">
-            <span class="cert__seal" aria-hidden="true">✦</span>
-            <span class="cert__brand">KYMDAN</span>
-            <span class="cert__label">Đại lý phân phối chính hãng</span>
-          </div>
-          <figcaption>Giấy ủy quyền · MST &amp; tem chống giả Kymdan</figcaption>
-        </figure>
-      </div>
-    </section>
 
     <div class="combos__filter" role="tablist" aria-label="Lọc combo theo dòng sản phẩm">
       <button class="chip chip--active" role="tab" aria-selected="true" data-filter="all">Tất cả</button>
@@ -828,8 +839,8 @@
           <span class="combo__installment" data-flag="SHOW_INSTALLMENT_0" hidden>Trả góp 0% qua thẻ tín dụng</span>
         </div>
         <div class="combo__actions">
-          <a class="btn btn--gold btn--block" href="#mac-thu" title="Đăng ký nằm thử Combo Kymdan Tinh Giản tại Showroom">Đăng ký nằm thử tại Showroom</a>
-          <a class="btn btn--text" href="https://zalo.me/0909001336" target="_blank" rel="noopener">Chat Zalo tư vấn ngay →</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="combo">Nhắn Zalo nhận báo giá</a>
+          <a class="btn btn--text" href="#mac-thu" data-cta="booking" data-pos="combo">Đặt lịch nằm thử →</a>
         </div>
       </article>
 
@@ -869,8 +880,8 @@
           <span class="combo__installment" data-flag="SHOW_INSTALLMENT_0" hidden>Trả góp 0% — 7.933.000₫/tháng</span>
         </div>
         <div class="combo__actions">
-          <a class="btn btn--gold btn--block" href="#mac-thu" title="Đăng ký nằm thử combo này tại Showroom">Đăng ký nằm thử tại Showroom</a>
-          <a class="btn btn--text" href="#mac-thu">Tư vấn 1:1 với chuyên gia →</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="combo">Nhắn Zalo nhận báo giá</a>
+          <a class="btn btn--text" href="#mac-thu" data-cta="booking" data-pos="combo">Đặt lịch nằm thử →</a>
         </div>
       </article>
 
@@ -906,219 +917,10 @@
           <span class="combo__installment" data-flag="SHOW_INSTALLMENT_0" hidden>Trả góp 0% — 825.000₫/tháng</span>
         </div>
         <div class="combo__actions">
-          <a class="btn btn--gold btn--block" href="#mac-thu" title="Xem Combo Bông Ép Hàn Quốc tại Showroom Nhật Duy">Xem tại Showroom</a>
-          <a class="btn btn--text" href="https://zalo.me/0909001336" target="_blank" rel="noopener">Chat Zalo tư vấn ngay →</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="combo">Nhắn Zalo nhận báo giá</a>
+          <a class="btn btn--text" href="#mac-thu" data-cta="booking" data-pos="combo">Đặt lịch nằm thử →</a>
         </div>
       </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ─────────── LO BAN CALCULATOR ─────────── -->
-<section class="loban" id="thuoc-lo-ban" aria-labelledby="lb-title">
-  <div class="container loban__grid">
-
-    <div class="loban__intro">
-      <span class="eyebrow">Tinh hoa độc bản · Phong thủy phòng ngủ</span>
-      <h2 id="lb-title">Bộ kiểm thước<br /><em>Lỗ Ban 42.9cm.</em></h2>
-      <p>
-        Thước Lỗ Ban 42.9cm — dải thước cổ dành cho khối đặc và đồ nội thất —
-        chia làm tám cung, xen kẽ <strong>cát</strong> và <strong>hung</strong>.
-        Nhập kích thước giường nệm dự kiến, hệ thống tự đối chiếu và đề xuất
-        kích cỡ chuẩn phong thủy thay thế nếu cần.
-      </p>
-      <ul class="loban__legend" role="list">
-        <li><span class="dot dot--good"></span> Cát · Tài · Nghĩa · Quan · Bản</li>
-        <li><span class="dot dot--bad"></span> Hung · Bệnh · Ly · Kiếp · Hại</li>
-      </ul>
-      <p class="loban__hint">
-        Mẹo: nệm tiêu chuẩn 1m6×2m hay rơi vào cung Kiếp. Đổi sang
-        1m72×1m97 (cung Tài – Quan) hoặc 1m72×2m17 (cung Tài – Tài) là
-        cách hóa giải đơn giản.
-      </p>
-      <p class="loban__hint loban__hint--custom">
-        Kích thước đặt riêng — nhắn Zalo để Nhật Duy báo giá và thời gian sản xuất.
-      </p>
-    </div>
-
-    <form class="loban__panel" id="lobanForm" novalidate>
-      <fieldset class="loban__inputs">
-        <legend class="sr-only">Nhập kích thước nệm dự kiến (cm)</legend>
-
-        <label class="field">
-          <span class="field__label">Rộng (cm)</span>
-          <input type="number" inputmode="decimal" min="40" max="400" step="0.1" name="width" id="lbWidth" value="160" required />
-        </label>
-        <label class="field">
-          <span class="field__label">Dài (cm)</span>
-          <input type="number" inputmode="decimal" min="40" max="400" step="0.1" name="length" id="lbLength" value="200" required />
-        </label>
-        <label class="field">
-          <span class="field__label">Cao (cm)</span>
-          <input type="number" inputmode="decimal" min="3" max="60" step="0.1" name="height" id="lbHeight" value="25" required />
-        </label>
-      </fieldset>
-
-      <button class="btn btn--gold btn--block" type="submit">Đối chiếu thước Lỗ Ban</button>
-
-      <div class="loban__result" id="lobanResult" hidden>
-        <div class="loban__verdict" id="lobanVerdict"></div>
-
-        <div class="loban__rows" id="lobanRows" role="list"></div>
-
-        <div class="loban__ruler" aria-hidden="true">
-          <div class="loban__ruler-track">
-            <span class="loban__ruler-cung" data-good="1"><b>Tài</b></span>
-            <span class="loban__ruler-cung" data-good="0"><b>Bệnh</b></span>
-            <span class="loban__ruler-cung" data-good="0"><b>Ly</b></span>
-            <span class="loban__ruler-cung" data-good="1"><b>Nghĩa</b></span>
-            <span class="loban__ruler-cung" data-good="1"><b>Quan</b></span>
-            <span class="loban__ruler-cung" data-good="0"><b>Kiếp</b></span>
-            <span class="loban__ruler-cung" data-good="0"><b>Hại</b></span>
-            <span class="loban__ruler-cung" data-good="1"><b>Bản</b></span>
-          </div>
-          <p class="loban__ruler-caption">42.9 cm — một chu kỳ thước Lỗ Ban khối đặc</p>
-        </div>
-
-        <div class="loban__suggest" id="lobanSuggest" hidden>
-          <h4>Kích thước phong thủy thay thế</h4>
-          <ul id="lobanSuggestList" role="list"></ul>
-          <a class="btn btn--navy" href="#mac-thu">
-            Đặt lịch đo Lỗ Ban tại Showroom
-          </a>
-        </div>
-
-        <div class="quick-contact">
-          <p class="quick-contact__lead">Nhắn Zalo để Nhật Duy tư vấn kích thước hợp phong thủy cho bạn</p>
-          <p class="quick-contact__soft">Hoặc <a href="#phieuForm">để lại số ở phiếu bên dưới</a> — Nhật Duy gọi tư vấn kích thước, không bắt buộc.</p>
-          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener">Nhắn Zalo tư vấn kích thước</a>
-          <p class="quick-contact__phones">
-            Hoặc gọi ngay:
-            <a href="tel:0909001336">0909&nbsp;001&nbsp;336</a> ·
-            <a href="tel:0905070785">0905&nbsp;070&nbsp;785</a>
-          </p>
-        </div>
-      </div>
-    </form>
-
-    <!-- Phiếu Phong Thủy Giấc Ngủ — hiện sau khi có kết quả thước Lỗ Ban -->
-    <div class="phieu" id="phieuBox" hidden>
-      <form class="phieu__form" id="phieuForm" novalidate>
-        <h3>Nhận Phiếu tư vấn phong thủy phòng ngủ riêng cho bạn</h3>
-        <p class="phieu__lede">Không bắt buộc — nhập tên và số điện thoại để nhận phiếu và được Nhật Duy gọi tư vấn kích thước. Phiếu hiện ngay bên dưới, tải về làm ảnh được.</p>
-        <label class="field">
-          <span class="field__label">Họ &amp; tên</span>
-          <input type="text" name="name" autocomplete="name" placeholder="Anh / Chị…" data-required="Vui lòng nhập họ tên để ghi lên phiếu" />
-        </label>
-        <label class="field">
-          <span class="field__label">Số điện thoại</span>
-          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" data-required="Vui lòng nhập số điện thoại để Nhật Duy gọi lại" />
-        </label>
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-        <button class="btn btn--gold btn--block" type="submit">Nhận phiếu phong thủy</button>
-        <p class="form-status form-status--err" id="phieuErr" role="alert" hidden></p>
-      </form>
-
-      <div class="phieu__out" id="phieuOut" hidden>
-        <article class="phieu-card" id="phieuCard" aria-label="Phiếu phong thủy giấc ngủ">
-          <header class="phieu-card__head">
-            <span class="phieu-card__brand">Nội Thất Nhật Duy</span>
-            <span class="phieu-card__sub">Đại lý Kymdan chính hãng · Bồng Sơn, Gia Lai</span>
-          </header>
-          <h4 class="phieu-card__title">Phiếu Phong Thủy Giấc Ngủ</h4>
-          <p class="phieu-card__for">Dành riêng cho <strong id="phieuName"></strong></p>
-
-          <div class="phieu-card__block">
-            <span class="phieu-card__label">Kích thước đang chọn · Thước Lỗ Ban 42.9cm</span>
-            <ul id="phieuCurrent" role="list"></ul>
-          </div>
-          <div class="phieu-card__block" id="phieuSuggestBlock">
-            <span class="phieu-card__label">Kích thước chuẩn phong thủy nên đổi sang</span>
-            <ul id="phieuSuggest" role="list"></ul>
-          </div>
-
-          <p class="phieu-card__wish" id="phieuWish"></p>
-          <footer class="phieu-card__foot">
-            <span>2657 Quang Trung, Bồng Sơn, Gia Lai</span>
-            <strong>0909 001 336 · 0905 070 785</strong>
-          </footer>
-        </article>
-
-        <div class="phieu__actions">
-          <button class="btn btn--gold btn--block" type="button" id="phieuDownload">Tải phiếu về máy (ảnh)</button>
-          <button class="btn btn--zalo btn--block" type="button" id="phieuShare">Chia sẻ qua Zalo</button>
-        </div>
-        <p class="form-status" id="phieuNote" role="status" hidden></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────── SO SÁNH DÒNG NỆM ─────────── -->
-<section class="compare" id="so-sanh" aria-labelledby="cmp-title">
-  <div class="container">
-    <header class="section-head section-head--center">
-      <span class="eyebrow">So sánh · Chọn đúng từ đầu</span>
-      <h2 id="cmp-title">Ba dòng nệm —<br /><em>một lựa chọn đúng cho bạn.</em></h2>
-    </header>
-
-    <div class="compare__grid">
-
-      <div class="compare__col">
-        <div class="compare__head">
-          <span class="compare__badge">Phổ thông</span>
-          <h3>Nệm Kymdan Deluxe</h3>
-          <p>Cao su thiên nhiên 100%</p>
-        </div>
-        <ul class="compare__list" role="list">
-          <li class="good">Bền 15–20 năm</li>
-          <li class="good">Bảo hành 15 năm chính hãng</li>
-          <li class="good">Nâng đỡ cột sống tốt</li>
-          <li class="good">Kháng khuẩn, kháng nấm mốc</li>
-          <li class="good">Phù hợp mọi tư thế ngủ</li>
-          <li class="neutral">Độ dày 10 / 15 / 20cm (có cả loại mỏng 5–12,5cm)</li>
-          <li class="neutral">Giá tầm trung</li>
-        </ul>
-        <p class="compare__best-for">Phù hợp: <strong>Phòng ngủ chính · Người lớn tuổi · Đau lưng</strong></p>
-        <a class="btn btn--ghost btn--block" href="#mac-thu">Nằm thử dòng này</a>
-      </div>
-
-      <div class="compare__col compare__col--featured">
-        <div class="compare__head">
-          <span class="compare__badge compare__badge--gold">Đề cử của Nhật Duy</span>
-          <h3>Kymdan Special Deluxe Pillow Top</h3>
-          <p>Cao su thiên nhiên · Lớp Pillow Top êm</p>
-        </div>
-        <ul class="compare__list" role="list">
-          <li class="good">Bền 15–20 năm</li>
-          <li class="good">Bảo hành 15 năm chính hãng</li>
-          <li class="good">Lớp Pillow Top cực êm ái</li>
-          <li class="good">Cảm giác sang trọng như khách sạn 5 sao</li>
-          <li class="good">Nâng đỡ cột sống toàn diện</li>
-          <li class="neutral">Giá cao hơn dòng Deluxe</li>
-        </ul>
-        <p class="compare__best-for">Phù hợp: <strong>Biệt thự · Nhà phố · Ai thích nệm êm, dày</strong></p>
-        <a class="btn btn--gold btn--block" href="#mac-thu">Nằm thử dòng này</a>
-      </div>
-
-      <div class="compare__col">
-        <div class="compare__head">
-          <span class="compare__badge">Tiết kiệm</span>
-          <h3>Nệm Bông ép Hàn Quốc</h3>
-          <p>Nhập khẩu · Thoáng mát đặc biệt</p>
-        </div>
-        <ul class="compare__list" role="list">
-          <li class="good">Thoáng mát vượt trội trong khí hậu nóng</li>
-          <li class="good">Kháng khuẩn, an toàn trẻ em</li>
-          <li class="good">Nhẹ, dễ vệ sinh</li>
-          <li class="good">Giá hợp lý</li>
-          <li class="neutral">Độ bền 5–8 năm</li>
-          <li class="neutral">Bảo hành 3 năm</li>
-        </ul>
-        <p class="compare__best-for">Phù hợp: <strong>Phòng trẻ em · Người hay đổ mồ hôi · Ngân sách hợp lý</strong></p>
-        <a class="btn btn--ghost btn--block" href="#mac-thu">Nằm thử dòng này</a>
-      </div>
 
     </div>
   </div>
@@ -1128,11 +930,11 @@
 <section class="price-table" id="bang-gia" aria-labelledby="pt-title">
   <div class="container">
     <header class="section-head section-head--center">
-      <span class="eyebrow">Giá tham khảo · Niêm yết Kymdan chính hãng 2026</span>
-      <h2 id="pt-title">Bảng giá nệm Kymdan<br /><em>minh bạch từ đầu.</em></h2>
+      <span class="eyebrow">Giá niêm yết Kymdan 2026</span>
+      <h2 id="pt-title">Bảng giá nệm Kymdan 2026 — đủ size 1m đến 1m8</h2>
       <p class="section-lede">
-        Giá dưới đây là giá niêm yết Kymdan chính hãng. Tại Showroom Nhật Duy,
-        khách có thể được tư vấn thêm chính sách ưu đãi theo từng thời điểm.
+        Giá niêm yết Kymdan chính hãng, đã gồm VAT. Nhắn Zalo để Nhật Duy báo
+        ưu đãi đang có cho đúng size bạn cần.
         <strong data-cfg="delivery-short">Giao &amp; lắp đặt trong 4 giờ — bán kính 30 km</strong>
       </p>
     </header>
@@ -1267,10 +1069,12 @@
         Giá có thể thay đổi theo từng đợt của Kymdan.
         <!-- KYMDAN-NOTE:END -->
         Giá chưa gồm phí giao lắp ngoài bán kính 30 km.
-        <strong>Gọi <a href="tel:0909001336">0909 001 336</a></strong> để nhận báo giá chính xác
-        và kiểm tra ưu đãi đại lý Nhật Duy tại Showroom.
+        Nhắn Zalo hoặc gọi để nhận báo giá chính xác và ưu đãi đại lý Nhật Duy.
       </p>
-      <a class="btn btn--gold" href="tel:0909001336">Hỏi giá ngay — gọi hoặc Zalo</a>
+      <div class="price-table__actions">
+        <a class="btn btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="price">Nhắn Zalo nhận báo giá</a>
+        <a class="btn btn--ghost-light" href="tel:0909001336" data-cta="call" data-pos="price">Gọi 0909&nbsp;001&nbsp;336</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1279,19 +1083,19 @@
 <section class="product-cat acc-intro" aria-labelledby="acc-title">
   <div class="container">
     <header class="section-head section-head--center">
-      <span class="eyebrow">Sản phẩm khác · 6 nhóm có mẫu &amp; bảng giá</span>
-      <h2 id="acc-title">Gối, giường, sofa, ga —<br /><em>và nệm foam, bông ép.</em></h2>
-      <p class="section-lede">Bấm vào từng nhóm bên dưới để xem mẫu và giá tham khảo.</p>
+      <span class="eyebrow">Sản phẩm khác · 6 nhóm</span>
+      <h2 id="acc-title">Gối, giường, sofa, ga, nệm foam &amp; bông ép</h2>
+      <p class="section-lede">Bấm vào từng nhóm để xem mẫu và bảng giá.</p>
     </header>
   </div>
 </section>
 
 <!-- ─────────── GỐI KYMDAN ─────────── -->
-<section class="product-cat" id="goi" data-accordion="Gối Kymdan" aria-labelledby="goi-title">
+<section class="product-cat" id="goi" data-accordion="Gối Kymdan" data-acc-from="từ 1.230.000₫" aria-labelledby="goi-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Gối Kymdan · Cao su thiên nhiên 100%</span>
-      <h2 id="goi-title">Gối Kymdan —<br /><em>nâng đỡ đốt sống cổ trọn đêm.</em></h2>
+      <h2 id="goi-title">15 mẫu gối Kymdan cao su thiên nhiên</h2>
       <p class="section-lede">
         Bộ sưu tập gối cao su thiên nhiên Kymdan — kháng khuẩn, kháng nấm mốc, kháng côn trùng.
         Có đầy đủ các dòng cho người lớn, trẻ em, đi du lịch và hỗ trợ cột sống cổ.
@@ -1310,7 +1114,7 @@
           <h3>Gối nằm Pillow Glory Air</h3>
           <p>Cao su thiên nhiên · Vỏ bọc CoolFlex thoáng khí · 60 × 38 × 8cm</p>
           <span class="product-card__price">từ 2.440.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1325,7 +1129,7 @@
           <h3>Gối ôm SoftTouch</h3>
           <p>Gối ôm cao su · 4 cỡ: Mini / Nhỏ / Trung / Lớn · Vỏ bọc mềm mại</p>
           <span class="product-card__price">từ 2.280.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1340,7 +1144,7 @@
           <h3>Pillow Comfy</h3>
           <p>Gối nằm cao su tiêu chuẩn · 30 × 16 × 15cm · Phù hợp mọi tư thế ngủ</p>
           <span class="product-card__price">từ 1.730.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1355,7 +1159,7 @@
           <h3>Pillow GO &amp; LumbarLatex</h3>
           <p>Gối du lịch và gối tựa lưng đi xe · Cao su thiên nhiên · Túi đựng kèm</p>
           <span class="product-card__price">từ 1.230.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
     </div>
@@ -1475,13 +1279,13 @@
 </section>
 
 <!-- ─────────── GIƯỜNG KYMDAN ─────────── -->
-<section class="product-cat product-cat--alt" id="giuong" data-accordion="Giường Kymdan" aria-labelledby="giuong-title">
+<section class="product-cat product-cat--alt" id="giuong" data-accordion="Giường Kymdan" data-acc-from="từ 31.840.000₫" aria-labelledby="giuong-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Giường Kymdan · Gỗ tự nhiên &amp; Giường gấp</span>
-      <h2 id="giuong-title">Giường Kymdan —<br /><em>đồng bộ tinh tế với nệm cao su.</em></h2>
+      <h2 id="giuong-title">Giường Kymdan: gỗ tự nhiên, bọc da, bọc vải, giường xếp</h2>
       <p class="section-lede">
-        Bộ sưu tập giường gỗ Kymdan thiết kế chuẩn tỉ lệ — đồng bộ kích thước với toàn bộ
+        Giường gỗ Kymdan thiết kế chuẩn tỉ lệ — đồng bộ kích thước với toàn bộ
         nệm Kymdan. Khung gỗ tự nhiên, kết cấu chắc chắn, đa dạng kiểu dáng từ tinh giản đến cổ điển.
       </p>
     </header>
@@ -1498,7 +1302,7 @@
           <h3>Giường gỗ bọc vải/da</h3>
           <p>Hơn 45 kiểu (Subtle, Comfort, Gallant…) · Bọc vải Premium hoặc da Simili · 1m6 × 2m</p>
           <span class="product-card__price">từ 44.530.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1513,7 +1317,7 @@
           <h3>Giường gỗ tự nhiên</h3>
           <p>Kiểu Care, Chocolate, Living, Screen… · Khung gỗ tự nhiên chắc chắn · 1m6 × 2m</p>
           <span class="product-card__price">từ 33.020.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1528,7 +1332,7 @@
           <h3>Giường xếp di động</h3>
           <p>Khung sắt sơn tĩnh điện · Gấp gọn tiết kiệm diện tích · Loại nâng / không nâng đầu</p>
           <span class="product-card__price">từ 31.840.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
     </div>
@@ -1576,18 +1380,18 @@
     <div class="price-table__note">
       <p>
         Kymdan có hơn 45 kiểu giường đa dạng kiểu dáng &amp; kích thước.
-        <strong>Gọi <a href="tel:0909001336">0909 001 336</a></strong> để nhận catalogue giường Kymdan đầy đủ tại Showroom Nhật Duy.
+        <strong><a href="tel:0909001336" data-cta="call" data-pos="product">Gọi 0909 001 336</a></strong> để nhận catalogue giường Kymdan đầy đủ tại Showroom Nhật Duy.
       </p>
     </div>
   </div>
 </section>
 
 <!-- ─────────── SOFA KYMDAN ─────────── -->
-<section class="product-cat" id="sofa" data-accordion="Sofa Kymdan" aria-labelledby="sofa-title">
+<section class="product-cat" id="sofa" data-accordion="Sofa Kymdan" data-acc-from="từ 48.200.000₫" aria-labelledby="sofa-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Sofa Kymdan · Đệm cao su thiên nhiên</span>
-      <h2 id="sofa-title">Sofa Kymdan —<br /><em>ngồi êm như nằm.</em></h2>
+      <h2 id="sofa-title">Sofa Kymdan đệm cao su — ngồi êm, không xẹp lún</h2>
       <p class="section-lede">
         Sofa Kymdan sử dụng đệm ngồi và đệm tựa cao su thiên nhiên — êm ái, bền vững,
         không xẹp lún theo thời gian. Đa dạng kiểu dáng: sofa bộ, sofa góc, armchair, sofa giường.
@@ -1606,7 +1410,7 @@
           <h3>Sofa bộ Kymdan</h3>
           <p>Bộ sofa lớn (Delta, Amigo, Alma…) · Đệm cao su · Bọc vải Premium / da Simili</p>
           <span class="product-card__price">từ 102.120.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1621,7 +1425,7 @@
           <h3>Sofa giường Kymdan</h3>
           <p>Sofa giường chuyển đổi (Wavy, Serenity, Leisure) · Đệm cao su không xẹp lún</p>
           <span class="product-card__price">từ 83.070.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1636,7 +1440,7 @@
           <h3>Ghế thư giãn &amp; Armchair</h3>
           <p>Ghế thư giãn đơn (Donna, Eden, Placid) · Bộ Armchair 2 ghế (Harlow, Rossy)</p>
           <span class="product-card__price">từ 48.200.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
     </div>
@@ -1684,18 +1488,18 @@
     <div class="price-table__note">
       <p>
         Sofa Kymdan đa dạng kiểu dáng &amp; chất liệu bọc — báo giá tùy cấu hình cụ thể.
-        <strong>Gọi <a href="tel:0909001336">0909 001 336</a></strong> để nhận catalogue sofa Kymdan đầy đủ.
+        <strong><a href="tel:0909001336" data-cta="call" data-pos="product">Gọi 0909 001 336</a></strong> để nhận catalogue sofa Kymdan đầy đủ.
       </p>
     </div>
   </div>
 </section>
 
 <!-- ─────────── GA TRẢI GIƯỜNG KYMDAN ─────────── -->
-<section class="product-cat product-cat--alt" id="ga" data-accordion="Ga trải giường Kymdan" aria-labelledby="ga-title">
+<section class="product-cat product-cat--alt" id="ga" data-accordion="Ga trải giường Kymdan" data-acc-from="từ 1.800.000₫" aria-labelledby="ga-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Ga trải giường Kymdan · Chất liệu cao cấp</span>
-      <h2 id="ga-title">Ga trải giường Kymdan —<br /><em>khoác lớp lụa cho giấc ngủ.</em></h2>
+      <h2 id="ga-title">Ga trải giường Kymdan — 5 dòng, đủ size 1m2 đến 2m2</h2>
       <p class="section-lede">
         Bộ ga trải giường Kymdan thiết kế chuẩn kích thước nệm Kymdan — đường may tinh xảo,
         chất liệu kháng khuẩn. Đầy đủ các dòng từ Serenity tiêu chuẩn đến Lavish Premium cao cấp.
@@ -1714,7 +1518,7 @@
           <h3>Bộ Lavish</h3>
           <p>Bộ ga gối cao cấp · Nhiều hoa văn &amp; màu · Có loại kèm vỏ mền (chăn)</p>
           <span class="product-card__price">từ 1.800.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1729,7 +1533,7 @@
           <h3>Bộ Serenity &amp; Lavish Prime</h3>
           <p>Cotton cao cấp · Dệt sợi mịn · Tone trầm sang trọng · Có loại kèm vỏ mền</p>
           <span class="product-card__price">từ 2.080.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1744,7 +1548,7 @@
           <h3>Bộ Lavish Premium &amp; Serenity Premium</h3>
           <p>Chất liệu cao cấp nhất · Phù hợp nệm Pillow Top Royal · Kèm vỏ mền</p>
           <span class="product-card__price">từ 3.810.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
     </div>
@@ -1798,18 +1602,18 @@
     <div class="price-table__note">
       <p>
         Mỗi bộ ga Kymdan gồm: ga bọc nệm, drap phủ, vỏ gối nằm và vỏ gối ôm. Báo giá theo kích thước nệm cụ thể.
-        <strong>Gọi <a href="tel:0909001336">0909 001 336</a></strong> để chọn màu &amp; chất liệu phù hợp.
+        <strong><a href="tel:0909001336" data-cta="call" data-pos="product">Gọi 0909 001 336</a></strong> để chọn màu &amp; chất liệu phù hợp.
       </p>
     </div>
   </div>
 </section>
 
 <!-- ─────────── NỆM FOAM ─────────── -->
-<section class="product-cat" id="foam" data-accordion="Nệm Foam" aria-labelledby="foam-title">
+<section class="product-cat" id="foam" data-accordion="Nệm Foam" data-acc-from="từ 1.720.000₫" aria-labelledby="foam-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Nệm Foam cao cấp · Công nghệ Hàn Quốc</span>
-      <h2 id="foam-title">Nệm Foam —<br /><em>nhẹ, êm, giá hợp lý.</em></h2>
+      <h2 id="foam-title">Nệm foam — nhẹ, êm, giá từ 1.720.000₫</h2>
       <p class="section-lede">
         Nệm foam bọt biển đa tầng — nhẹ, dễ vận chuyển, nâng đỡ êm ái. Lựa chọn tiết kiệm
         cho phòng ngủ phụ, phòng trọ, căn hộ cho thuê. Có loại gấp gọn tiện lợi và loại massage than hoạt tính.
@@ -1828,7 +1632,7 @@
           <h3>Topper Foam du lịch</h3>
           <p>Tấm foam mỏng 5cm · Trải thêm trên nệm cũ · Gấp gọn mang đi · 1m–1m8</p>
           <span class="product-card__price">từ 1.720.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1843,7 +1647,7 @@
           <h3>Foam Cozy massage (gấp 3)</h3>
           <p>Foam massage than hoạt tính · Gấp 3 tiện lợi · Vải gấm xốp · Dày 10cm</p>
           <span class="product-card__price">từ 7.160.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1858,7 +1662,7 @@
           <h3>Foam thông hơi Sapphire</h3>
           <p>Foam massage thông hơi · Thoáng mát · Dày 16–20cm · Phòng ngủ chính tiết kiệm</p>
           <span class="product-card__price">từ 11.320.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
     </div>
@@ -1901,16 +1705,16 @@
         </tbody>
       </table>
     </div>
-    <p class="price-table__caption">Giá niêm yết tham khảo 2026 — thay đổi theo kích thước &amp; độ dày. Gọi <a href="tel:0909001336" style="color:#d4a84b">0909 001 336</a> để báo giá chính xác từng size.</p>
+    <p class="price-table__caption">Giá niêm yết tham khảo 2026 — thay đổi theo kích thước &amp; độ dày. <a href="tel:0909001336" style="color:#d4a84b" data-cta="call" data-pos="product">Gọi 0909 001 336</a> để báo giá chính xác từng size.</p>
   </div>
 </section>
 
 <!-- ─────────── NỆM BÔNG ÉP HÀN QUỐC ─────────── -->
-<section class="product-cat product-cat--alt" id="bong-ep" data-accordion="Nệm Bông ép Hàn Quốc" aria-labelledby="be-title">
+<section class="product-cat product-cat--alt" id="bong-ep" data-accordion="Nệm Bông ép Hàn Quốc" data-acc-from="từ 2.620.000₫" aria-labelledby="be-title">
   <div class="container">
     <header class="section-head section-head--center">
       <span class="eyebrow">Nệm Bông ép Hàn Quốc · Thoáng mát, kháng khuẩn</span>
-      <h2 id="be-title">Nệm Bông ép Hàn Quốc —<br /><em>mát lành cho khí hậu nhiệt đới.</em></h2>
+      <h2 id="be-title">Nệm bông ép Hàn Quốc — thoáng mát, giá từ 2.620.000₫</h2>
       <p class="section-lede">
         Nệm bông ép theo công nghệ Hàn Quốc — thoáng khí vượt trội, kháng khuẩn, nhẹ và dễ vệ sinh.
         Phù hợp phòng trẻ em, người hay đổ mồ hôi và ngân sách hợp lý. Đa dạng loại gấp 2, gấp 3 tiện lợi.
@@ -1929,7 +1733,7 @@
           <h3>Bông ép Korea Plus</h3>
           <p>Bông ép gấp 3 mảnh · Vải xốp gấm / cotton · Dày 10–15cm</p>
           <span class="product-card__price">từ 7.900.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1944,7 +1748,7 @@
           <h3>Bông ép Ruby khoan lỗ</h3>
           <p>Khoan lỗ thoáng khí · Vải gấm xốp / 4D · Gấp 3 · Dày 9–14cm</p>
           <span class="product-card__price">từ 8.460.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
 
@@ -1959,7 +1763,7 @@
           <h3>Bông thẳng Beauty</h3>
           <p>Bông thẳng không gấp · Vải cotton · Dày 17–22cm · Êm dày như nệm cao cấp</p>
           <span class="product-card__price">từ 8.360.000₫</span>
-          <a class="btn btn--ghost btn--block" href="#mac-thu">Xem tại Showroom</a>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="product">Hỏi giá qua Zalo</a>
         </div>
       </article>
     </div>
@@ -2032,7 +1836,171 @@
         </tbody>
       </table>
     </div>
-    <p class="price-table__caption">Giá niêm yết tham khảo 2026 — thay đổi theo kích thước &amp; độ dày. Có đủ size 1m → 1m8. Gọi <a href="tel:0909001336" style="color:#d4a84b">0909 001 336</a> để báo giá chính xác từng size.</p>
+    <p class="price-table__caption">Giá niêm yết tham khảo 2026 — thay đổi theo kích thước &amp; độ dày. Có đủ size 1m → 1m8. <a href="tel:0909001336" style="color:#d4a84b" data-cta="call" data-pos="product">Gọi 0909 001 336</a> để báo giá chính xác từng size.</p>
+  </div>
+</section>
+
+<!-- ─────────── LO BAN CALCULATOR ─────────── -->
+<section class="loban" id="thuoc-lo-ban" aria-labelledby="lb-title">
+  <div class="container loban__grid">
+
+    <div class="loban__intro">
+      <span class="eyebrow">Thước Lỗ Ban 42.9cm · Miễn phí</span>
+      <h2 id="lb-title">Kiểm tra kích thước nệm hợp phong thủy</h2>
+      <p>
+        Thước Lỗ Ban 42.9cm — dải thước cổ dành cho khối đặc và đồ nội thất —
+        chia làm tám cung, xen kẽ <strong>cát</strong> và <strong>hung</strong>.
+        Nhập kích thước giường nệm dự kiến, hệ thống tự đối chiếu và đề xuất
+        kích cỡ chuẩn phong thủy thay thế nếu cần.
+      </p>
+      <ul class="loban__legend" role="list">
+        <li><span class="dot dot--good"></span> Cát · Tài · Nghĩa · Quan · Bản</li>
+        <li><span class="dot dot--bad"></span> Hung · Bệnh · Ly · Kiếp · Hại</li>
+      </ul>
+      <p class="loban__hint">
+        Mẹo: nệm tiêu chuẩn 1m6×2m hay rơi vào cung Kiếp. Đổi sang
+        1m72×1m97 (cung Tài – Quan) hoặc 1m72×2m17 (cung Tài – Tài) là
+        cách hóa giải đơn giản.
+      </p>
+      <p class="loban__hint loban__hint--custom">
+        Kích thước đặt riêng — nhắn Zalo để Nhật Duy báo giá và thời gian sản xuất.
+      </p>
+    </div>
+
+    <form class="loban__panel" id="lobanForm" novalidate>
+      <fieldset class="loban__inputs">
+        <legend class="sr-only">Nhập kích thước nệm dự kiến (cm)</legend>
+
+        <label class="field">
+          <span class="field__label">Rộng (cm)</span>
+          <input type="number" inputmode="decimal" min="40" max="400" step="0.1" name="width" id="lbWidth" value="160" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Dài (cm)</span>
+          <input type="number" inputmode="decimal" min="40" max="400" step="0.1" name="length" id="lbLength" value="200" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Cao (cm)</span>
+          <input type="number" inputmode="decimal" min="3" max="60" step="0.1" name="height" id="lbHeight" value="25" required />
+        </label>
+      </fieldset>
+
+      <button class="btn btn--gold btn--block" type="submit">Đối chiếu thước Lỗ Ban</button>
+
+      <div class="loban__result" id="lobanResult" hidden>
+        <div class="loban__verdict" id="lobanVerdict"></div>
+
+        <div class="loban__rows" id="lobanRows" role="list"></div>
+
+        <div class="loban__ruler" aria-hidden="true">
+          <div class="loban__ruler-track">
+            <span class="loban__ruler-cung" data-good="1"><b>Tài</b></span>
+            <span class="loban__ruler-cung" data-good="0"><b>Bệnh</b></span>
+            <span class="loban__ruler-cung" data-good="0"><b>Ly</b></span>
+            <span class="loban__ruler-cung" data-good="1"><b>Nghĩa</b></span>
+            <span class="loban__ruler-cung" data-good="1"><b>Quan</b></span>
+            <span class="loban__ruler-cung" data-good="0"><b>Kiếp</b></span>
+            <span class="loban__ruler-cung" data-good="0"><b>Hại</b></span>
+            <span class="loban__ruler-cung" data-good="1"><b>Bản</b></span>
+          </div>
+          <p class="loban__ruler-caption">42.9 cm — một chu kỳ thước Lỗ Ban khối đặc</p>
+        </div>
+
+        <div class="loban__suggest" id="lobanSuggest" hidden>
+          <h4>Kích thước phong thủy thay thế</h4>
+          <ul id="lobanSuggestList" role="list"></ul>
+          <a class="btn btn--navy" href="#mac-thu" data-cta="booking" data-pos="loban">Đặt lịch nằm thử</a>
+        </div>
+
+        <div class="quick-contact">
+          <p class="quick-contact__lead">Nhắn Zalo để Nhật Duy tư vấn kích thước hợp phong thủy cho bạn</p>
+          <p class="quick-contact__soft">Hoặc <a href="#phieuForm">để lại số ở phiếu bên dưới</a> — Nhật Duy gọi tư vấn kích thước, không bắt buộc.</p>
+          <a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="loban">Nhắn Zalo nhận báo giá</a>
+          <p class="quick-contact__phones">
+            Hoặc <a href="tel:0909001336" data-cta="call" data-pos="loban">Gọi 0909&nbsp;001&nbsp;336</a>
+          </p>
+        </div>
+      </div>
+    </form>
+
+    <!-- Phiếu Phong Thủy Giấc Ngủ — hiện sau khi có kết quả thước Lỗ Ban -->
+    <div class="phieu" id="phieuBox" hidden>
+      <form class="phieu__form" id="phieuForm" novalidate>
+        <h3>Nhận Phiếu tư vấn phong thủy phòng ngủ riêng cho bạn</h3>
+        <p class="phieu__lede">Không bắt buộc — nhập tên và số điện thoại để nhận phiếu và được Nhật Duy gọi tư vấn kích thước. Phiếu hiện ngay bên dưới, tải về làm ảnh được.</p>
+        <label class="field">
+          <span class="field__label">Họ &amp; tên</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Anh / Chị…" data-required="Vui lòng nhập họ tên để ghi lên phiếu" />
+        </label>
+        <label class="field">
+          <span class="field__label">Số điện thoại</span>
+          <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" data-required="Vui lòng nhập số điện thoại để Nhật Duy gọi lại" />
+        </label>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <button class="btn btn--gold btn--block" type="submit">Nhận phiếu phong thủy</button>
+        <p class="form-status form-status--err" id="phieuErr" role="alert" hidden></p>
+      </form>
+
+      <div class="phieu__out" id="phieuOut" hidden>
+        <article class="phieu-card" id="phieuCard" aria-label="Phiếu phong thủy giấc ngủ">
+          <header class="phieu-card__head">
+            <span class="phieu-card__brand">Nội Thất Nhật Duy</span>
+            <span class="phieu-card__sub">Đại lý Kymdan chính hãng · Bồng Sơn, Gia Lai</span>
+          </header>
+          <h4 class="phieu-card__title">Phiếu Phong Thủy Giấc Ngủ</h4>
+          <p class="phieu-card__for">Dành riêng cho <strong id="phieuName"></strong></p>
+
+          <div class="phieu-card__block">
+            <span class="phieu-card__label">Kích thước đang chọn · Thước Lỗ Ban 42.9cm</span>
+            <ul id="phieuCurrent" role="list"></ul>
+          </div>
+          <div class="phieu-card__block" id="phieuSuggestBlock">
+            <span class="phieu-card__label">Kích thước chuẩn phong thủy nên đổi sang</span>
+            <ul id="phieuSuggest" role="list"></ul>
+          </div>
+
+          <p class="phieu-card__wish" id="phieuWish"></p>
+          <footer class="phieu-card__foot">
+            <span>2657 Quang Trung, Bồng Sơn, Gia Lai</span>
+            <strong>0909 001 336 · 0905 070 785</strong>
+          </footer>
+        </article>
+
+        <div class="phieu__actions">
+          <button class="btn btn--gold btn--block" type="button" id="phieuDownload">Tải phiếu về máy (ảnh)</button>
+          <button class="btn btn--zalo btn--block" type="button" id="phieuShare">Chia sẻ qua Zalo</button>
+        </div>
+        <p class="form-status" id="phieuNote" role="status" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── LOCAL TRUST STRIP ─────────── -->
+<section class="local-trust" id="dich-vu" aria-labelledby="lt-title">
+  <div class="container">
+  <h2 class="local-trust__title" id="lt-title">Giao lắp, bảo hành, thu nệm cũ</h2>
+  <div class="local-trust__grid">
+    <article>
+      <h3>4 giờ</h3>
+      <p data-cfg="delivery-long">Giao &amp; lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.</p>
+    </article>
+    <article>
+      <h3>30 phút</h3>
+      <p>Nằm thử miễn phí tại showroom 2657 Quang Trung — so sánh các dòng
+        nệm và được tư vấn riêng trong khung giờ bạn đặt.</p>
+    </article>
+    <article>
+      <h3>15 năm</h3>
+      <p>Nệm Kymdan bảo hành chính hãng 15 năm, nệm bông ép 3 năm, nệm foam 2 năm.
+        Bảo trì tận nhà tại Gia Lai.</p>
+    </article>
+    <article data-flag="SHOW_TRADE_IN" hidden>
+      <h3>200–500K</h3>
+      <p>Thu lại nệm cũ tận nơi khi đổi nệm mới. Niêm yết giá rõ ràng theo
+        kích thước &amp; chất liệu.</p>
+    </article>
+  </div>
   </div>
 </section>
 
@@ -2064,8 +2032,8 @@
       </div>
       <a class="btn btn--gold reviews-cta__btn"
          href="https://www.google.com/maps/search/?api=1&amp;query=N%E1%BB%99i+Th%E1%BA%A5t+Nh%E1%BA%ADt+Duy+2657+Quang+Trung+B%E1%BB%93ng+S%C6%A1n"
-         target="_blank" rel="noopener">
-        Viết đánh giá trên Google
+         target="_blank" rel="noopener" data-cta="review" data-pos="reviews">
+        Xem đánh giá trên Google
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
       </a>
     </aside>
@@ -2076,38 +2044,13 @@
   </div>
 </section>
 
-<!-- ─────────── LOCAL TRUST STRIP ─────────── -->
-<section class="local-trust" aria-label="Bảo chứng địa phương">
-  <div class="container local-trust__grid">
-    <article>
-      <h3>4 giờ</h3>
-      <p data-cfg="delivery-long">Giao &amp; lắp đặt miễn phí trong 4 giờ trong bán kính 30 km (Bồng Sơn, Hoài Nhơn, Hoài Ân, An Lão, Phù Mỹ). Ngoài 30 km, vui lòng liên hệ để Nhật Duy báo lịch và phí giao.</p>
-    </article>
-    <article>
-      <h3>30 phút</h3>
-      <p>Trải nghiệm trọn buổi tại Showroom 2657 Quang Trung — nằm thử,
-        so sánh và nhận tư vấn 1:1 trong khung giờ dành riêng cho bạn.</p>
-    </article>
-    <article>
-      <h3>15 năm</h3>
-      <p>Bảo hành nệm Kymdan chính hãng 15 năm. Bảo trì tận nhà tại Gia Lai —
-        không cần gửi nệm ngược lên TP.HCM hay Quy Nhơn.</p>
-    </article>
-    <article data-flag="SHOW_TRADE_IN" hidden>
-      <h3>200–500K</h3>
-      <p>Thu lại nệm cũ tận nơi khi đổi nệm mới. Niêm yết giá rõ ràng theo
-        kích thước &amp; chất liệu.</p>
-    </article>
-  </div>
-</section>
-
 <!-- ─────────── BOOKING / CTA ─────────── -->
 <section class="booking" id="mac-thu" aria-labelledby="bk-title">
   <div class="container booking__grid">
 
     <div class="booking__copy">
-      <span class="eyebrow">Trải nghiệm nệm tại Showroom</span>
-      <h2 id="bk-title">Ghé Showroom Nhật Duy,<br /><em>nằm thử nệm Kymdan và trải nghiệm đầy đủ dòng sản phẩm.</em></h2>
+      <span class="eyebrow">Đặt lịch nằm thử</span>
+      <h2 id="bk-title">Ghé showroom nằm thử miễn phí</h2>
       <p>
         Tại 2657 Quang Trung, bạn được nằm thử trực tiếp nệm Kymdan Deluxe,
         Kymdan Special Deluxe Pillow Top — cùng nệm foam và bông ép Hàn Quốc —
@@ -2127,7 +2070,7 @@
           action="https://formsubmit.co/ductan07bs@gmail.com"
           method="POST"
           novalidate>
-      <h3>Đặt lịch tại Showroom</h3>
+      <h3>Đặt lịch nằm thử</h3>
 
       <!-- Cấu hình FormSubmit (kích hoạt ở lần submit đầu, không spam) -->
       <input type="hidden" name="_subject" value="[Nhật Duy] Đặt lịch trải nghiệm tại Showroom" />
@@ -2148,11 +2091,12 @@
                data-required="Vui lòng nhập số điện thoại để Nhật Duy gọi lại" />
       </label>
 
-      <button class="btn btn--gold btn--block" id="dat-lich" type="submit">Gửi yêu cầu — Nhật Duy gọi lại trong 30 phút</button>
+      <button class="btn btn--gold btn--block" id="dat-lich" type="submit">Đặt lịch nằm thử</button>
 
-      <div class="form-status form-status--ok booking__ok" id="bookingOk" role="status" hidden>
-        <strong>Đã gửi</strong> — một chuyên viên sẽ gọi bạn trong 30 phút.
-        Cảm ơn bạn đã tin Nhật Duy.
+      <div class="form-status form-status--ok booking__ok" id="bookingOk" role="status" tabindex="-1" hidden>
+        <strong>Đã nhận lịch hẹn của bạn.</strong>
+        <span id="bookingOkMsg">Nhật Duy sẽ gọi lại để xác nhận giờ ghé trong giờ mở cửa (7:30 – 21:00).</span>
+        <a class="btn btn--zalo btn--block booking__ok-zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="booking">Nhắn Zalo ngay để được ưu tiên</a>
       </div>
       <div class="form-status form-status--err" id="bookingErr" role="alert" hidden>
         <strong>Chưa gửi được yêu cầu.</strong> Mạng đang chập chờn — thông tin bạn nhập vẫn còn nguyên, bạn bấm gửi lại giúp nhé.
@@ -2227,20 +2171,17 @@
         <h3>2657 Quang Trung,<br /><em>Phường Bồng Sơn, Gia Lai.</em></h3>
         <ul class="map-block__lines" role="list">
           <li><strong>Mở cửa</strong> 7:30 – 21:00 mỗi ngày</li>
-          <li><strong>Hotline</strong> <a href="tel:0909001336">0909 001 336</a> · <a href="tel:0905070785">0905 070 785</a></li>
+          <li><strong>Hotline</strong> <a href="tel:0909001336" data-cta="call" data-pos="map">0909 001 336</a> · <a href="tel:0905070785" data-cta="call" data-pos="map">0905 070 785</a></li>
           <li><strong>Bãi đỗ</strong> sẵn cho ô tô 7 chỗ ngay trước showroom</li>
         </ul>
         <div class="map-block__actions">
-          <a class="btn btn--gold"
+          <a class="btn btn--gold" data-cta="directions" data-pos="map"
              href="https://www.google.com/maps/dir/?api=1&amp;destination=14.4375628,109.0182714"
              target="_blank" rel="noopener">
             Chỉ đường Google Maps
             <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
           </a>
-          <a class="btn btn--ghost"
-             href="https://zalo.me/0909001336" target="_blank" rel="noopener">
-            Hỏi đường qua Zalo
-          </a>
+          <a class="btn btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="map">Nhắn Zalo nhận báo giá</a>
         </div>
       </div>
       <div class="map-block__embed">
@@ -2261,11 +2202,11 @@
 </section>
 
 <!-- ─────────── FAQ ─────────── -->
-<section class="faq" aria-labelledby="faq-title">
+<section class="faq" id="faq" aria-labelledby="faq-title">
   <div class="container">
     <header class="section-head">
-      <span class="eyebrow">Câu hỏi từ khách Bồng Sơn — Hoài Nhơn</span>
-      <h2 id="faq-title">Trước khi bạn nhấc máy.</h2>
+      <span class="eyebrow">Hỏi đáp</span>
+      <h2 id="faq-title">Câu hỏi thường gặp</h2>
     </header>
     <div class="faq__list">
 
@@ -2333,11 +2274,10 @@
     </div>
   </div>
 </section>
-
 </main>
 
 <!-- ─────────── FOOTER ─────────── -->
-<footer class="site-footer">
+<footer class="site-footer" id="lien-he">
   <div class="container site-footer__grid">
 
     <div class="site-footer__brand">
@@ -2365,8 +2305,8 @@
       <h4>Liên hệ</h4>
       <p><strong>Showroom Bồng Sơn</strong><br />2657 Quang Trung, Phường Bồng Sơn, Gia Lai</p>
       <ul class="footer-contacts" aria-label="Số điện thoại Nhật Duy">
-        <li><a href="tel:0909001336">0909&nbsp;001&nbsp;336</a></li>
-        <li><a href="tel:0905070785">0905&nbsp;070&nbsp;785</a></li>
+        <li><a href="tel:0909001336" data-cta="call" data-pos="footer">0909&nbsp;001&nbsp;336</a></li>
+        <li><a href="tel:0905070785" data-cta="call" data-pos="footer">0905&nbsp;070&nbsp;785</a></li>
       </ul>
       <p><a href="mailto:ductan07bs@gmail.com">ductan07bs@gmail.com</a></p>
       <p>Mở cửa: 7:30 – 21:00 mỗi ngày</p>
@@ -2375,12 +2315,11 @@
     <div class="site-footer__col">
       <h4>Dịch vụ</h4>
       <ul>
-        <li><a href="#mac-thu">Trải nghiệm nệm Kymdan tại Showroom</a></li>
+        <li><a href="#mac-thu">Đặt lịch nằm thử tại showroom</a></li>
         <li><a href="#bo-suu-tap">Nội thất Kymdan đồng bộ</a></li>
         <li><a href="#foam">Nệm foam cao cấp</a></li>
         <li><a href="#bong-ep">Nệm bông ép Hàn Quốc</a></li>
         <li><a href="#thuoc-lo-ban">Tư vấn phong thủy phòng ngủ</a></li>
-        <li><a href="#sanh-pho">Chọn phong cách theo không gian</a></li>
       </ul>
     </div>
 
@@ -2388,7 +2327,7 @@
       <h4>Theo dõi</h4>
       <ul class="socials">
         <li>
-          <a class="social-link" href="https://zalo.me/0909001336" target="_blank" rel="noopener" aria-label="Chat Zalo Nhật Duy">
+          <a class="social-link" href="https://zalo.me/0909001336" target="_blank" rel="noopener" aria-label="Nhắn Zalo Nhật Duy" data-cta="zalo" data-pos="footer">
             <span class="social-link__ic" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 5h16v10H9l-4 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </span>
@@ -2406,32 +2345,29 @@
          [[CẦN BA XÁC NHẬN: link thông báo online.gov.vn]] → điền moitNoticeUrl trong site-config.js rồi bật SHOW_MOIT_NOTICE. -->
     <a class="site-footer__moit" data-flag="SHOW_MOIT_NOTICE" data-cfg="moit-link" target="_blank" rel="noopener" hidden>Đã thông báo Bộ Công Thương</a>
     <span>© 2026 Nội Thất Nhật Duy — Bồng Sơn, Gia Lai.</span>
-    <span class="site-footer__sig"><em>Giấc ngủ của bạn, được tinh tuyển.</em></span>
+    <span class="site-footer__sig"><em>Nệm Kymdan chính hãng tại Bồng Sơn.</em></span>
   </div>
 </footer>
 
 <!-- ─────────── STICKY MOBILE CTA ─────────── -->
-<div class="sticky-cta" aria-label="Hành động nhanh">
-  <a class="sticky-cta__btn sticky-cta__btn--call" href="tel:0909001336" aria-label="Gọi 0909 001 336">
+<div class="sticky-cta" aria-label="Liên hệ nhanh">
+  <a class="sticky-cta__btn sticky-cta__btn--call" href="tel:0909001336" aria-label="Gọi 0909 001 336" data-cta="call" data-pos="sticky">
     <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
     <span>Gọi</span>
   </a>
-  <a class="sticky-cta__btn sticky-cta__btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener" aria-label="Chat Zalo Nhật Duy">
+  <a class="sticky-cta__btn sticky-cta__btn--zalo" href="https://zalo.me/0909001336" target="_blank" rel="noopener" aria-label="Nhắn Zalo nhận báo giá" data-cta="zalo" data-pos="sticky">
     <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 6h16v10H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
     <span>Zalo</span>
   </a>
-  <a class="sticky-cta__btn sticky-cta__btn--book" href="#mac-thu" title="Đặt lịch trải nghiệm tại Showroom">
-    Đặt lịch tại Showroom
-  </a>
 </div>
 
-<!-- ─────────── FLOATING ZALO + BACK TO TOP ─────────── -->
+<!-- ─────────── FLOATING ZALO (chỉ máy tính — điện thoại đã có thanh cố định) + BACK TO TOP ─────────── -->
 <button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang">
   <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 19V6M6 12l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
 
-<a class="zalo-float" href="https://zalo.me/0909001336" target="_blank" rel="noopener" aria-label="Nhắn Zalo Nhật Duy — trả lời trong 5 phút">
-  <span class="zalo-float__tip">Nhắn ngay — trả lời trong 5 phút</span>
+<a class="zalo-float" href="https://zalo.me/0909001336" target="_blank" rel="noopener" aria-label="Nhắn Zalo nhận báo giá" data-cta="zalo" data-pos="float">
+  <span class="zalo-float__tip">Nhắn Zalo nhận báo giá</span>
   <span class="zalo-float__ic" aria-hidden="true">
     <svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5.5h16v9H9l-4 4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><text x="12" y="12.2" font-size="6.4" font-weight="700" text-anchor="middle" fill="currentColor" font-family="sans-serif">Zalo</text></svg>
   </span>
@@ -2520,9 +2456,9 @@
       var m = document.createElement('div');
       m.className = 'exit-msg';
       m.innerHTML = '<button class="exit-msg__x" aria-label="Đóng">×</button>' +
-        '<strong>Bạn vừa xem bảng giá 👀</strong>' +
-        '<p>Đặt lịch để được dành riêng khung giờ tư vấn 1:1 — Nhật Duy gọi lại trong 30 phút.</p>' +
-        '<a class="btn btn--gold btn--block" href="#mac-thu">Đặt lịch ngay</a>';
+        '<strong>Bạn vừa xem bảng giá</strong>' +
+        '<p>Nhắn Zalo để Nhật Duy báo giá đúng size và ưu đãi đang có.</p>' +
+        '<a class="btn btn--zalo btn--block" href="https://zalo.me/0909001336" target="_blank" rel="noopener" data-cta="zalo" data-pos="exit">Nhắn Zalo nhận báo giá</a>';
       document.body.appendChild(m);
       requestAnimationFrame(function(){ m.classList.add('is-in'); });
       function close(){ m.classList.remove('is-in'); setTimeout(function(){ m.remove(); }, 400); }
