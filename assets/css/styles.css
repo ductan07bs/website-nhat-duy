@@ -2749,3 +2749,5 @@ em { font-style: italic; color: var(--walnut-mid); }
 .combo--featured .combo__installment { color: var(--sand); }
 .reviews-cta__rating { margin: 0 0 4px; font-weight: 700; color: var(--gold-deep); }
 .site-footer__moit { text-decoration: underline; }
+.combo__price-now--ask { font-size: 1.6rem; }
+.loban__hint--custom { font-style: normal; font-weight: 600; color: var(--sand); margin-top: 10px; }
